@@ -1,0 +1,23 @@
+{
+  "name": "slotbookingportalbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darshan744/SlotBookingPortalBackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darshan744/SlotBookingPortalBackend/issues"
+  },
+  "homepage": "https://github.com/darshan744/SlotBookingPortalBackend#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
+  }
+}
