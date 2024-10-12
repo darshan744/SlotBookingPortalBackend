@@ -7,6 +7,7 @@ var StudentEventResultSchema = new mongoose.Schema({
     marks:Number,
     remarks: String,
 })
+
 var StudentSchema = new mongoose.Schema({
     _id:String,
     name : String,
@@ -25,5 +26,5 @@ var StudentModel = mongoose.model("Student",StudentSchema);
 var StudentEventResultModel = mongoose.model("StudentEventResult",StudentEventResultSchema);
 var BookingStatusModel = new mongoose.model("BookingStatus",BookingStatusSchema);
 
-module.exports = {StudentModel,StudentEventResultModel,BookingStatusModel};
 
+module.exports = {StudentModel,StudentEventResultModel,BookingStatusModel};

@@ -1,0 +1,594 @@
+[
+    {
+        "_id": "CSE001",
+        "name": "Amit Sharma",
+        "dept": "CSE",
+        "phNo": "9876543210",
+        "email": "amit.sharma@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE002",
+        "name": "Priya Verma",
+        "dept": "CSE",
+        "phNo": "9876543211",
+        "email": "priya.verma@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE001",
+        "name": "Rahul Gupta",
+        "dept": "ECE",
+        "phNo": "9876543212",
+        "email": "rahul.gupta@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE001",
+        "name": "Sneha Singh",
+        "dept": "EEE",
+        "phNo": "9876543213",
+        "email": "sneha.singh@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT001",
+        "name": "Vikram Patel",
+        "dept": "IT",
+        "phNo": "9876543214",
+        "email": "vikram.patel@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE003",
+        "name": "Anjali Mehta",
+        "dept": "CSE",
+        "phNo": "9876543215",
+        "email": "anjali.mehta@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE002",
+        "name": "Karan Joshi",
+        "dept": "ECE",
+        "phNo": "9876543216",
+        "email": "karan.joshi@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE002",
+        "name": "Neha Reddy",
+        "dept": "EEE",
+        "phNo": "9876543217",
+        "email": "neha.reddy@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT002",
+        "name": "Suresh Kumar",
+        "dept": "IT",
+        "phNo": "9876543218",
+        "email": "suresh.kumar@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE004",
+        "name": "Riya Kapoor",
+        "dept": "CSE",
+        "phNo": "9876543219",
+        "email": "riya.kapoor@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE003",
+        "name": "Ayaan Malik",
+        "dept": "ECE",
+        "phNo": "9876543220",
+        "email": "ayaan.malik@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE003",
+        "name": "Pooja Iyer",
+        "dept": "EEE",
+        "phNo": "9876543221",
+        "email": "pooja.iyer@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT003",
+        "name": "Nikhil Sinha",
+        "dept": "IT",
+        "phNo": "9876543222",
+        "email": "nikhil.sinha@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE005",
+        "name": "Snehal Patil",
+        "dept": "CSE",
+        "phNo": "9876543223",
+        "email": "snehal.patil@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE004",
+        "name": "Vani Nair",
+        "dept": "ECE",
+        "phNo": "9876543224",
+        "email": "vani.nair@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE004",
+        "name": "Tarun Verma",
+        "dept": "EEE",
+        "phNo": "9876543225",
+        "email": "tarun.verma@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT004",
+        "name": "Meera Choudhury",
+        "dept": "IT",
+        "phNo": "9876543226",
+        "email": "meera.choudhury@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE006",
+        "name": "Rohit Raghavan",
+        "dept": "CSE",
+        "phNo": "9876543227",
+        "email": "rohit.raghavan@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE005",
+        "name": "Kriti Sen",
+        "dept": "ECE",
+        "phNo": "9876543228",
+        "email": "kriti.sen@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE005",
+        "name": "Deepak Mehta",
+        "dept": "EEE",
+        "phNo": "9876543229",
+        "email": "deepak.mehta@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT005",
+        "name": "Ravi Kumar",
+        "dept": "IT",
+        "phNo": "9876543230",
+        "email": "ravi.kumar@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE007",
+        "name": "Pallavi Joshi",
+        "dept": "CSE",
+        "phNo": "9876543231",
+        "email": "pallavi.joshi@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE006",
+        "name": "Kiran Reddy",
+        "dept": "ECE",
+        "phNo": "9876543232",
+        "email": "kiran.reddy@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE006",
+        "name": "Sanjay Singh",
+        "dept": "EEE",
+        "phNo": "9876543233",
+        "email": "sanjay.singh@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT006",
+        "name": "Naina Nair",
+        "dept": "IT",
+        "phNo": "9876543234",
+        "email": "naina.nair@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE008",
+        "name": "Vishal Sharma",
+        "dept": "CSE",
+        "phNo": "9876543235",
+        "email": "vishal.sharma@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE007",
+        "name": "Riya Yadav",
+        "dept": "ECE",
+        "phNo": "9876543236",
+        "email": "riya.yadav@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE007",
+        "name": "Ankit Kumar",
+        "dept": "EEE",
+        "phNo": "9876543237",
+        "email": "ankit.kumar@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT007",
+        "name": "Gaurav Choudhary",
+        "dept": "IT",
+        "phNo": "9876543238",
+        "email": "gaurav.choudhary@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE009",
+        "name": "Tanvi Gupta",
+        "dept": "CSE",
+        "phNo": "9876543239",
+        "email": "tanvi.gupta@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE008",
+        "name": "Rahul Bansal",
+        "dept": "ECE",
+        "phNo": "9876543240",
+        "email": "rahul.bansal@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE008",
+        "name": "Radhika Jain",
+        "dept": "EEE",
+        "phNo": "9876543241",
+        "email": "radhika.jain@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT008",
+        "name": "Karan Verma",
+        "dept": "IT",
+        "phNo": "9876543242",
+        "email": "karan.verma@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE010",
+        "name": "Aarav Singh",
+        "dept": "CSE",
+        "phNo": "9876543243",
+        "email": "aarav.singh@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE009",
+        "name": "Meena Reddy",
+        "dept": "ECE",
+        "phNo": "9876543244",
+        "email": "meena.reddy@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE009",
+        "name": "Saurav Patel",
+        "dept": "EEE",
+        "phNo": "9876543245",
+        "email": "saurav.patel@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT009",
+        "name": "Divya Sharma",
+        "dept": "IT",
+        "phNo": "9876543246",
+        "email": "divya.sharma@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE011",
+        "name": "Shivam Joshi",
+        "dept": "CSE",
+        "phNo": "9876543247",
+        "email": "shivam.joshi@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE010",
+        "name": "Aditi Nair",
+        "dept": "ECE",
+        "phNo": "9876543248",
+        "email": "aditi.nair@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE010",
+        "name": "Vikas Mehta",
+        "dept": "EEE",
+        "phNo": "9876543249",
+        "email": "vikas.mehta@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT010",
+        "name": "Neelam Rao",
+        "dept": "IT",
+        "phNo": "9876543250",
+        "email": "neelam.rao@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE012",
+        "name": "Ritesh Sharma",
+        "dept": "CSE",
+        "phNo": "9876543251",
+        "email": "ritesh.sharma@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE011",
+        "name": "Aman Singh",
+        "dept": "ECE",
+        "phNo": "9876543252",
+        "email": "aman.singh@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE011",
+        "name": "Simran Gupta",
+        "dept": "EEE",
+        "phNo": "9876543253",
+        "email": "simran.gupta@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT011",
+        "name": "Tanisha Sood",
+        "dept": "IT",
+        "phNo": "9876543254",
+        "email": "tanisha.sood@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE013",
+        "name": "Ravi Dubey",
+        "dept": "CSE",
+        "phNo": "9876543255",
+        "email": "ravi.dubey@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE012",
+        "name": "Disha Awasthi",
+        "dept": "ECE",
+        "phNo": "9876543256",
+        "email": "disha.awasthi@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE012",
+        "name": "Tarun Roy",
+        "dept": "EEE",
+        "phNo": "9876543257",
+        "email": "tarun.roy@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT012",
+        "name": "Sanjay Rawat",
+        "dept": "IT",
+        "phNo": "9876543258",
+        "email": "sanjay.rawat@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE014",
+        "name": "Nisha Tiwari",
+        "dept": "CSE",
+        "phNo": "9876543259",
+        "email": "nisha.tiwari@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE013",
+        "name": "Rohan Bhatia",
+        "dept": "ECE",
+        "phNo": "9876543260",
+        "email": "rohan.bhatia@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE013",
+        "name": "Reena Desai",
+        "dept": "EEE",
+        "phNo": "9876543261",
+        "email": "reena.desai@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT013",
+        "name": "Vivek Puri",
+        "dept": "IT",
+        "phNo": "9876543262",
+        "email": "vivek.puri@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE015",
+        "name": "Riya Sethi",
+        "dept": "CSE",
+        "phNo": "9876543263",
+        "email": "riya.sethi@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE014",
+        "name": "Amit Agarwal",
+        "dept": "ECE",
+        "phNo": "9876543264",
+        "email": "amit.agarwal@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE014",
+        "name": "Rakesh Joshi",
+        "dept": "EEE",
+        "phNo": "9876543265",
+        "email": "rakesh.joshi@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT014",
+        "name": "Ankit Sharma",
+        "dept": "IT",
+        "phNo": "9876543266",
+        "email": "ankit.sharma@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE016",
+        "name": "Geeta Yadav",
+        "dept": "CSE",
+        "phNo": "9876543267",
+        "email": "geeta.yadav@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE015",
+        "name": "Nikita Singh",
+        "dept": "ECE",
+        "phNo": "9876543268",
+        "email": "nikita.singh@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE015",
+        "name": "Alok Verma",
+        "dept": "EEE",
+        "phNo": "9876543269",
+        "email": "alok.verma@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT015",
+        "name": "Tanya Sinha",
+        "dept": "IT",
+        "phNo": "9876543270",
+        "email": "tanya.sinha@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE017",
+        "name": "Aashish Tiwari",
+        "dept": "CSE",
+        "phNo": "9876543271",
+        "email": "aashish.tiwari@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE016",
+        "name": "Swati Mehta",
+        "dept": "ECE",
+        "phNo": "9876543272",
+        "email": "swati.mehta@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE016",
+        "name": "Gaurav Sharma",
+        "dept": "EEE",
+        "phNo": "9876543273",
+        "email": "gaurav.sharma@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT016",
+        "name": "Meghna Gupta",
+        "dept": "IT",
+        "phNo": "9876543274",
+        "email": "meghna.gupta@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE018",
+        "name": "Tarun Bhardwaj",
+        "dept": "CSE",
+        "phNo": "9876543275",
+        "email": "tarun.bhardwaj@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE017",
+        "name": "Naman Verma",
+        "dept": "ECE",
+        "phNo": "9876543276",
+        "email": "naman.verma@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE017",
+        "name": "Shivani Rai",
+        "dept": "EEE",
+        "phNo": "9876543277",
+        "email": "shivani.rai@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT017",
+        "name": "Niraj Khatri",
+        "dept": "IT",
+        "phNo": "9876543278",
+        "email": "niraj.khatri@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE019",
+        "name": "Kriti Soni",
+        "dept": "CSE",
+        "phNo": "9876543279",
+        "email": "kriti.soni@cse.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "ECE018",
+        "name": "Aarav Prasad",
+        "dept": "ECE",
+        "phNo": "9876543280",
+        "email": "aarav.prasad@ece.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "EEE018",
+        "name": "Rekha Singh",
+        "dept": "EEE",
+        "phNo": "9876543281",
+        "email": "rekha.singh@eee.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "IT018",
+        "name": "Naina Patil",
+        "dept": "IT",
+        "phNo": "9876543282",
+        "email": "naina.patil@it.in",
+        "eventHistory": []
+    },
+    {
+        "_id": "CSE020",
+        "name": "Avi Sharma",
+        "dept": "CSE",
+        "phNo": "9876543283",
+        "email": "avi.sharma@cse.in",
+        "eventHistory": []
+    }
+]
