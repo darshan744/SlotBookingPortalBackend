@@ -60,9 +60,11 @@ var StaffSchema = new mongoose.Schema({
 // Define AvailabilitySchema last
 var AvailabilitySchema = new mongoose.Schema({
     instructorId: { type: String, ref: 'Staff', required: true },
-    availableSlots: [{ type:SlotGeneratedSchema, ref: 'SlotGenerated' }]
+    availableSlots: [{ type:{date : String , slots : [{
+        time : String,
+        isAvailable : { type : Boolean , default : false}
+    }]}, ref: 'SlotGenerated' }]
 });
-
 // Create models
 var StaffModel = mongoose.model("Staff", StaffSchema);
 var VenuesModel = mongoose.model("Venues", VenuesSchema);
