@@ -1,5 +1,5 @@
-const { StaffModel, AvailabilityModel } = require('../../Models/SuperAdmin');
-const {converToDate , assignToDate ,assignToStaff } = require('../miscellaneous')
+const { StaffModel, AvailabilityModel } = require('../../Models/AllModel');
+const {converToDate , assignToDate ,assignToStaff,generateHoursForStaffs } = require('../miscellaneous')
 
 exports.getAllStaff = async (req, res, next) => {
     try {
@@ -20,7 +20,7 @@ exports.insertManyStaffs = async (req, res, next) => {
         if (!Array.isArray(staffs)) {
             return res.status(400).json({ success: false, message: 'Invalid INput ' })
         }
-        await staff.StaffModel.insertMany(staffs);
+        await staffs.StaffModel.insertMany(staffs);
         res.json({ success: true })
     } catch (e) {
         res.json({ success: false, message: 'error Occured in inserting objects array' })
@@ -29,24 +29,21 @@ exports.insertManyStaffs = async (req, res, next) => {
 }
 
 exports.requestAvailability = async (req, res) => {
-    const { slots, startDate, endDate, staffs } = req.body;
-    if (!Array.isArray(slots) || !startDate || !endDate || !Array.isArray(staffs)) {
+    const {startDate, endDate, staffs } = req.body;
+    if (!startDate || !endDate || !Array.isArray(staffs)) {
         return res.status(400).json({ success: false, message: 'Invalid input' });
     }
+    let slots = generateHoursForStaffs();
     try {
-        let startDateString = converToDate(startDate);
-        let endDateString = converToDate(endDate);
-
-        // console.log(startDateString, endDateString);
-        const slotsGenerated = assignToDate(startDateString, endDateString, slots);
+        const slotsGenerated = assignToDate(startDate, endDate, slots);
         const result = assignToStaff(staffs, slotsGenerated)
-        
+        console.log(result);
 
-        const res = await AvailabilityModel.insertMany(result);
-        console.log(res);
-        res.status(200).json({ message: 'Request Received', result: result, slotsGenerated: slots });
+        await AvailabilityModel.insertMany(result);
+        res.json({ message: 'Request Received', result: result, slotsGenerated: slotsGenerated });
     } catch (error) {
-        res.status(500).json({ success: false, message: error.message })
+        console.error("Error" + error);
+        res.json({ success: false, message: error.message })
     }
 
 }

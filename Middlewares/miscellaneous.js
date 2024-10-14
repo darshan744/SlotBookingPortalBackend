@@ -1,4 +1,4 @@
-exports.converToDate = (date)=>{
+exports.converToDate = (date) => {
     var startdate = date.split('T')[0].split('-');
     var years = startdate[0];
     var months = startdate[1];
@@ -6,7 +6,7 @@ exports.converToDate = (date)=>{
     return `${years}-${months.padStart(2, 0)}-${date.padStart(2, 0)}`;
 }
 
-exports.assignToDate = (startDateStr, endDateStr, slots)=>{
+exports.assignToDate = (startDateStr, endDateStr, slots) => {
     let resultSlot /**type slot*/ = [];
     let startDate = new Date(startDateStr);
     let endDate = new Date(endDateStr);
@@ -20,18 +20,51 @@ exports.assignToDate = (startDateStr, endDateStr, slots)=>{
     console.log(" AssignToDate " + resultSlot);
     return resultSlot;
 }
-exports.assignToStaff = (staffs, slots)=>{
+exports.assignToStaff = (staffs, slots) => {
     const availabilityStaffArray = [];
     staffs.forEach((staff) => {
-        availabilityStaffArray.push({ instructorId: staff._id, 
+        availabilityStaffArray.push({
+            instructorId: staff._id,
             availableSlots: slots.map(slot => ({
-                date : slot.date,
-                slots : slot.slots.map(eachSlot => ({
-                    time : eachSlot,
-                    isAvailable : false
+                /*slot contains date and slots array
+                which has slot timing and a boolean property  time : 9:00 - 9:15 isAvailable : false */
+                date: slot.date,
+                slots: slot.slots.map(eachSlot => ({
+                    time: eachSlot,
+                    isAvailable: false
                 }))
-            })) })
+            }))
+        })
     });
     console.log(" assignToStaff " + availabilityStaffArray);
     return availabilityStaffArray;
+}
+
+
+
+exports.generateHoursForStaffs = () => {
+    const resultSlots = [];
+    function minutesToTime(minutes) {
+        const hours = Math.floor(minutes / 60);
+        const min = Math.floor(minutes % 60);
+        return `${hours.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`
+    }
+    function timeToMinutes(time) {
+        const [hours, minutes] = time.split(':').map(Number);
+        return hours * 60 + minutes;
+    }
+    let startTime = '8:45', endTime = '16:30';
+    let startMinutes = timeToMinutes(startTime), endMinutes = timeToMinutes(endTime);
+    const hr = 60;
+    while(startMinutes <= endMinutes) {
+        let timeInterval = `${minutesToTime(startMinutes)} - ${minutesToTime(startMinutes + hr)}`
+        if(timeInterval !== '12:45 - 13:45' )
+            if(timeInterval === '15:45 - 16:45')
+                resultSlots.push('15:45 - 16:30');
+            else 
+                resultSlots.push(timeInterval)
+        
+        startMinutes += hr;
+    }
+    return resultSlots;
 }
