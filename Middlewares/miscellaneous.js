@@ -1,3 +1,5 @@
+
+
 exports.converToDate = (date) => {
     var startdate = date.split('T')[0].split('-');
     var years = startdate[0];
@@ -7,13 +9,13 @@ exports.converToDate = (date) => {
 }
 
 exports.assignToDate = (startDateStr, endDateStr, slots) => {
-    let resultSlot /**type slot*/ = [];
+    let resultSlot = [];
     let startDate = new Date(startDateStr);
     let endDate = new Date(endDateStr);
     console.log("assignTODate : ", startDate, endDate)
     while (startDate <= endDate) {
         if (startDate.getDay() !== 0) {
-            resultSlot.push({ date: startDate.toString(), slots: slots });
+            resultSlot.push({ date: startDate.toLocaleDateString("en-CA",{year:'numeric',month:'2-digit',day:'2-digit'}), slots: slots });
         }
         startDate.setDate(startDate.getDate() + 1);
     }
@@ -31,7 +33,7 @@ exports.assignToStaff = (staffs, slots) => {
                 date: slot.date,
                 slots: slot.slots.map(eachSlot => ({
                     time: eachSlot,
-                    isAvailable: false
+                    isAvailable: 'unmodified',
                 }))
             }))
         })
@@ -39,8 +41,6 @@ exports.assignToStaff = (staffs, slots) => {
     console.log(" assignToStaff " + availabilityStaffArray);
     return availabilityStaffArray;
 }
-
-
 
 exports.generateHoursForStaffs = () => {
     const resultSlots = [];

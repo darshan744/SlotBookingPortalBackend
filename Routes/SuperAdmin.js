@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getAllStaff,insertManyStaffs,requestAvailability} = require('../Middlewares/SuperAdmin/superAdmin')
+const {getAllStaff,insertManyStaffs,requestAvailability} = require('../Middlewares/superAdmin')
 
 /**One time route */
 router.post('/insertManyStaffs',insertManyStaffs)

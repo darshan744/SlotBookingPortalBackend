@@ -62,8 +62,8 @@ var AvailabilitySchema = new mongoose.Schema({
     instructorId: { type: String, ref: 'Staff', required: true },
     availableSlots: [{ type:{date : String , slots : [{
         time : String,
-        isAvailable : { type : Boolean , default : false}
-    }]}, ref: 'SlotGenerated' }]
+        isAvailable : { type : String },
+    }]} }]
 });
 // Create models
 var StaffModel = mongoose.model("Staff", StaffSchema);
