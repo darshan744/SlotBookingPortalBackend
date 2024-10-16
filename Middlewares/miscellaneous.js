@@ -68,3 +68,22 @@ exports.generateHoursForStaffs = () => {
     }
     return resultSlots;
 }
+exports.reTransformSlots = (slots)=>{
+    return slots.reduce( (acc , curr) => {
+       const {date , time , isAvailable} = curr; 
+       let f = acc.find(e=> e.date === date);
+       if(!f) {
+        f = {date , availableSlots : []};
+        acc.push(f);
+       }
+       f.availableSlots.push({time , isAvailable});
+       return acc;
+    },[])
+}
+exports.transformSlots = (schedule)=>{
+    const result = [];
+    schedule.forEach(e => {
+        e.slots.forEach(slot => result.push(({date : e.date , time : slot.time , isAvailable : slot.isAvailable})));
+    })
+    return result
+}
