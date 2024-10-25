@@ -1,5 +1,4 @@
 
-
 exports.converToDate = (date) => {
     var startdate = date.split('T')[0].split('-');
     var years = startdate[0];
@@ -22,6 +21,7 @@ exports.assignToDate = (startDateStr, endDateStr, slots) => {
     console.log(" AssignToDate " + resultSlot);
     return resultSlot;
 }
+
 exports.assignToStaff = (staffs, slots) => {
     const availabilityStaffArray = [];
     staffs.forEach((staff) => {
@@ -68,6 +68,7 @@ exports.generateHoursForStaffs = () => {
     }
     return resultSlots;
 }
+
 exports.reTransformSlots = (slots)=>{
     return slots.reduce( (acc , curr) => {
        const {date , time , isAvailable} = curr; 
@@ -80,10 +81,12 @@ exports.reTransformSlots = (slots)=>{
        return acc;
     },[])
 }
+
 exports.transformSlots = (schedule)=>{
     const result = [];
     schedule.forEach(e => {
         e.slots.forEach(slot => result.push(({date : e.date , time : slot.time , isAvailable : slot.isAvailable})));
     })
-    return result
+    return result.filter(e => e.isAvailable === 'unmodified');
 }
+

@@ -27,7 +27,7 @@ exports.insertManyStaffs = async (req, res, next) => {
 
     }
 }
-
+//api/v1/superAdmin/requestAvailability
 exports.requestAvailability = async (req, res) => {
     const {startDate, endDate, staffs } = req.body;
     if (!startDate || !endDate || !Array.isArray(staffs)) {
@@ -46,4 +46,8 @@ exports.requestAvailability = async (req, res) => {
         res.json({ success: false, message: error.message })
     }
 
+}
+//api/v1/superAdmin/getAllAvailability
+exports.getAllResponse = async (req , res) => {
+        
 }
