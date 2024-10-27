@@ -11,14 +11,14 @@ exports.assignToDate = (startDateStr, endDateStr, slots) => {
     let resultSlot = [];
     let startDate = new Date(startDateStr);
     let endDate = new Date(endDateStr);
-    console.log("assignTODate : ", startDate, endDate)
+    // console.log("assignTODate : ", startDate, endDate)
     while (startDate <= endDate) {
         if (startDate.getDay() !== 0) {
             resultSlot.push({ date: startDate.toLocaleDateString("en-CA",{year:'numeric',month:'2-digit',day:'2-digit'}), slots: slots });
         }
         startDate.setDate(startDate.getDate() + 1);
     }
-    console.log(" AssignToDate " + resultSlot);
+    // console.log(" AssignToDate " + resultSlot);
     return resultSlot;
 }
 
@@ -38,7 +38,7 @@ exports.assignToStaff = (staffs, slots) => {
             }))
         })
     });
-    console.log(" assignToStaff " + availabilityStaffArray);
+    // console.log(" assignToStaff " + availabilityStaffArray);
     return availabilityStaffArray;
 }
 

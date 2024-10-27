@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const AvailabilitySchema = new mongoose.Schema({
-    instructorId: { type: String, ref: 'Staff', required: true },
+    instructorId: { type: mongoose.Types.ObjectId, ref: 'Staff', required: true },
     unmodifiedCount: { type: Number, default: 0 },
+    deleteAt: { type: Date },
     availableSlots: [{
         type: {
             date: String,
@@ -12,20 +13,34 @@ const AvailabilitySchema = new mongoose.Schema({
         }
     }]
 });
-function unmodifiedCountHelper(next) {
-    const count = 0;
-    for (const slot of this.availableSlots) {
-        slot.slots.forEach(element => {
-            if(isAvailable === 'unmodified') {
-                count++;
-            }
-        }); 
+
+/* helper function */
+async function  unmodifiedCountHelper(doc) {
+    let count = 0;
+    try {
+        for (const slot of doc.availableSlots) {
+            slot.slots.forEach(element => {
+                if (element.isAvailable === 'unmodified') {
+                    count++;
+                }
+            });
+        }
+        doc.unmodifiedCount = count;
+    } catch (e) {
+        console.error(e.message + " From helper function ")
     }
-    this.unmodifiedCount = count;
-    next();
 }
-AvailabilitySchema.pre("save",unmodifiedCountHelper)
-AvailabilitySchema.pre("updateOne",unmodifiedCountHelper)
+
+AvailabilitySchema.pre("save", function (next) {
+    unmodifiedCountHelper(this);
+    next();
+});
+AvailabilitySchema.pre("insertMany", function(next , docs) {
+    for ( const doc of docs) {
+        unmodifiedCountHelper(doc);
+    }
+    next();
+})
 const AvailabilityModel = mongoose.model("Availability", AvailabilitySchema);
 
-module.exports = { AvailabilityModel };
+module.exports = AvailabilityModel;

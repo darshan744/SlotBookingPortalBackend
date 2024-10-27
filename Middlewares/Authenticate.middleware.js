@@ -1,9 +1,9 @@
-const StudentModel = require('../Models/Student')
-const StaffModel = require('../Models/Staff');
+const {StudentModel} = require('../Models/Student.model')
+const StaffModel = require('../Models/Staff.model');
 exports.auth = async (request, response) => {
     const id = request.body.rollNo
 
-    const isStaff = await StaffModel.findOne({ _id: id });
+    const isStaff = await StaffModel.findOne({ staffId: id });
     const isStudent = await StudentModel.findOne({ _id: id });
     if (isStaff) {
         console.log('isStaff');

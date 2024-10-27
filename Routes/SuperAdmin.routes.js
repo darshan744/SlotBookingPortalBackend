@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getAllResponse,getAllStaff,insertManyStaffs,
+const {getAllResponse,getAllStaff,insertManyStaffs,getIndividualResponse,
         requestAvailability} = require('../Middlewares/superAdmin.middleware');
 
 
@@ -8,6 +8,7 @@ const {getAllResponse,getAllStaff,insertManyStaffs,
 router.post('/insertManyStaffs',insertManyStaffs)
 router.get('/getAllStaff',getAllStaff)
 router.post('/requestAvailability',requestAvailability)
-router.get('/getResponse',getAllResponse)
+router.get('/getAllResponse',getAllResponse)
+router.get('/getIndividualResponse/:id',getIndividualResponse)
 
 module.exports = router
