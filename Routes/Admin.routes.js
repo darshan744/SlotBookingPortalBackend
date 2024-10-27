@@ -1,5 +1,5 @@
 const express = require('express');
-const {getSlotAvailability,postAvaialability} = require('../Middlewares/staff');
+const {getSlotAvailability,postAvaialability} = require('../Middlewares/staff.middleware');
 const router = express.Router();
 
 router.get('/getAvailability/:id' , getSlotAvailability);

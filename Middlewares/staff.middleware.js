@@ -1,6 +1,6 @@
 const StaffModel = require('../Models/Staff');
 const {AvailabilityModel} = require("../Models/Availability");
-const {transformSlots,reTransformSlots } = require('./miscellaneous');
+const {transformSlots,reTransformSlots } = require('./miscellaneous.middleware');
 
 
 // route : api/v1/Admin/getAvailability/:id
