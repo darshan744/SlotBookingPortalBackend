@@ -1,6 +1,6 @@
-const  StaffModel = require('../Models/Staff')
-const  AvailabilityModel  = require('../Models/Availability');
-const {assignToDate ,assignToStaff,generateHoursForStaffs } = require('./miscellaneous.middleware')
+const  StaffModel = require('../Models/Staff.model')
+const  AvailabilityModel  = require('../Models/Availability.model');
+const {assignToDate ,assignToStaff,generateHoursForStaffs } = require('./helpers.middleware')
 
 exports.getAllStaff = async (req, res, next) => {
     try {

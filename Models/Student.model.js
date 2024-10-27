@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const {StudentEventResultSchema} = require('../Models/StudentEventResult');
+const {StudentEventResultSchema} = require('./StudentEventResult.model');
 const StudentSchema = new mongoose.Schema({
     _id:String,
     name : String,
