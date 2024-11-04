@@ -2,12 +2,12 @@ const StaffModel = require('../Models/Staff.model')
 const AvailabilityModel = require('../Models/Availability.model');
 const { assignToDate, assignToStaff, generateHoursForStaffs } = require('./helpers.middleware')
 
-exports.getAllStaff = async (req, res, next) => {
+exports.getAllStaffs  = async (req, res, next) => {
     try {
         const staffs = await StaffModel.find({}, { 'name': 1, 'staffId': 1 });
         res.json({
-            success: true,
-            staffs
+            success : true,
+            data : staffs
         })
     }
     catch (e) {
@@ -15,7 +15,7 @@ exports.getAllStaff = async (req, res, next) => {
     }
 }
 
-exports.insertManyStaffs = async (req, res, next) => {
+exports.createStaffs = async (req, res, next) => {
     try {
         const staffs = req.body;
         if (!Array.isArray(staffs)) {
@@ -48,7 +48,7 @@ exports.requestAvailability = async (req, res) => {
 
 }
 //api/v1/superAdmin/getAllResponse
-exports.getAllResponse = async (req, res) => {
+exports.getAllResponses = async (req, res) => {
     let dbData = await AvailabilityModel.find({}).populate({
         path: 'instructorId',
         select: 'staffId name email phNo -_id'
@@ -65,8 +65,8 @@ exports.getAllResponse = async (req, res) => {
         message: 'Success', result: results
     });
 }
-//api/v1/superAdmin/getIndividualResponse
-exports.getIndividualResponse = async (req, res) => {
+//api/v1/superAdmin/responses/:id
+exports.getResponseById = async (req, res) => {
     let id = req.params.id;
     /*interface Slot {
     time: string;
@@ -162,4 +162,22 @@ interface Staff {
     catch (e) {
         res.status(404).json({ message: `Error Occured`, error: e })
     }
+}
+//api/v1/SuperAdmin/responses/accepted
+exports.getAcceptedResponse = async (req , res) => {
+    try {
+       const result =  await AvailabilityModel.find({unmodifiedCount : 0},{'availableSlots':0 ,
+         '_id':0,'__v':0}).populate({
+           path:'instructorId',select : 'name staffId -_id ' 
+       });
+       if(result.length === 0) {
+           res.status(404).json({success : false , message : "Theres no matching found"})
+       }
+       else {
+        res.status(200).json({success : true , data : result});
+       }
+   } catch (e) {
+        res.status(500).json({success: false , message : "Unknown Error Occured in Server"})
+   }
+
 }

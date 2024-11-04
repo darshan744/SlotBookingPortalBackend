@@ -7,8 +7,6 @@ const AdminRoutes = require('./Routes/Admin.routes');
 const cors = require('cors');
 const {auth} = require('./Middlewares/Authenticate.middleware')
 
-
-
 dotenv.config({path:'Config/.env'});
 
 Database.DatabaseConnection();

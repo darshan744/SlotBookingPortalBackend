@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const {getAllResponse,getAllStaff,insertManyStaffs,getIndividualResponse,
-        requestAvailability} = require('../Middlewares/superAdmin.middleware');
+const { getAllResponses,getAllStaffs,createStaffs,getResponseById,
+        requestAvailability,getAcceptedResponse} = require('../Middlewares/superAdmin.middleware');
 
 
-/**One time route */
-router.post('/insertManyStaffs',insertManyStaffs)
-router.get('/getAllStaff',getAllStaff)
-router.post('/requestAvailability',requestAvailability)
-router.get('/getAllResponse',getAllResponse)
-router.get('/getIndividualResponse/:id',getIndividualResponse)
+//api/v1/SuperAdmin
+router.post('/staffs/availability',requestAvailability)
+router.post('/staffs',createStaffs)
+router.get('/staffs',getAllStaffs )
+router.get('/responses/accepted',getAcceptedResponse);
+router.get('/responses/:id',getResponseById)
+router.get('/responses',getAllResponses)
 
 module.exports = router
