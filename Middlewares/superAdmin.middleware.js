@@ -1,13 +1,14 @@
 const StaffModel = require('../Models/Staff.model')
 const AvailabilityModel = require('../Models/Availability.model');
 const { assignToDate, assignToStaff, generateHoursForStaffs } = require('./helpers.middleware')
-
-exports.getAllStaffs  = async (req, res, next) => {
+const SlotModel = require('../Models/Slot.model')
+const { StudentModel } = require('../Models/Student.model')
+exports.getAllStaffs = async (req, res, next) => {
     try {
         const staffs = await StaffModel.find({}, { 'name': 1, 'staffId': 1 });
         res.json({
-            success : true,
-            data : staffs
+            success: true,
+            data: staffs
         })
     }
     catch (e) {
@@ -164,20 +165,47 @@ interface Staff {
     }
 }
 //api/v1/SuperAdmin/responses/accepted
-exports.getAcceptedResponse = async (req , res) => {
+exports.getAcceptedResponse = async (req, res) => {
     try {
-       const result =  await AvailabilityModel.find({unmodifiedCount : 0},{'availableSlots':0 ,
-         '_id':0,'__v':0}).populate({
-           path:'instructorId',select : 'name staffId -_id ' 
-       });
-       if(result.length === 0) {
-           res.status(404).json({success : false , message : "Theres no matching found"})
-       }
-       else {
-        res.status(200).json({success : true , data : result});
-       }
-   } catch (e) {
-        res.status(500).json({success: false , message : "Unknown Error Occured in Server"})
-   }
+        const result = await AvailabilityModel.find({ unmodifiedCount: 0 }, {
+            'availableSlots': 0,
+            '_id': 0, '__v': 0
+        }).populate({
+            path: 'instructorId', select: 'name staffId -_id '
+        });
+        if (result.length === 0) {
+            res.status(404).json({ success: false, message: "Theres no matching found" })
+        }
+        else {
+            res.status(200).json({ success: true, data: result });
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, message: "Unknown Error Occured in Server" })
+    }
 
 }
+
+exports.slots = async (req, res) => {
+    let data = req.body;
+    const students = await StudentModel.find({ year: req.body.year }, '_id');
+    const ids = students.map(e => e._id.toString());
+    console.log(ids);
+    let  bookers = ids.map(e=>({studentId : e , isBooked : false , bookingTime : ''}))
+    data.bookers = bookers;
+    await SlotModel.insertMany(data);
+    res.json({ success: true })
+}
+
+/**
+ * type  = startDate: this.startDate,
+      endDate: this.endDate,
+      eventType: this.selectedEvent,
+      year: this.selectedYear,
+      limit: this.limit,
+      slots: { slots: 
+        this.slots().map(e => 
+          ({time : e , limit : this.limit})
+        ) ,
+         venuesAndStaff : this.venues()}
+    }
+ */

@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 const {StudentEventResultSchema} = require('./StudentEventResult.model');
 const StudentSchema = new mongoose.Schema({
-    _id:String,
+    studentId:String,
     name : String,
     department  :String,
-    resume:{type : String},
+    email:String,
+    year : String,
+    password : String,
+    resume :{type : String},
     EventHistory : [{type : StudentEventResultSchema , ref: 'Event'}]
 });
 const StudentModel = mongoose.model("Student",StudentSchema);

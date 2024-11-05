@@ -1,0 +1,2002 @@
+[
+  {
+    "studentId": "7376241EC101",
+    "name": "Susan McGlynn",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "250324",
+    "resume": "SusanMcGlynn_resume",
+    "email": "susanmcglynn.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS102",
+    "name": "Damon Cormier",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "190224",
+    "resume": "DamonCormier_resume",
+    "email": "damoncormier.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT103",
+    "name": "Irene Windler",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "250524",
+    "resume": "IreneWindler_resume",
+    "email": "irenewindler.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE104",
+    "name": "Natasha Mills-Russel",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "030424",
+    "resume": "NatashaMills-Russel_resume",
+    "email": "natashamills-russel.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC105",
+    "name": "Patsy Homenick",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "240824",
+    "resume": "PatsyHomenick_resume",
+    "email": "patsyhomenick.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS106",
+    "name": "Charlie Fadel",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "070524",
+    "resume": "CharlieFadel_resume",
+    "email": "charliefadel.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT107",
+    "name": "Bob Sporer",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "011124",
+    "resume": "BobSporer_resume",
+    "email": "bobsporer.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE108",
+    "name": "Jana Dare",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "200624",
+    "resume": "JanaDare_resume",
+    "email": "janadare.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC109",
+    "name": "Kenneth Lang",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "030324",
+    "resume": "KennethLang_resume",
+    "email": "kennethlang.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS110",
+    "name": "Kelly Brown",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "040624",
+    "resume": "KellyBrown_resume",
+    "email": "kellybrown.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT111",
+    "name": "Miss Angelica Sporer Sr.",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "060924",
+    "resume": "MissAngelica_resume",
+    "email": "missangelica.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE112",
+    "name": "Jerry Brakus",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "140524",
+    "resume": "JerryBrakus_resume",
+    "email": "jerrybrakus.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC113",
+    "name": "Gregory Mosciski",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "230724",
+    "resume": "GregoryMosciski_resume",
+    "email": "gregorymosciski.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS114",
+    "name": "Sheldon Hegmann",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "150624",
+    "resume": "SheldonHegmann_resume",
+    "email": "sheldonhegmann.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT115",
+    "name": "Jorge Turcotte",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "160524",
+    "resume": "JorgeTurcotte_resume",
+    "email": "jorgeturcotte.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE116",
+    "name": "Dianne Christiansen",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "100324",
+    "resume": "DianneChristiansen_resume",
+    "email": "diannechristiansen.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC117",
+    "name": "Timothy Skiles",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "041223",
+    "resume": "TimothySkiles_resume",
+    "email": "timothyskiles.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS118",
+    "name": "Robin Crist",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "250324",
+    "resume": "RobinCrist_resume",
+    "email": "robincrist.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT119",
+    "name": "Victor Stracke",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "300724",
+    "resume": "VictorStracke_resume",
+    "email": "victorstracke.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE120",
+    "name": "Austin Runolfsson",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "190224",
+    "resume": "AustinRunolfsson_resume",
+    "email": "austinrunolfsson.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC121",
+    "name": "Holly Auer",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "260224",
+    "resume": "HollyAuer_resume",
+    "email": "hollyauer.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS122",
+    "name": "Lula Lind",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "130924",
+    "resume": "LulaLind_resume",
+    "email": "lulalind.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT123",
+    "name": "Camille Rogahn",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "250624",
+    "resume": "CamilleRogahn_resume",
+    "email": "camillerogahn.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE124",
+    "name": "Christopher Kling",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "141223",
+    "resume": "ChristopherKling_resume",
+    "email": "christopherkling.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC125",
+    "name": "Sabrina Schroeder",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "040824",
+    "resume": "SabrinaSchroeder_resume",
+    "email": "sabrinaschroeder.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS126",
+    "name": "Sidney Gleichner-Block",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "170524",
+    "resume": "SidneyGleichner-Block_resume",
+    "email": "sidneygleichner-block.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT127",
+    "name": "Jerald Deckow",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "111223",
+    "resume": "JeraldDeckow_resume",
+    "email": "jeralddeckow.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE128",
+    "name": "Jon Mann",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "030624",
+    "resume": "JonMann_resume",
+    "email": "jonmann.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC129",
+    "name": "Billy Stehr",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "100324",
+    "resume": "BillyStehr_resume",
+    "email": "billystehr.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS130",
+    "name": "Betty Sanford",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "080124",
+    "resume": "BettySanford_resume",
+    "email": "bettysanford.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT131",
+    "name": "Janet Donnelly",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "151123",
+    "resume": "JanetDonnelly_resume",
+    "email": "janetdonnelly.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE132",
+    "name": "Heather Russel",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "261024",
+    "resume": "HeatherRussel_resume",
+    "email": "heatherrussel.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC133",
+    "name": "Theodore Mayer",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "210824",
+    "resume": "TheodoreMayer_resume",
+    "email": "theodoremayer.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS134",
+    "name": "Blanca Howell",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "290424",
+    "resume": "BlancaHowell_resume",
+    "email": "blancahowell.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT135",
+    "name": "Steve Hermann",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "100224",
+    "resume": "SteveHermann_resume",
+    "email": "stevehermann.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE136",
+    "name": "Mathew Romaguera",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "040424",
+    "resume": "MathewRomaguera_resume",
+    "email": "mathewromaguera.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC137",
+    "name": "Rudolph Dooley",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "190324",
+    "resume": "RudolphDooley_resume",
+    "email": "rudolphdooley.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS138",
+    "name": "Anthony Champlin DVM",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "300524",
+    "resume": "AnthonyChamplin_resume",
+    "email": "anthonychamplin.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT139",
+    "name": "Lonnie Conroy",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "240524",
+    "resume": "LonnieConroy_resume",
+    "email": "lonnieconroy.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE140",
+    "name": "Casey Goyette",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "190124",
+    "resume": "CaseyGoyette_resume",
+    "email": "caseygoyette.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC141",
+    "name": "Claire Bartoletti",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "090124",
+    "resume": "ClaireBartoletti_resume",
+    "email": "clairebartoletti.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS142",
+    "name": "Darren Hintz",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "090724",
+    "resume": "DarrenHintz_resume",
+    "email": "darrenhintz.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT143",
+    "name": "Cristina McDermott",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "120224",
+    "resume": "CristinaMcDermott_resume",
+    "email": "cristinamcdermott.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE144",
+    "name": "Marlon Lang",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "291024",
+    "resume": "MarlonLang_resume",
+    "email": "marlonlang.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC145",
+    "name": "Tyler Kub",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "260424",
+    "resume": "TylerKub_resume",
+    "email": "tylerkub.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS146",
+    "name": "Irene Reinger V",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "250624",
+    "resume": "IreneReinger_resume",
+    "email": "irenereinger.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT147",
+    "name": "Diane Stanton",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "170624",
+    "resume": "DianeStanton_resume",
+    "email": "dianestanton.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE148",
+    "name": "Rex Hickle",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "151223",
+    "resume": "RexHickle_resume",
+    "email": "rexhickle.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC149",
+    "name": "Chris Herzog",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "110224",
+    "resume": "ChrisHerzog_resume",
+    "email": "chrisherzog.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS150",
+    "name": "Gene Hirthe-Koch",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "300924",
+    "resume": "GeneHirthe-Koch_resume",
+    "email": "genehirthe-koch.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT151",
+    "name": "Charlie Dicki",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "110824",
+    "resume": "CharlieDicki_resume",
+    "email": "charliedicki.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE152",
+    "name": "Janie McClure",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "290624",
+    "resume": "JanieMcClure_resume",
+    "email": "janiemcclure.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC153",
+    "name": "Bernard Stiedemann",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "190824",
+    "resume": "BernardStiedemann_resume",
+    "email": "bernardstiedemann.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS154",
+    "name": "Ted O'Connell Jr.",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "250424",
+    "resume": "TedO'Connell_resume",
+    "email": "tedo'connell.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT155",
+    "name": "Geraldine Nikolaus",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "140624",
+    "resume": "GeraldineNikolaus_resume",
+    "email": "geraldinenikolaus.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE156",
+    "name": "Kristen Keeling",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "160924",
+    "resume": "KristenKeeling_resume",
+    "email": "kristenkeeling.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC157",
+    "name": "Alicia Streich",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "270124",
+    "resume": "AliciaStreich_resume",
+    "email": "aliciastreich.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS158",
+    "name": "Johanna Wilderman",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "170924",
+    "resume": "JohannaWilderman_resume",
+    "email": "johannawilderman.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT159",
+    "name": "Marc Lockman",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "110624",
+    "resume": "MarcLockman_resume",
+    "email": "marclockman.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE160",
+    "name": "Gertrude Nitzsche",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "100624",
+    "resume": "GertrudeNitzsche_resume",
+    "email": "gertrudenitzsche.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC161",
+    "name": "Cecil Waelchi",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "201123",
+    "resume": "CecilWaelchi_resume",
+    "email": "cecilwaelchi.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS162",
+    "name": "Delbert Runolfsson",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "290424",
+    "resume": "DelbertRunolfsson_resume",
+    "email": "delbertrunolfsson.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT163",
+    "name": "Eileen Hartmann",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "081123",
+    "resume": "EileenHartmann_resume",
+    "email": "eileenhartmann.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE164",
+    "name": "Ginger Pollich",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "190224",
+    "resume": "GingerPollich_resume",
+    "email": "gingerpollich.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC165",
+    "name": "Ruby Pouros",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "290624",
+    "resume": "RubyPouros_resume",
+    "email": "rubypouros.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS166",
+    "name": "Vicky Herzog I",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "070624",
+    "resume": "VickyHerzog_resume",
+    "email": "vickyherzog.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT167",
+    "name": "Carolyn Littel",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "210324",
+    "resume": "CarolynLittel_resume",
+    "email": "carolynlittel.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE168",
+    "name": "Felicia Kohler",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "090924",
+    "resume": "FeliciaKohler_resume",
+    "email": "feliciakohler.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC169",
+    "name": "Penny Bogan",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "190524",
+    "resume": "PennyBogan_resume",
+    "email": "pennybogan.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS170",
+    "name": "Winifred Dickens",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "130324",
+    "resume": "WinifredDickens_resume",
+    "email": "winifreddickens.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT171",
+    "name": "Willard Hudson",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "270824",
+    "resume": "WillardHudson_resume",
+    "email": "willardhudson.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE172",
+    "name": "Gene Kshlerin",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "270424",
+    "resume": "GeneKshlerin_resume",
+    "email": "genekshlerin.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC173",
+    "name": "Shelley McCullough",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "180224",
+    "resume": "ShelleyMcCullough_resume",
+    "email": "shelleymccullough.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS174",
+    "name": "Sophia Deckow III",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "271024",
+    "resume": "SophiaDeckow_resume",
+    "email": "sophiadeckow.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT175",
+    "name": "Katie Beahan",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "230224",
+    "resume": "KatieBeahan_resume",
+    "email": "katiebeahan.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE176",
+    "name": "Monica Wisoky",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "150624",
+    "resume": "MonicaWisoky_resume",
+    "email": "monicawisoky.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC177",
+    "name": "Roxanne Lowe",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "120524",
+    "resume": "RoxanneLowe_resume",
+    "email": "roxannelowe.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS178",
+    "name": "Marlene D'Amore",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "190324",
+    "resume": "MarleneD'Amore_resume",
+    "email": "marlened'amore.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT179",
+    "name": "Yolanda Orn-Dickens DVM",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "270624",
+    "resume": "YolandaOrn-Dickens_resume",
+    "email": "yolandaorn-dickens.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE180",
+    "name": "Lamar Daniel",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "270724",
+    "resume": "LamarDaniel_resume",
+    "email": "lamardaniel.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC181",
+    "name": "Sean Smith",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "270924",
+    "resume": "SeanSmith_resume",
+    "email": "seansmith.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS182",
+    "name": "Aaron Leuschke",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "080224",
+    "resume": "AaronLeuschke_resume",
+    "email": "aaronleuschke.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT183",
+    "name": "Verna Prosacco",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "040524",
+    "resume": "VernaProsacco_resume",
+    "email": "vernaprosacco.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE184",
+    "name": "Rochelle Hills",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "171223",
+    "resume": "RochelleHills_resume",
+    "email": "rochellehills.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC185",
+    "name": "Claude Kemmer",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "190724",
+    "resume": "ClaudeKemmer_resume",
+    "email": "claudekemmer.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS186",
+    "name": "Freda Kozey",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "080224",
+    "resume": "FredaKozey_resume",
+    "email": "fredakozey.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT187",
+    "name": "Camille Blick",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "010224",
+    "resume": "CamilleBlick_resume",
+    "email": "camilleblick.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE188",
+    "name": "Roosevelt Muller-Bins",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "090724",
+    "resume": "RooseveltMuller-Bins_resume",
+    "email": "rooseveltmuller-bins.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC189",
+    "name": "Veronica Monahan",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "141223",
+    "resume": "VeronicaMonahan_resume",
+    "email": "veronicamonahan.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231CS190",
+    "name": "Wesley Shields",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "251123",
+    "resume": "WesleyShields_resume",
+    "email": "wesleyshields.cse23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT191",
+    "name": "Jenna Lind DVM",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "280124",
+    "resume": "JennaLind_resume",
+    "email": "jennalind.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE192",
+    "name": "Vicki Anderson",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "031223",
+    "resume": "VickiAnderson_resume",
+    "email": "vickianderson.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC193",
+    "name": "Spencer Stoltenberg",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "290724",
+    "resume": "SpencerStoltenberg_resume",
+    "email": "spencerstoltenberg.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231CS194",
+    "name": "Shane Ratke",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "081123",
+    "resume": "ShaneRatke_resume",
+    "email": "shaneratke.cse23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT195",
+    "name": "Gerardo Erdman",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "220424",
+    "resume": "GerardoErdman_resume",
+    "email": "gerardoerdman.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE196",
+    "name": "Beatrice White",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "150124",
+    "resume": "BeatriceWhite_resume",
+    "email": "beatricewhite.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC197",
+    "name": "Kyle Aufderhar",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "040424",
+    "resume": "KyleAufderhar_resume",
+    "email": "kyleaufderhar.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS198",
+    "name": "Curtis Fay",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "170924",
+    "resume": "CurtisFay_resume",
+    "email": "curtisfay.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT199",
+    "name": "Vincent Kuhic",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "080624",
+    "resume": "VincentKuhic_resume",
+    "email": "vincentkuhic.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE200",
+    "name": "Charlotte Hermiston",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "020824",
+    "resume": "CharlotteHermiston_resume",
+    "email": "charlottehermiston.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC101",
+    "name": "Myron Hilpert",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "240124",
+    "resume": "MyronHilpert_resume",
+    "email": "myronhilpert.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS102",
+    "name": "Virginia Gibson",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "041124",
+    "resume": "VirginiaGibson_resume",
+    "email": "virginiagibson.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT103",
+    "name": "Nathaniel Dietrich",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "181123",
+    "resume": "NathanielDietrich_resume",
+    "email": "nathanieldietrich.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE104",
+    "name": "Ana Dickens",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "190924",
+    "resume": "AnaDickens_resume",
+    "email": "anadickens.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC105",
+    "name": "Douglas Lang",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "010624",
+    "resume": "DouglasLang_resume",
+    "email": "douglaslang.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS106",
+    "name": "Rene Wolff",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "060124",
+    "resume": "ReneWolff_resume",
+    "email": "renewolff.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT107",
+    "name": "Yolanda Marvin I",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "040724",
+    "resume": "YolandaMarvin_resume",
+    "email": "yolandamarvin.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE108",
+    "name": "Javier Runte DVM",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "060624",
+    "resume": "JavierRunte_resume",
+    "email": "javierrunte.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC109",
+    "name": "Cecilia Blick",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "180424",
+    "resume": "CeciliaBlick_resume",
+    "email": "ceciliablick.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS110",
+    "name": "Julie Haag MD",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "010724",
+    "resume": "JulieHaag_resume",
+    "email": "juliehaag.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT111",
+    "name": "Duane Kertzmann",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "200524",
+    "resume": "DuaneKertzmann_resume",
+    "email": "duanekertzmann.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE112",
+    "name": "Marilyn Hoppe",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "210524",
+    "resume": "MarilynHoppe_resume",
+    "email": "marilynhoppe.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC113",
+    "name": "Earl Moore",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "071123",
+    "resume": "EarlMoore_resume",
+    "email": "earlmoore.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231CS114",
+    "name": "Rochelle Toy",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "251223",
+    "resume": "RochelleToy_resume",
+    "email": "rochelletoy.cse23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT115",
+    "name": "Alan Smith DDS",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "300724",
+    "resume": "AlanSmith_resume",
+    "email": "alansmith.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE116",
+    "name": "Lynne Adams-Predovic",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "060224",
+    "resume": "LynneAdams-Predovic_resume",
+    "email": "lynneadams-predovic.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC117",
+    "name": "Alexis Huels",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "031223",
+    "resume": "AlexisHuels_resume",
+    "email": "alexishuels.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS118",
+    "name": "George Treutel",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "011124",
+    "resume": "GeorgeTreutel_resume",
+    "email": "georgetreutel.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT119",
+    "name": "Bessie Schowalter",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "250624",
+    "resume": "BessieSchowalter_resume",
+    "email": "bessieschowalter.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE120",
+    "name": "Frances Mertz",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "161223",
+    "resume": "FrancesMertz_resume",
+    "email": "francesmertz.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC121",
+    "name": "Roland Hettinger",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "160824",
+    "resume": "RolandHettinger_resume",
+    "email": "rolandhettinger.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS122",
+    "name": "May Blanda",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "021024",
+    "resume": "MayBlanda_resume",
+    "email": "mayblanda.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT123",
+    "name": "Israel Nolan",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "240224",
+    "resume": "IsraelNolan_resume",
+    "email": "israelnolan.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE124",
+    "name": "Dana Reinger II",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "171123",
+    "resume": "DanaReinger_resume",
+    "email": "danareinger.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC125",
+    "name": "Milton Gusikowski",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "020624",
+    "resume": "MiltonGusikowski_resume",
+    "email": "miltongusikowski.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS126",
+    "name": "May McClure",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "260524",
+    "resume": "MayMcClure_resume",
+    "email": "maymcclure.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT127",
+    "name": "Pat Schuppe",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "070424",
+    "resume": "PatSchuppe_resume",
+    "email": "patschuppe.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE128",
+    "name": "Charles Johnson I",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "310124",
+    "resume": "CharlesJohnson_resume",
+    "email": "charlesjohnson.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC129",
+    "name": "Austin Murphy",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "100724",
+    "resume": "AustinMurphy_resume",
+    "email": "austinmurphy.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS130",
+    "name": "Charlene Pagac",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "200924",
+    "resume": "CharlenePagac_resume",
+    "email": "charlenepagac.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT131",
+    "name": "Gerard Swift-Senger",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "250724",
+    "resume": "GerardSwift-Senger_resume",
+    "email": "gerardswift-senger.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE132",
+    "name": "Timmy Smitham",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "010524",
+    "resume": "TimmySmitham_resume",
+    "email": "timmysmitham.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC133",
+    "name": "Domingo Gusikowski-Schowalter",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "130424",
+    "resume": "DomingoGusikowski-Schowalter_resume",
+    "email": "domingogusikowski-schowalter.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS134",
+    "name": "Alicia Lubowitz DVM",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "081024",
+    "resume": "AliciaLubowitz_resume",
+    "email": "alicialubowitz.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT135",
+    "name": "Rosa Watsica",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "270424",
+    "resume": "RosaWatsica_resume",
+    "email": "rosawatsica.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE136",
+    "name": "Miss Julia Zemlak",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "180224",
+    "resume": "MissJulia_resume",
+    "email": "missjulia.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC137",
+    "name": "Wilson Wuckert-Hamill",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "020924",
+    "resume": "WilsonWuckert-Hamill_resume",
+    "email": "wilsonwuckert-hamill.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS138",
+    "name": "Wilfred Abernathy",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "180324",
+    "resume": "WilfredAbernathy_resume",
+    "email": "wilfredabernathy.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT139",
+    "name": "Evan DuBuque",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "150424",
+    "resume": "EvanDuBuque_resume",
+    "email": "evandubuque.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE140",
+    "name": "Nichole Yost",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "280924",
+    "resume": "NicholeYost_resume",
+    "email": "nicholeyost.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC141",
+    "name": "Kathryn Moen",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "110624",
+    "resume": "KathrynMoen_resume",
+    "email": "kathrynmoen.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS142",
+    "name": "Spencer Cronin",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "250924",
+    "resume": "SpencerCronin_resume",
+    "email": "spencercronin.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT143",
+    "name": "Benny Tremblay",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "090124",
+    "resume": "BennyTremblay_resume",
+    "email": "bennytremblay.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE144",
+    "name": "Beatrice Veum DDS",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "030624",
+    "resume": "BeatriceVeum_resume",
+    "email": "beatriceveum.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC145",
+    "name": "Wilfred Wisozk",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "021024",
+    "resume": "WilfredWisozk_resume",
+    "email": "wilfredwisozk.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS146",
+    "name": "Jermaine Reilly",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "240624",
+    "resume": "JermaineReilly_resume",
+    "email": "jermainereilly.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT147",
+    "name": "Derek West",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "160224",
+    "resume": "DerekWest_resume",
+    "email": "derekwest.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE148",
+    "name": "Antonia McCullough",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "100624",
+    "resume": "AntoniaMcCullough_resume",
+    "email": "antoniamccullough.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC149",
+    "name": "Ashley Wunsch",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "100924",
+    "resume": "AshleyWunsch_resume",
+    "email": "ashleywunsch.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS150",
+    "name": "Dolores Hessel MD",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "091024",
+    "resume": "DoloresHessel_resume",
+    "email": "doloreshessel.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT151",
+    "name": "Ms. Natalie Hartmann",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "100424",
+    "resume": "Ms.Natalie_resume",
+    "email": "ms.natalie.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE152",
+    "name": "Ida Rath",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "221024",
+    "resume": "IdaRath_resume",
+    "email": "idarath.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC153",
+    "name": "Amanda Turner",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "240624",
+    "resume": "AmandaTurner_resume",
+    "email": "amandaturner.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231CS154",
+    "name": "Hugo Block",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "291123",
+    "resume": "HugoBlock_resume",
+    "email": "hugoblock.cse23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT155",
+    "name": "Maria Jast",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "251123",
+    "resume": "MariaJast_resume",
+    "email": "mariajast.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE156",
+    "name": "Diana Jones",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "110524",
+    "resume": "DianaJones_resume",
+    "email": "dianajones.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC157",
+    "name": "Megan Lang",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "210424",
+    "resume": "MeganLang_resume",
+    "email": "meganlang.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS158",
+    "name": "Lynda Klocko",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "070224",
+    "resume": "LyndaKlocko_resume",
+    "email": "lyndaklocko.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT159",
+    "name": "Jake Pagac",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "270624",
+    "resume": "JakePagac_resume",
+    "email": "jakepagac.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE160",
+    "name": "Shawn DuBuque V",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "251024",
+    "resume": "ShawnDuBuque_resume",
+    "email": "shawndubuque.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC161",
+    "name": "Mable Collier",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "080424",
+    "resume": "MableCollier_resume",
+    "email": "mablecollier.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS162",
+    "name": "Ross Considine",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "310824",
+    "resume": "RossConsidine_resume",
+    "email": "rossconsidine.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT163",
+    "name": "Alison Fahey PhD",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "301123",
+    "resume": "AlisonFahey_resume",
+    "email": "alisonfahey.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE164",
+    "name": "Christopher Ruecker",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "180724",
+    "resume": "ChristopherRuecker_resume",
+    "email": "christopherruecker.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC165",
+    "name": "Marion Raynor",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "010924",
+    "resume": "MarionRaynor_resume",
+    "email": "marionraynor.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS166",
+    "name": "Camille Lebsack",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "101024",
+    "resume": "CamilleLebsack_resume",
+    "email": "camillelebsack.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT167",
+    "name": "Karl Aufderhar",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "130924",
+    "resume": "KarlAufderhar_resume",
+    "email": "karlaufderhar.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE168",
+    "name": "Roland Hintz",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "150124",
+    "resume": "RolandHintz_resume",
+    "email": "rolandhintz.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC169",
+    "name": "Benny Kuhlman-Howell",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "190324",
+    "resume": "BennyKuhlman-Howell_resume",
+    "email": "bennykuhlman-howell.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS170",
+    "name": "Lois Hamill Jr.",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "271024",
+    "resume": "LoisHamill_resume",
+    "email": "loishamill.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT171",
+    "name": "Ms. Carolyn Gleason",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "220824",
+    "resume": "Ms.Carolyn_resume",
+    "email": "ms.carolyn.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE172",
+    "name": "Eunice Brown",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "130524",
+    "resume": "EuniceBrown_resume",
+    "email": "eunicebrown.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC173",
+    "name": "Jesus Torphy MD",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "100724",
+    "resume": "JesusTorphy_resume",
+    "email": "jesustorphy.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS174",
+    "name": "Miriam Reichel",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "050824",
+    "resume": "MiriamReichel_resume",
+    "email": "miriamreichel.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT175",
+    "name": "Zachary Hand III",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "300424",
+    "resume": "ZacharyHand_resume",
+    "email": "zacharyhand.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE176",
+    "name": "Roxanne Hermann",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "150924",
+    "resume": "RoxanneHermann_resume",
+    "email": "roxannehermann.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC177",
+    "name": "Joey Hirthe",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "110624",
+    "resume": "JoeyHirthe_resume",
+    "email": "joeyhirthe.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS178",
+    "name": "Tracey Ratke",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "230824",
+    "resume": "TraceyRatke_resume",
+    "email": "traceyratke.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT179",
+    "name": "Virgil Welch",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "281024",
+    "resume": "VirgilWelch_resume",
+    "email": "virgilwelch.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE180",
+    "name": "Claude Ruecker",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "080624",
+    "resume": "ClaudeRuecker_resume",
+    "email": "clauderuecker.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EC181",
+    "name": "Margie Kiehn",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "101223",
+    "resume": "MargieKiehn_resume",
+    "email": "margiekiehn.ece23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231CS182",
+    "name": "Rosie Reichert",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "161123",
+    "resume": "RosieReichert_resume",
+    "email": "rosiereichert.cse23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT183",
+    "name": "Jean Tromp",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "010424",
+    "resume": "JeanTromp_resume",
+    "email": "jeantromp.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE184",
+    "name": "Alton Rice",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "110124",
+    "resume": "AltonRice_resume",
+    "email": "altonrice.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC185",
+    "name": "Peggy Feest IV",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "010624",
+    "resume": "PeggyFeest_resume",
+    "email": "peggyfeest.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS186",
+    "name": "Lucy Block",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "220124",
+    "resume": "LucyBlock_resume",
+    "email": "lucyblock.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231IT187",
+    "name": "Alvin Abernathy",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "201123",
+    "resume": "AlvinAbernathy_resume",
+    "email": "alvinabernathy.it23@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE188",
+    "name": "Glenda Mante",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "010124",
+    "resume": "GlendaMante_resume",
+    "email": "glendamante.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC189",
+    "name": "Wendy Emmerich",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "131024",
+    "resume": "WendyEmmerich_resume",
+    "email": "wendyemmerich.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS190",
+    "name": "Celia Ward",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "170824",
+    "resume": "CeliaWard_resume",
+    "email": "celiaward.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT191",
+    "name": "Jenny Hackett",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "230724",
+    "resume": "JennyHackett_resume",
+    "email": "jennyhackett.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE192",
+    "name": "Robin Lowe",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "280624",
+    "resume": "RobinLowe_resume",
+    "email": "robinlowe.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC193",
+    "name": "Don Baumbach III",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "300524",
+    "resume": "DonBaumbach_resume",
+    "email": "donbaumbach.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS194",
+    "name": "Jasmine Larkin",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "280724",
+    "resume": "JasmineLarkin_resume",
+    "email": "jasminelarkin.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT195",
+    "name": "Jorge McCullough-Paucek",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "180824",
+    "resume": "JorgeMcCullough-Paucek_resume",
+    "email": "jorgemccullough-paucek.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EE196",
+    "name": "Jose Kunde III",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "260224",
+    "resume": "JoseKunde_resume",
+    "email": "josekunde.eee24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241EC197",
+    "name": "Phyllis Homenick",
+    "department": "ECE",
+    "year": "Year 1",
+    "password": "170624",
+    "resume": "PhyllisHomenick_resume",
+    "email": "phyllishomenick.ece24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241CS198",
+    "name": "Randolph Tromp-Ondricka",
+    "department": "CSE",
+    "year": "Year 2",
+    "password": "180424",
+    "resume": "RandolphTromp-Ondricka_resume",
+    "email": "randolphtromp-ondricka.cse24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376241IT199",
+    "name": "John Hermann",
+    "department": "IT",
+    "year": "Year 3",
+    "password": "100224",
+    "resume": "JohnHermann_resume",
+    "email": "johnhermann.it24@bitsathy.ac.in",
+    "EventHistory": []
+  },
+  {
+    "studentId": "7376231EE200",
+    "name": "Jeffery Lakin",
+    "department": "EEE",
+    "year": "Year 4",
+    "password": "161223",
+    "resume": "JefferyLakin_resume",
+    "email": "jefferylakin.eee23@bitsathy.ac.in",
+    "EventHistory": []
+  }
+]
