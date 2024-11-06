@@ -1,91 +1,74 @@
-const StaffModel = require('../Models/Staff.model')
-const AvailabilityModel = require('../Models/Availability.model');
-const { assignToDate, assignToStaff, generateHoursForStaffs } = require('./helpers.middleware')
-const SlotModel = require('../Models/Slot.model')
-const { StudentModel } = require('../Models/Student.model')
-exports.getAllStaffs = async (req, res, next) => {
+import { Request, Response, NextFunction } from 'express';
+import {StaffModel} from '../Models/Staff.model';
+import {AvailabilityModel} from '../Models/Availability.model';
+import { assignToDate, assignToStaff, generateHoursForStaffs } from './helpers';
+import {SlotModel} from '../Models/Slot.model';
+import { StudentModel } from '../Models/Student.model';
+
+export const getAllStaffs = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-        const staffs = await StaffModel.find({}, { 'name': 1, 'staffId': 1 });
+        const staffs: Array<{ name: string; staffId: string }> = await StaffModel.find({}, { 'name': 1, 'staffId': 1 });
         res.json({
             success: true,
             data: staffs
-        })
-    }
-    catch (e) {
-        res.status(404).json({ success: false })
-    }
-}
-
-exports.createStaffs = async (req, res, next) => {
-    try {
-        const staffs = req.body;
-        if (!Array.isArray(staffs)) {
-            return res.status(400).json({ success: false, message: 'Invalid INput ' })
-        }
-        await staffs.StaffModel.insertMany(staffs);
-        res.json({ success: true })
+        });
     } catch (e) {
-        res.json({ success: false, message: 'error Occured in inserting objects array' })
+        res.status(404).json({ success: false });
+    }
+};
 
-    }
-}
-//api/v1/superAdmin/requestAvailability
-exports.requestAvailability = async (req, res) => {
-    const { startDate, endDate, staffs } = req.body;
-    if (!startDate || !endDate || !Array.isArray(staffs)) {
-        return res.status(400).json({ success: false, message: 'Invalid input' });
-    }
-    let slots = generateHoursForStaffs();
+export const createStaffs = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-        const slotsGenerated = assignToDate(startDate, endDate, slots);
-        const result = assignToStaff(staffs, slotsGenerated)
+        const staffs: any = req.body;
+        if (!Array.isArray(staffs)) {
+         res.status(400).json({ success: false, message: 'Invalid Input' });
+        }
+        await StaffModel.insertMany(staffs);
+        res.json({ success: true });
+    } catch (e) {
+        res.json({ success: false, message: 'Error Occurred in inserting objects array' });
+    }
+};
+
+export const requestAvailability = async (req: Request, res: Response): Promise<void> => {
+    const { startDate, endDate, staffs }: { startDate: string; endDate: string; staffs:{ _id: string; }[] } = req.body;
+    if (!startDate || !endDate || !Array.isArray(staffs)) {
+        res.status(400).json({ success: false, message: 'Invalid input' });
+    }
+    let slots: any = generateHoursForStaffs();
+    try {
+        const slotsGenerated: any = assignToDate(startDate, endDate, slots);
+        const result: any = assignToStaff(staffs, slotsGenerated);
         console.log(result);
         await AvailabilityModel.insertMany(result);
         res.json({ message: 'Request Received And Success' });
-    } catch (error) {
+    } catch (error : any) {
         console.error("Error" + error);
-        res.json({ success: false, message: error.message })
+        res.json({ success: false, message: error.message });
     }
+};
 
-}
-//api/v1/superAdmin/getAllResponse
-exports.getAllResponses = async (req, res) => {
-    let dbData = await AvailabilityModel.find({}).populate({
+export const getAllResponses = async (req: Request, res: Response): Promise<void> => {
+    let dbData: Array<any> = await AvailabilityModel.find({}).populate({
         path: 'instructorId',
         select: 'staffId name email phNo -_id'
     });
-    let results = dbData.map((el) => ({
+    let results: Array<{ staffId: string; phoneNumber: string; name: string; email: string; unmodifiedCount: number }> = dbData.map((el) => ({
         staffId: el.instructorId.staffId,
         phoneNumber: el.instructorId.phNo,
         name: el.instructorId.name,
         email: el.instructorId.email,
         unmodifiedCount: el.unmodifiedCount
-    })
-    );
+    }));
     res.status(200).json({
         message: 'Success', result: results
     });
-}
-//api/v1/superAdmin/responses/:id
-exports.getResponseById = async (req, res) => {
-    let id = req.params.id;
-    /*interface Slot {
-    time: string;
-    isAvailable: "Accepted" | "Declined"; // Adjust as needed
-}
+};
 
-interface AvailableSlot {
-    date: string; // Or Date if you prefer
-    slots: Slot[];
-}
-
-interface Staff {
-    staffId: string;
-    name: string;
-    availableSlots: AvailableSlot[];
-}*/
+export const getResponseById = async (req: Request, res: Response): Promise<void> => {
+    let id: string = req.params.id;
     try {
-        let results = await AvailabilityModel.aggregate([
+        let results: Array<any> = await AvailabilityModel.aggregate([
             {
                 $lookup: {
                     from: 'staffs',
@@ -100,7 +83,7 @@ interface Staff {
             {
                 $match: {
                     'staff.staffId': id,
-                    'availableSlots.slots.isAvailable': 'Accepted' // Filter for available slots
+                    'availableSlots.slots.isAvailable': 'Accepted'
                 }
             },
             {
@@ -159,53 +142,36 @@ interface Staff {
         res.status(200).json({
             message: "Success", Result: results[0]
         });
+    } catch (e) {
+        res.status(404).json({ message: `Error Occurred`, error: e });
     }
-    catch (e) {
-        res.status(404).json({ message: `Error Occured`, error: e })
-    }
-}
-//api/v1/SuperAdmin/responses/accepted
-exports.getAcceptedResponse = async (req, res) => {
+};
+
+export const getAcceptedResponse = async (req: Request, res: Response): Promise<void> => {
     try {
-        const result = await AvailabilityModel.find({ unmodifiedCount: 0 }, {
+        const result: Array<any> = await AvailabilityModel.find({ unmodifiedCount: 0 }, {
             'availableSlots': 0,
             '_id': 0, '__v': 0
         }).populate({
             path: 'instructorId', select: 'name staffId -_id '
         });
         if (result.length === 0) {
-            res.status(404).json({ success: false, message: "Theres no matching found" })
-        }
-        else {
+            res.status(404).json({ success: false, message: "There's no matching found" });
+        } else {
             res.status(200).json({ success: true, data: result });
         }
     } catch (e) {
-        res.status(500).json({ success: false, message: "Unknown Error Occured in Server" })
+        res.status(500).json({ success: false, message: "Unknown Error Occurred in Server" });
     }
+};
 
-}
-
-exports.slots = async (req, res) => {
-    let data = req.body;
-    const students = await StudentModel.find({ year: req.body.year }, '_id');
-    const ids = students.map(e => e._id.toString());
+export const slots = async (req: Request, res: Response): Promise<void> => {
+    let data: any = req.body;
+    const students: Array<{ _id: string }> = await StudentModel.find({ year: req.body.year }, '_id');
+    const ids: string[] = students.map(e => e._id.toString());
     console.log(ids);
-    let  bookers = ids.map(e=>({studentId : e , isBooked : false , bookingTime : ''}))
+    let bookers: Array<{ studentId: string; isBooked: boolean; bookingTime: string }> = ids.map(e => ({ studentId: e, isBooked: false, bookingTime: '' }));
     data.bookers = bookers;
     await SlotModel.insertMany(data);
-    res.json({ success: true })
-}
-
-/**
- * type  = startDate: this.startDate,
-      endDate: this.endDate,
-      eventType: this.selectedEvent,
-      year: this.selectedYear,
-      limit: this.limit,
-      slots: { slots: 
-        this.slots().map(e => 
-          ({time : e , limit : this.limit})
-        ) ,
-         venuesAndStaff : this.venues()}
-    }
- */
+    res.json({ success: true });
+};

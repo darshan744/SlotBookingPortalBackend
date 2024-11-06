@@ -1,11 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const { getAllResponses,getAllStaffs,createStaffs,getResponseById,
-        requestAvailability,getAcceptedResponse , slots} = require('../Middlewares/superAdmin.middleware');
+import express, { Router } from 'express'
+const router : Router = express.Router();
+import {requestAvailability,createStaffs,getAllStaffs
+    ,getAcceptedResponse,getResponseById,getAllResponses,slots
+} from '../Middlewares/SuperAdmin.middleware'
 
 
-
-//api/v1/SuperAdmin
 router.post('/staffs/availability',requestAvailability)
 router.post('/staffs',createStaffs)
 router.get('/staffs',getAllStaffs )
@@ -14,4 +13,4 @@ router.get('/responses/:id',getResponseById)
 router.get('/responses',getAllResponses)
 router.post('/slots',slots);
 
-module.exports = router
+export {router};
