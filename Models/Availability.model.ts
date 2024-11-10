@@ -1,19 +1,6 @@
 import mongoose  from "mongoose";
+import {IAvailability} from './interfaces'
 
-interface IAvailability {
-    instructorId : mongoose.Schema.Types.ObjectId,
-    unmodifiedCount : Number,
-    deleteAt: Date,
-    availableSlots : 
-    {
-        date : string ,
-         slots: 
-         {
-            time : string,
-            isAvailable:string
-        }[]
-    }[]
-}
 const AvailabilitySchema = new mongoose.Schema<IAvailability>({
     instructorId: { type: mongoose.Types.ObjectId, ref: 'Staff', required: true },
     unmodifiedCount: { type: Number, default: 0 },

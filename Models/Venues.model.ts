@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
+import { IVenues } from "./interfaces";
 
-interface IVenues {
-    venue : string,
-    staffs :  string[],
-    slots : {time : string,limit : number}[]
-}
 const VenuesSchema = new mongoose.Schema<IVenues>({
     venue: String,
     staffs: [{ type: String, ref: 'Staff' }],

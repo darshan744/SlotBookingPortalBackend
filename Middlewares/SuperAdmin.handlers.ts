@@ -4,7 +4,8 @@ import {AvailabilityModel} from '../Models/Availability.model';
 import { assignToDate, assignToStaff, generateHoursForStaffs } from './helpers';
 import {SlotModel} from '../Models/Slot.model';
 import { StudentModel } from '../Models/Student.model';
-
+import mongoose,{ObjectId} from 'mongoose';
+import { IBookingStatus } from '../Models/interfaces';
 export const getAllStaffs = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const staffs: Array<{ name: string; staffId: string }> = await StaffModel.find({}, { 'name': 1, 'staffId': 1 });
@@ -167,10 +168,9 @@ export const getAcceptedResponse = async (req: Request, res: Response): Promise<
 
 export const slots = async (req: Request, res: Response): Promise<void> => {
     let data: any = req.body;
-    const students: Array<{ _id: string }> = await StudentModel.find({ year: req.body.year }, '_id');
-    const ids: string[] = students.map(e => e._id.toString());
-    console.log(ids);
-    let bookers: Array<{ studentId: string; isBooked: boolean; bookingTime: string }> = ids.map(e => ({ studentId: e, isBooked: false, bookingTime: '' }));
+    const students: Array<{ _id: ObjectId }> = await StudentModel.find({ year: req.body.year }, '_id');
+    const ids: ObjectId[] = students.map(e => e._id);
+    let bookers: Array<IBookingStatus> = ids.map(e => ({ studentId: e , isBooked: false, bookingTime: '' }));
     data.bookers = bookers;
     await SlotModel.insertMany(data);
     res.json({ success: true });

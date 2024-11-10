@@ -1,13 +1,6 @@
 import mongoose from "mongoose";
+import {IStaff} from './interfaces'
 
-interface IStaff {
-    staffId : string,
-    name: string,
-    dept: string,
-    phNo: string,
-    email: string,
-    eventHistory: mongoose.Schema.Types.ObjectId[]
-}
 
 const StaffSchema = new mongoose.Schema<IStaff>({
     staffId : {type : String , required: true},

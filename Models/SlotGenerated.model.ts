@@ -1,12 +1,7 @@
 import mongoose from "mongoose";
+import {ISlotGenerated} from './interfaces'
 
-interface ISlotGenerated {
-    date: Date,
-    startTime: string,
-    endTime: string,
-    isAvailable: boolean
-}
-const SlotGeneratedSchema = new mongoose.Schema({
+const SlotGeneratedSchema = new mongoose.Schema<ISlotGenerated>({
     date: Date,
     startTime: String,
     endTime: String,

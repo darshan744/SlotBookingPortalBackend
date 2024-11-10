@@ -1,12 +1,5 @@
 import mongoose from "mongoose";
-
-interface IStudentEventResult {
-    id : string,
-    eventType : string,
-    isPresent : boolean,
-    marks  :number,
-    remarks : string
-}
+import {IStudentEventResult} from './interfaces'
 
 export const  StudentEventResultSchema = new mongoose.Schema<IStudentEventResult>({
     id: { type: String, required: true },

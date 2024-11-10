@@ -1,11 +1,7 @@
 
 import mongoose from "mongoose";
+import {IBookingStatus} from './interfaces';
 
-interface IBookingStatus {
-    studentId : mongoose.Schema.Types.ObjectId,
-    isBooked : boolean,
-    bookingTime : string
-}
 export const BookingStatusSchema = new mongoose.Schema<IBookingStatus>({
     studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'Student' },
     isBooked: { type: Boolean, default: false },

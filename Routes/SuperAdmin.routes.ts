@@ -1,8 +1,9 @@
 import express, { Router } from 'express'
 const router : Router = express.Router();
 import {requestAvailability,createStaffs,getAllStaffs
-    ,getAcceptedResponse,getResponseById,getAllResponses,slots
-} from '../Middlewares/SuperAdmin.middleware'
+    ,getAcceptedResponse,getResponseById,getAllResponses,
+    slots
+} from '../Middlewares/SuperAdmin.handlers'
 
 
 router.post('/staffs/availability',requestAvailability)
