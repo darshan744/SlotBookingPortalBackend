@@ -11,15 +11,15 @@ const app = express();
 dotenv.config({ path: 'Config/.env' });
 DatabaseConnection();
 
-app.post('/api/v1/login', auth)
 app.use(cors());
 app.use(express.json())
+app.post('/api/v1/login', auth)
 app.use('/api/v1/SuperAdmin', superAdminRoutes);
 app.use('/api/v1/Admin', Adminroutes);
 app.use('/api/v1/Students', StudentRoutes);
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server Listenting in http:localhost:${process.env.PORT}`)
+    console.log(`Server Listenting in http://localhost:${process.env.PORT}`)
 })
 
 

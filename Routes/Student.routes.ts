@@ -1,7 +1,8 @@
 import express, { Router } from 'express';
-import {slots} from '../Middlewares/Student.handlers'
+import {bookSlot, slots} from '../Middlewares/Student.handlers'
 const router : Router = express.Router();
 
-router.get('/slots/:eventType',slots)
+router.get('/slots/:id/:eventType',slots);
+router.post('/slots/:eventType/book',bookSlot);
 
 export {router}

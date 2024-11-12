@@ -1,3 +1,4 @@
+import { slots } from './../Middlewares/SuperAdmin.handlers';
 import  mongoose from "mongoose"
 import { VenuesSchema } from "./Venues.model";
 import { BookingStatusSchema } from "./BookingStatus.model";
@@ -27,7 +28,7 @@ interface IVenues {
     slots : {time : string,limit : number}[]
 }
 interface ISlot {
-    id : string,
+    slotId : string,
     startDate : Date,
     endDate : Date,
     eventType : String,
@@ -70,6 +71,21 @@ interface IBookingStatus {
     bookingTime : string
 }
 
+interface IRetrivalSlots {
+    startDate : string,
+    endDate : string,
+    bookers : {
+        studentId : string,
+        isBooked : boolean,
+        bookingTime : string
+    }[]
+    slots : {
+        venue : string[],
+        staffs : string[],
+        slots : { time : string , limit : number }[]
+    }
+}
+
 export {IAvailability ,IBookingStatus , ISlot , ISlotGenerated , IStaff , IStudent ,
-    IStudentEventResult, IVenues
+    IStudentEventResult, IVenues , IRetrivalSlots
 }
