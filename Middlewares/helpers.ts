@@ -1,3 +1,7 @@
+/**
+ *
+ * @param date
+ */
 export const converToDate = (date: string): string => {
     const startdate: string[] = date.split('T')[0].split('-');
     const years: string = startdate[0];
@@ -6,6 +10,12 @@ export const converToDate = (date: string): string => {
     return `${years}-${months.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }
 
+/**
+ *
+ * @param startDateStr
+ * @param endDateStr
+ * @param slots
+ */
 export const assignToDate = (startDateStr: string, endDateStr: string, slots: any[]): { date: string; slots: any[] }[] => {
     const resultSlot: { date: string; slots: any[] }[] = [];
     let startDate: Date = new Date(startDateStr);
@@ -19,6 +29,11 @@ export const assignToDate = (startDateStr: string, endDateStr: string, slots: an
     return resultSlot;
 }
 
+/**
+ *
+ * @param staffs
+ * @param slots
+ */
 export const assignToStaff = (staffs: { _id: string }[], slots: any[]): { instructorId: string; availableSlots: { date: string; slots: { time: any; isAvailable: string }[] }[] }[] => {
     const availabilityStaffArray: { instructorId: string; availableSlots: { date: string; slots: { time: any; isAvailable: string }[] }[] }[] = [];
     staffs.forEach((staff) => {
@@ -36,6 +51,9 @@ export const assignToStaff = (staffs: { _id: string }[], slots: any[]): { instru
     return availabilityStaffArray;
 }
 
+/**
+ *
+ */
 export const generateHoursForStaffs = (): string[] => {
     const resultSlots: string[] = [];
     const minutesToTime = (minutes: number): string => {
@@ -63,6 +81,10 @@ export const generateHoursForStaffs = (): string[] => {
     return resultSlots;
 }
 
+/**
+ *
+ * @param slots
+ */
 export const reTransformSlots = (slots: { date: string; time: string; isAvailable: string }[]): { date: string; availableSlots: { time: string; isAvailable: string }[] }[] => {
     return slots.reduce((acc: { date: string; availableSlots: { time: string; isAvailable: string }[] }[], curr) => {
         const { date, time, isAvailable } = curr;
@@ -76,10 +98,28 @@ export const reTransformSlots = (slots: { date: string; time: string; isAvailabl
     }, []);
 }
 
+/**
+ *
+ * @param schedule
+ */
 export const transformSlots = (schedule: { date: string; slots: { time: string; isAvailable: string }[] }[]): { date: string; time: string; isAvailable: string }[] => {
     const result: { date: string; time: string; isAvailable: string }[] = [];
     schedule.forEach(e => {
         e.slots.forEach(slot => result.push(({ date: e.date, time: slot.time, isAvailable: slot.isAvailable })));
     })
     return result.filter(e => e.isAvailable === 'unmodified');
+}
+
+/**
+ * @param slotTime  - has a string with venue and timing
+ * @param venue - staff assigned venue
+ * @type ({slotTime : string , venue :  string})
+ * @return - whether the split string is same as venue
+ */
+export const venueMatch = (slotTime : string , venue : string) : boolean => {
+    if(slotTime !== null && slotTime !== undefined) {
+        let slot = slotTime.split('|')[0].trim();
+        return slot === venue;
+    }
+    return false;
 }

@@ -10,7 +10,7 @@ const StudentSchema = new mongoose.Schema<IStudent>({
     year : String,
     password : String,
     resume :{type : String},
-    EventHistory : [{type : StudentEventResultSchema , ref: 'Event'}]
+    EventHistory : [{type : StudentEventResultSchema }]
 });
 
 export const StudentModel = mongoose.model("Student",StudentSchema);

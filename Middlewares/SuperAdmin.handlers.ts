@@ -220,10 +220,11 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
     "_id"
   );
   const ids: ObjectId[] = students.map((e) => e._id);
-  let bookers: Array<IBookingStatus> = ids.map((e) => ({
+  let bookers: Array<IBookingStatus> = ids.map((e) =>  ({
     studentId: e,
     isBooked: false,
-    bookingTime: "",
+    bookingDate: null,
+    bookingTime: null,
   }));
   data.bookers = bookers;
   data.slotId = `${(data.startDate).split("T")[0]}_${data.endDate.split("T")[0]}_${data.eventType}`
