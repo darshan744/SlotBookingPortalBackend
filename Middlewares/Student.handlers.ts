@@ -3,20 +3,27 @@ import { Response, Request } from "express";
 import { SlotModel } from "../Models/Slot.model";
 import { IRetrivalSlots } from "../Models/interfaces";
 import { StudentModel } from "../Models/Student.model";
-import { ClientSession, startSession } from "mongoose";
+import mongoose, { ClientSession, ObjectId, startSession } from "mongoose";
 
+/**
+ * @route - api/v1/Students/slots/:id/:eventType
+ */
 export const slots = async (req: Request, res: Response): Promise<void> => {
+  console.log("Cookie",req.headers.cookie);
+  console.log("Slots" , req.session.id);
   let event = req.params.eventType;
   let studentId: string | null = req.params.id;
-  let studentObjectId: any;
+  let user = req.session.user;
+  console.log("Student Session")
+  console.log(user);
+  let studentObjectId: any = new mongoose.Types.ObjectId(user.objectId??"")
+  console.log("StudentObjctId" , studentObjectId);
   let slotsData: IRetrivalSlots[];
   try {
-    studentObjectId = await StudentModel.findOne(
-      { studentId: studentId },
-      { _id: 1 }
-    );
-    studentObjectId = studentObjectId?._id;
-    console.log(studentObjectId);
+    // studentObjectId = await StudentModel.findOne(
+    //   { studentId: studentId },
+    //   { _id: 1 }
+    // );   
     if (!studentObjectId) {
       res.status(404).json({ message: "Student Not Found" });
       return;
@@ -71,15 +78,18 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
       },
     ];
     slotsData = await SlotModel.aggregate(agg);
-    if (slotsData.length === 0) {
-      res.status(200).json({ success: false, message: "No Slots Found" });
-      return;
-    }
+    console.log(slotsData);
     if (slotsData.length === 0) {
       console.log("No Slots Found");
       res.json({ success: false, message: "No Slots Found" });
       return;
-    } else if (slotsData[0].bookers[0].isBooked) {
+    }
+    else if(slotsData[0].bookers.length === 0) {
+      console.log("No slots Available")
+      res.json({success : true, message : "No slots Available for Now"})
+      return;
+    } 
+    else if (slotsData[0].bookers[0].isBooked) {
       const bookers = slotsData[0].bookers[0];
       console.log("Already Booked");  
       res.json({ success: true, message: "Already Booked",
@@ -94,7 +104,7 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
       });
     }
   } catch (err: any) {
-    res.status(500).json({ message: "Error finding student", error: err.message });
+    res.status(500).json({ success : false , message: "Error finding student", error: err.message });
   }
 };
 /**
@@ -106,10 +116,14 @@ export const bookSlot = async (req: Request, res: Response): Promise<void> => {
   let { time, date, eventType, studentId, venue, slotId } = req.body;
   eventType = eventType === "Mi" ? "Mock Interview" : eventType === "Si"
       ? "Self Introduction" : "Group Discussion";
+  
+  console.log("event" , eventType);  
   date = new Date(date);
   date.setFullYear(new Date().getFullYear());
-  let studentObjectId = await StudentModel.findOne({ studentId: studentId })
-    .select({ _id: 1 }).exec();
+  let user = req.session.user
+  // let studentObjectId = await StudentModel.findOne({ studentId: studentId })
+  //   .select({ _id: 1 }).exec();
+  let studentObjectId : any = new mongoose.Types.ObjectId(user.objectId);
   if (!studentObjectId) {
     res.status(404).json({ message: "Student Not Found" });
   }

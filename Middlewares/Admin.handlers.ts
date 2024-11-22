@@ -6,18 +6,28 @@ import { AvailabilityModel } from '../Models/Availability.model';
 import { transformSlots, reTransformSlots, venueMatch } from './helpers';
 import { SlotModel } from '../Models/Slot.model'
 import { IBookingStatus, IStudent } from '../Models/interfaces';
-import { IStudentEventResult } from "../Models/interfaces";
+
 
 export const getSlotAvailability = async (req: Request, res: Response): Promise<void> => {
-    let id: ObjectId | null = (await StaffModel.findOne({ staffId: req.params.id }, '_id'));
+    console.log("Headers : ");
+    console.log(req.headers)
+    console.log("Session slotAvailabilityRoute :");
+    console.log(req.session)
+    let id: ObjectId |string| null = req.session.user.objectId??null;
     if (id === null) {
-        res.status(500).json({ message: "Please Enter Correct Data" });
+        res.json({ message: "Please Enter Correct Data" });
         return;
     }
     try {
         const slots = await AvailabilityModel.findOne({ instructorId: id });
-        const transformedSlots: any = transformSlots(slots!.availableSlots);
-        res.status(200).json({ slots: transformedSlots, message: 'Successful', id: id });
+        if(slots?.availableSlots) {
+            const transformedSlots: any = transformSlots(slots!.availableSlots);
+            res.status(200).json({ slots: transformedSlots, message: 'Slots Found', id: id });
+            return;
+        }
+        else {
+            res.status(200).json({ message: "No Slots Request For You Found" });
+        }
     } catch (e: any) {
         console.error("error", e.message);
         res.status(500).json({ message: "Error Occurred", error: e.message });
@@ -79,8 +89,14 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
             },
         },
     ];
-    let data = await SlotModel.aggregate(agg);
-    let staffVenue = data[0].slots.venue;
+    let data
+    try {
+        data = await SlotModel.aggregate(agg);
+        if(data.length === 0){
+            res.json({message : "No Data Found"});
+            return;
+        }
+        let staffVenue = data[0].slots.venue;
     let nowBookers: Pick<IBookingStatus, "bookingDate" | "bookingTime" | "studentId">[] = [];
     data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: mongoose.Schema.Types.ObjectId, isBooked: boolean }) => {
         if (slot.isBooked && slot.bookingTime !== null && venueMatch(slot.bookingTime, staffVenue)) {
@@ -92,6 +108,7 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
             nowBookers.push(d);
         }
     });
+
     /**
     * ```js
     * nowBookers = nowBookers.filter(e=> {
@@ -101,8 +118,17 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
     * **uncomment to get the current hour bookers**
     *
     */
-    const students = await StudentModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
-    res.json({ students, eventType: data[0].eventType });
+       const students = await StudentModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
+       res.json({ students, eventType: data[0].eventType });
+
+
+    } catch (error) {
+
+        res.status(500).json({ message: "Error Occurred" });
+    }
+    
+    
+    
 }
 /**
  *

@@ -42,6 +42,7 @@ interface IStaff extends Document {
     name: string,
     dept: string,
     phNo: string,
+    password:string,
     email: string,
     eventHistory: mongoose.Schema.Types.ObjectId[]
 }
