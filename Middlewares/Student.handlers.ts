@@ -5,6 +5,14 @@ import { IRetrivalSlots } from "../Models/interfaces";
 import { StudentModel } from "../Models/Student.model";
 import mongoose, { ClientSession, ObjectId, startSession } from "mongoose";
 
+enum STUDENTRESPONSES { 
+  STD_NOTFOUND = "Student Not Found",
+  INVALID_EVENT_TYPE = "Invalid Event Type",
+  NO_SLOTS = "No Slots Found",
+  BOOKED = "Already Booked",
+  RETRIEVE_SUCCESS = "Slot Retrieved Successfully",
+}
+
 /**
  * @route - api/v1/Students/slots/:id/:eventType
  */
@@ -20,10 +28,6 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
   console.log("StudentObjctId" , studentObjectId);
   let slotsData: IRetrivalSlots[];
   try {
-    // studentObjectId = await StudentModel.findOne(
-    //   { studentId: studentId },
-    //   { _id: 1 }
-    // );   
     if (!studentObjectId) {
       res.status(404).json({ message: "Student Not Found" });
       return;
@@ -93,14 +97,14 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
       const bookers = slotsData[0].bookers[0];
       console.log("Already Booked");  
       res.json({ success: true, message: "Already Booked",
-        data: { bookingTime: bookers.bookingTime.split("|")[1], bookingDate: bookers.bookingDate,
-        },
+        data: { bookingTime: bookers.bookingTime.split("|")[1],
+        bookingDate: bookers.bookingDate},
       });
     } else {
       console.log("SLots Found");
       res.json({ success: true, message: "Slot Retrieved Successfully",
-        data: { startDate: slotsData[0].startDate, endDate: slotsData[0].endDate, slots: slotsData[0].slots,
-        },
+        data: { startDate: slotsData[0].startDate, endDate: slotsData[0].endDate,
+        slots: slotsData[0].slots,},
       });
     }
   } catch (err: any) {

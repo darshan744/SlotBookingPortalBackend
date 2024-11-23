@@ -18,6 +18,7 @@
   "homepage": "https://github.com/darshan744/SlotBookingPortalBackend#readme",
   "description": "",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/connect-mongo": "^3.1.2",
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",

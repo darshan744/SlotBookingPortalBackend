@@ -3,21 +3,14 @@ import { StudentModel } from "../Models/Student.model";
 import { StaffModel } from "../Models/Staff.model";
 import { Request, Response } from "express";
 import { IStaff, IStudent } from "../Models/interfaces";
+import {ResponseMessages , Role} from '../../Shared/Authenticate.enum'
 
-enum ResponseMessages {
-    INVALID_PASSWORD = 'Invalid Password',
-    USER_NOT_FOUND = 'User not found',
-}
-enum Role {
-    STUDENT = 'student',
-    STAFF = 'staff',
-    ADMIN =  'admin'
-}
 // Augmenting the express-session module to include user information in the session
 
 const toObjType = (obj: any) => obj as mongoose.Schema.Types.ObjectId;
 /**
- * @route POST - /api/v1/login
+ * @method POST
+ * @route   /api/v1/login
  * @param req  - contains the user pass and id
  * @param res  - sends the response to the user
  */
@@ -75,7 +68,8 @@ export const authenticate = async (req: Request, res: Response) => {
 
 /**
  * Handles Google login for both students and staff.
- * @route POST - /api/v1/google/login
+ * @method POST
+ * @route  /api/v1/google/login
  * @param {Request} req - The request object containing user credential.
  * @param {Response} res - The response object to send the result.
  */

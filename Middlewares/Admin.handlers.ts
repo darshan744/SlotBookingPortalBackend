@@ -6,22 +6,24 @@ import { AvailabilityModel } from '../Models/Availability.model';
 import { transformSlots, reTransformSlots, venueMatch } from './helpers';
 import { SlotModel } from '../Models/Slot.model'
 import { IBookingStatus, IStudent } from '../Models/interfaces';
+import { IGroupDates, ISlotTimings, IStudentMarks } from './type.interfaces';
 
-
+/**
+ * 
+ * @method GET
+ * @route  api/v1/Admin/getAvaialability/:id
+ * 
+ */
 export const getSlotAvailability = async (req: Request, res: Response): Promise<void> => {
-    console.log("Headers : ");
-    console.log(req.headers)
-    console.log("Session slotAvailabilityRoute :");
-    console.log(req.session)
-    let id: ObjectId |string| null = req.session.user.objectId??null;
+    let id: ObjectId | string | null = req.session.user.objectId ?? null;
     if (id === null) {
         res.json({ message: "Please Enter Correct Data" });
         return;
     }
     try {
         const slots = await AvailabilityModel.findOne({ instructorId: id });
-        if(slots?.availableSlots) {
-            const transformedSlots: any = transformSlots(slots!.availableSlots);
+        if (slots?.availableSlots) {
+            const transformedSlots: ISlotTimings[] = transformSlots(slots!.availableSlots);
             res.status(200).json({ slots: transformedSlots, message: 'Slots Found', id: id });
             return;
         }
@@ -34,10 +36,15 @@ export const getSlotAvailability = async (req: Request, res: Response): Promise<
     }
 }
 
+/**
+ * 
+ * @method POST
+ * @route api/v1/Admin/postAvailability/:id
+ */
 export const postAvailability = async (req: Request, res: Response): Promise<void> => {
     let id: ObjectId | null = (await StaffModel.findOne({ staffId: req.params.id }, '_id'))
     const availabilities: any = req.body;
-    const reTransformedSlots: any = reTransformSlots(availabilities);
+    const reTransformedSlots: IGroupDates[] = reTransformSlots(availabilities);
     try {
         const userAvailability = await AvailabilityModel.findOne({ instructorId: id });
         if (!userAvailability) {
@@ -62,7 +69,11 @@ export const postAvailability = async (req: Request, res: Response): Promise<voi
         res.status(500).json({ message: e + " error occurred" });
     }
 }
-
+/** 
+ * @method GET
+ * @route api/v1/Admin/student/:id
+ * 
+ */
 export const getStudents = async (req: Request, res: Response): Promise<void> => {
     let hour = new Date().getHours();
     let staffId = req.params.id;
@@ -92,97 +103,88 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
     let data
     try {
         data = await SlotModel.aggregate(agg);
-        if(data.length === 0){
-            res.json({message : "No Data Found"});
+        if (data.length === 0) {
+            res.json({ message: "No Data Found" });
             return;
         }
         let staffVenue = data[0].slots.venue;
-    let nowBookers: Pick<IBookingStatus, "bookingDate" | "bookingTime" | "studentId">[] = [];
-    data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: mongoose.Schema.Types.ObjectId, isBooked: boolean }) => {
-        if (slot.isBooked && slot.bookingTime !== null && venueMatch(slot.bookingTime, staffVenue)) {
-            let d: { bookingTime: string, bookingDate: Date, studentId: mongoose.Schema.Types.ObjectId } = {
-                bookingTime: slot.bookingTime.split("|")[1].toString(),
-                bookingDate: slot.bookingDate,
-                studentId: slot.studentId
+        let nowBookers: Pick<IBookingStatus, "bookingDate" | "bookingTime" | "studentId">[] = [];
+        data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: mongoose.Schema.Types.ObjectId, isBooked: boolean }) => 
+        {
+            if (slot.isBooked && slot.bookingTime !== null && venueMatch(slot.bookingTime, staffVenue)) {
+                let d: { bookingTime: string, bookingDate: Date, studentId: mongoose.Schema.Types.ObjectId } = {
+                    bookingTime: slot.bookingTime.split("|")[1].toString(),
+                    bookingDate: slot.bookingDate,
+                    studentId: slot.studentId
+                }
+                nowBookers.push(d);
             }
-            nowBookers.push(d);
-        }
-    });
+        });
 
-    /**
-    * ```js
-    * nowBookers = nowBookers.filter(e=> {
-      return (e.bookingTime?.split("-")[0].trim().split(":").map(Number)[0] === hour);
-       });
-     * ```
-    * **uncomment to get the current hour bookers**
-    *
-    */
-       const students = await StudentModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
-       res.json({ students, eventType: data[0].eventType });
+      /**
+        * nowBookers = nowBookers.filter(e=> {
+        * return (e.bookingTime?.split("-")[0].trim().split(":").map(Number)[0] === hour);
+        *  });
+        * **uncomment to get the current hour bookers**
+        */
+        const students = await StudentModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
+        res.json({ students, eventType: data[0].eventType });
 
 
     } catch (error) {
 
         res.status(500).json({ message: "Error Occurred" });
     }
-    
-    
-    
+
+
+
 }
 /**
- *
- * @route - api/v1/Admin/studentMarks/:id
- *
+ * @method POST
+ * @route  api/v1/Admin/studentMarks/
+ * @desc It will handle either one or many students as well
  */
-interface IStudentMarks {
-    id: string, name: string, attendance: string,
-    ispresent: boolean, marks: number, remarks: string
-}
+
 export const studentsMarks = async (req: Request, res: Response): Promise<void> => {
     const { eventType, staffId, studentmarks }:
         { eventType: string, staffId: string, studentmarks: IStudentMarks[] }
         = req.body;
-    let studentObjectIds : mongoose.Schema.Types.ObjectId[] = [];
+    let studentObjectIds: mongoose.Schema.Types.ObjectId[] = [];
     for (const student of studentmarks) {
         const studentId = student.id;
         const results = {
-            marks : student.marks,
-            remarks : student.remarks === "" ? "No Remarks" : student.remarks,
-            isPresent : student.ispresent,
-            eventType : eventType,
-            date : new Date(),
+            marks: student.marks,
+            remarks: student.remarks === "" ? "No Remarks" : student.remarks,
+            isPresent: student.ispresent,
+            eventType: eventType,
+            date: new Date(),
         }
-        const update : IStudent | null = await StudentModel.findOneAndUpdate({studentId : studentId},{
-            $push:{ "EventHistory" : results}
-        },{ new: true, returnDocument: 'after', projection: { _id : 1 } })
-        if(update){
+        const update: IStudent | null = await StudentModel.findOneAndUpdate({
+            studentId: studentId
+        }, {
+            $push: { "EventHistory": results }
+        }, { new: true, returnDocument: 'after', projection: { _id: 1 } })
+        if (update) {
             studentObjectIds.push(update._id as mongoose.Schema.Types.ObjectId);
         }
     }
-    const bookers : {bookers : IBookingStatus[] }  | null = await SlotModel.findOne({eventType : eventType , "bookers.studentId" : { $in : studentObjectIds}},
-        {bookers : 1, _id: 0});
+    const bookers: { bookers: IBookingStatus[] } | null = await SlotModel.findOne({ eventType: eventType, "bookers.studentId": { $in: studentObjectIds } },
+        { bookers: 1, _id: 0 });
     // console.log(bookers);
     // let objId = new mongoose.Schema.Types.ObjectId("672a46fd1fdb7cc295bd6c59");
     // console.log( studentObjectIds ,studentObjectIds.includes(objId));
-    if(bookers) {
-        const filteredBookers = (bookers.bookers).filter((booker)=>
-            !(studentObjectIds.some(id=>id.toString() === booker.studentId.toString())))
-        
+    if (bookers) {
+        const filteredBookers = (bookers.bookers).filter((booker) =>
+            !(studentObjectIds.some(id => id.toString() === booker.studentId.toString())))
+
         console.log(filteredBookers);
-        await SlotModel.findOneAndUpdate({eventType : eventType ,
-            "bookers.studentId" : { $in : studentObjectIds}},
-            {$set : {bookers : filteredBookers}},
-            {new : true, returnDocument : 'after'}
+        await SlotModel.findOneAndUpdate({
+            eventType: eventType,
+            "bookers.studentId": { $in: studentObjectIds }
+        },
+            { $set: { bookers: filteredBookers } },
+            { new: true, returnDocument: 'after' }
         )
     }
-    res.json({ message: "nice",  studentmarks });
-}
-/**
- *
- * @route - api/v1/Admin/studentMarks
- *
- */
-export const student = async (req: Request, res: Response): Promise<void> => {
-
+    res.json({ message: "nice", studentmarks });
 }

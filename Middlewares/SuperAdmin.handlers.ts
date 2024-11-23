@@ -7,11 +7,13 @@ import { SlotModel } from "../Models/Slot.model";
 import { StudentModel } from "../Models/Student.model";
 import mongoose, { ObjectId } from "mongoose";
 import { IBookingStatus } from "../Models/interfaces";
-export const getAllStaffs = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-): Promise<void> => {
+
+/**
+ * @Route api/v1/SuperAdmin/staffs
+ * @description
+ * Returns all the staff for requesting them for their availability
+ */
+export const getAllStaffs = async (req: Request, res: Response,next: NextFunction): Promise<void> => {
   try {
     const staffs: Array<{ name: string; staffId: string }> =
       await StaffModel.find({}, { name: 1, staffId: 1 });
@@ -24,11 +26,11 @@ export const getAllStaffs = async (
   }
 };
 
-export const createStaffs = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-): Promise<void> => {
+/**
+ * @description
+ * Inserting Staffs i.e Users
+ */
+export const createStaffs = async (req: Request,res: Response,next: NextFunction): Promise<void> => {
   try {
     const staffs: any = req.body;
     if (!Array.isArray(staffs)) {
@@ -43,11 +45,10 @@ export const createStaffs = async (
     });
   }
 };
-
-export const requestAvailability = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+/**
+ * 
+ */
+export const requestAvailability = async (req: Request,res: Response): Promise<void> => {
   const {
     startDate,
     endDate,
@@ -69,11 +70,12 @@ export const requestAvailability = async (
     res.json({ success: false, message: error.message });
   }
 };
-
-export const getAllResponses = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+/**
+ * 
+ * @for The table in the SuperAdmin 
+ *  
+ */
+export const getAllResponses = async (req: Request,res: Response): Promise<void> => {
   let dbData: Array<any> = await AvailabilityModel.find({}).populate({
     path: "instructorId",
     select: "staffId name email phNo -_id",
@@ -97,10 +99,11 @@ export const getAllResponses = async (
   });
 };
 
-export const getResponseById = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+/**
+ * @for The table in the SuperAdmin when Individual Id is Clicked
+ */
+
+export const getResponseById = async (req: Request,res: Response ): Promise<void> => {
   let id: string = req.params.id;
   try {
     let results: Array<any> = await AvailabilityModel.aggregate([
@@ -183,10 +186,13 @@ export const getResponseById = async (
   }
 };
 
-export const getAcceptedResponse = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+
+/**
+ * 
+ * @for The slot generation Component 
+ * 
+ */
+export const getAcceptedResponse = async (req: Request, res: Response): Promise<void> => {
   try {
     const result: Array<any> = await AvailabilityModel.find(
       { unmodifiedCount: 0 },
@@ -213,6 +219,10 @@ export const getAcceptedResponse = async (
   }
 };
 
+
+/**
+ * @for Creating The slots in the Database
+ */
 export const slots = async (req: Request, res: Response): Promise<void> => {
   let data: any = req.body;
   const students: Array<{ _id: ObjectId }> = await StudentModel.find(

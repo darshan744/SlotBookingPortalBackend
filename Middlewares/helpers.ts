@@ -1,3 +1,5 @@
+import { IGroupDates, IreGroupDate, ISlotTimings } from "./type.interfaces";
+
 /**
  *
  * @param date
@@ -52,7 +54,11 @@ export const assignToStaff = (staffs: { _id: string }[], slots: any[]): { instru
 }
 
 /**
- *
+ * @returns
+ * An Array of Strings Displaying Hour Range in a single String 
+ * @example 
+ * [09:00 - 10:00 , 10:00 - 11:00 , 11:00 - 12:00]
+ * 
  */
 export const generateHoursForStaffs = (): string[] => {
     const resultSlots: string[] = [];
@@ -81,12 +87,17 @@ export const generateHoursForStaffs = (): string[] => {
     return resultSlots;
 }
 
+
 /**
  *
- * @param slots
+ * @param slots 
+ * @paramType ISlotTimings []
+ * @returns Returns an array of Objects By Grouping the Date
+ * @returnType IGroupDates [] 
  */
-export const reTransformSlots = (slots: { date: string; time: string; isAvailable: string }[]): { date: string; availableSlots: { time: string; isAvailable: string }[] }[] => {
-    return slots.reduce((acc: { date: string; availableSlots: { time: string; isAvailable: string }[] }[], curr) => {
+export const reTransformSlots = (slots:ISlotTimings[]) : IGroupDates[] => {
+    
+    return slots.reduce((acc: IGroupDates[], curr) => {
         const { date, time, isAvailable } = curr;
         let f = acc.find(e => e.date === date);
         if (!f) {
@@ -98,16 +109,20 @@ export const reTransformSlots = (slots: { date: string; time: string; isAvailabl
     }, []);
 }
 
+
+
 /**
- *
- * @param schedule
+ * @param schedule 
+ * @paramType IreGroupDate[]
+ * @returns Converts IGroupedDates to ISlotTimings
  */
-export const transformSlots = (schedule: { date: string; slots: { time: string; isAvailable: string }[] }[]): { date: string; time: string; isAvailable: string }[] => {
-    const result: { date: string; time: string; isAvailable: string }[] = [];
-    schedule.forEach(e => {
-        e.slots.forEach(slot => result.push(({ date: e.date, time: slot.time, isAvailable: slot.isAvailable })));
-    })
-    return result.filter(e => e.isAvailable === 'unmodified');
+export const transformSlots : (schedule : IreGroupDate[]) => ISlotTimings[] = 
+    (schedule: IreGroupDate[]):ISlotTimings[] => {
+        const result: { date: string; time: string; isAvailable: string }[] = [];
+        schedule.forEach(e => {
+            e.slots.forEach(slot => result.push(({ date: e.date, time: slot.time, isAvailable: slot.isAvailable })));
+        })
+        return result.filter(e => e.isAvailable === 'unmodified');
 }
 
 /**

@@ -11,6 +11,5 @@ router.get('/getAvailability/:id' , getSlotAvailability);
 router.post('/postAvailability/:id',postAvailability);
 router.get('/students/:id',getStudents)
 router.post('/studentMarks',studentsMarks)
-router.post('/studentMarks');
 
 export  {router};
