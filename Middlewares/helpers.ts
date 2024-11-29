@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { IGroupDates, IreGroupDate, ISlotTimings } from "./type.interfaces";
 
 /**
@@ -110,6 +111,7 @@ export const reTransformSlots = (slots:ISlotTimings[]) : IGroupDates[] => {
 }
 
 
+export const toObjType = (obj: any) => obj as mongoose.Schema.Types.ObjectId;
 
 /**
  * @param schedule 
