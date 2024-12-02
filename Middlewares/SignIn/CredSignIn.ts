@@ -1,9 +1,10 @@
 import { Request, Response } from "express";
 import { StudentModel } from "../../Models/Student.model";
 import { StaffModel } from "../../Models/Staff.model";
-import { IStudent } from "../../Models/interfaces";
+import { IStudent, IUser } from "../../Models/interfaces";
 import { toObjType } from "../helpers";
 import { ResponseMessages, Role } from "../../../Shared/Authenticate.enum";
+import { UserModel } from "../../Models/User.model";
 
 
 
@@ -15,9 +16,22 @@ import { ResponseMessages, Role } from "../../../Shared/Authenticate.enum";
  */
 export const authenticate = async (req: Request, res: Response) => {
     const credentials = req.body.user;
+    // let user : IUser | null = await UserModel.findOne({id : credentials.name});
     let student: IStudent | null = await StudentModel.findOne({ studentId: credentials.name });
     let staff: any= await StaffModel.findOne({ staffId: credentials.name });
     console.log("staff", staff);
+    // if(user && user.password === credentials.password) {
+    //     req.session.user = {
+    //         objectId: toObjType(user.objectId).toString(),
+    //         id: user.id,
+    //         // name: user.name,
+    //         role:user.role
+    //     }
+    // }
+    // else {
+    //     res.json({message : "Invalid Login Credenatials"})
+    // }
+    
     if (student) {
         if (student.password === credentials.password) {
             req.session.user = {

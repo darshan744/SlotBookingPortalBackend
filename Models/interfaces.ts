@@ -20,6 +20,7 @@ interface IStudent extends Document {
     email: String,
     year: String,
     password: String,
+    upcomingEvent:String,
     resume: { type: String },
     EventHistory: typeof StudentEventResultSchema[]
 }
@@ -58,13 +59,14 @@ interface IAvailability extends Document {
     deleteAt: Date,
     availableSlots:
     {
-        date: string,
+        date: Date,
         slots:
         {
             time: string,
             isAvailable: string
         }[]
-    }[]
+    }[],
+    responseDeadline : Date
 }
 
 interface IBookingStatus {
@@ -90,7 +92,15 @@ interface IRetrivalSlots extends Document {
     }
 }
 
+interface IUser extends Document {
+    id : string,
+    email : string,
+    password : string,
+    objectId : mongoose.Types.ObjectId,
+    role:string
+}
+
 export {
     IAvailability, IBookingStatus, ISlot, ISlotGenerated, IStaff, IStudent,
-    IStudentEventResult, IVenues, IRetrivalSlots
+    IStudentEventResult, IVenues, IRetrivalSlots ,IUser
 }

@@ -1,7 +1,8 @@
 import mongoose from 'mongoose'
 
 const eventSchema = new mongoose.Schema({
-    name:String,
+    Name:String,
     Description:String,
+    MaximumParticipants : Number
 })
 export const eventModel =  mongoose.model('Events' , eventSchema)

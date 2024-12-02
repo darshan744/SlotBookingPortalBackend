@@ -4,19 +4,20 @@ import {IAvailability} from './interfaces'
 const AvailabilitySchema = new mongoose.Schema<IAvailability>({
     instructorId: { type: mongoose.Types.ObjectId, ref: 'Staff', required: true },
     unmodifiedCount: { type: Number, default: 0 },
-    deleteAt: { type: Date },
+    // deleteAt: { type: Date },
     availableSlots: [{
         type: {
-            date: String,
+            date: Date,
             slots: [{
                 time: String,
                 isAvailable: { type: String },
             }]
         }
-    }]
+    }],
+    responseDeadline : Date
 })
 
-async function unmodifiedCount(doc : IAvailability) {
+ function unmodifiedCount(doc : IAvailability) {
     let count : number = 0;
     try {
         for(const slot of doc.availableSlots) {

@@ -12,17 +12,19 @@ import { reTransformSlots } from '../helpers';
  * @route api/v1/Admin/postAvailability/:id
  */
 export const postAvailability = async (req: Request, res: Response): Promise<void> => {
-    let id: ObjectId | null = (await StaffModel.findOne({ staffId: req.params.id }, '_id'))
+
+    // let id: ObjectId | null = (await StaffModel.findOne({ staffId: req.params.id }, '_id'))
+    let id = req.session.user.objectId
     const availabilities: any = req.body;
     const reTransformedSlots: IGroupDates[] = reTransformSlots(availabilities);
     try {
-        const userAvailability = await AvailabilityModel.findOne({ instructorId: id });
+        const userAvailability = await AvailabilityModel.findOne({ instructorId: id , responseDeadline : {$gte : ["$responseDeadline" , new Date()]}});
         if (!userAvailability) {
             res.status(404).json({ message: "cannot find user" });
             return;
         }
-        reTransformedSlots.forEach((slotObj: { date: string; availableSlots: { time: string; isAvailable: string; }[]; }) => {
-            let existingDate = userAvailability.availableSlots.find((e: { date: string; }) => e.date === slotObj.date);
+        reTransformedSlots.forEach((slotObj: { date: Date; availableSlots: { time: string; isAvailable: string; }[]; }) => {
+            let existingDate = userAvailability.availableSlots.find((e: { date: Date; }) => e.date === slotObj.date);
             if (existingDate) {
                 existingDate.slots.forEach((slot: { time: string; isAvailable: string; }) => {
                     let receivedSlotUpdate = slotObj.availableSlots.find((s: { time: string; }) => s.time === slot.time);

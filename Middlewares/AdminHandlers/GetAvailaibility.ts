@@ -3,6 +3,7 @@ import {ObjectId} from 'mongoose';
 import {Request  , Response }  from 'express';
 import { AvailabilityModel } from '../../Models/Availability.model';
 import { transformSlots } from '../helpers';
+import { IAvailability } from '../../Models/interfaces';
 
 /**
  * 
@@ -17,10 +18,14 @@ export const getSlotAvailability = async (req: Request, res: Response): Promise<
         return;
     }
     try {
-        const slots = await AvailabilityModel.findOne({ instructorId: id });
-        if (slots?.availableSlots) {
-            const transformedSlots: ISlotTimings[] = transformSlots(slots!.availableSlots);
-            res.status(200).json({ slots: transformedSlots, message: 'Slots Found', id: id });
+        const slots : IAvailability | null = await AvailabilityModel.findOne({ instructorId: id ,
+            responseDeadline : {$gte : ["$responseDeadline" , new Date()]}
+         });
+        
+        if (slots) {
+            const transformedSlots: ISlotTimings[] = transformSlots(slots.availableSlots);
+            res.status(200).json({ slots: transformedSlots, message: 'Slots Found', id: id , responseDeadline : slots.responseDeadline });
+            console.log(transformedSlots);
             return;
         }
         else {

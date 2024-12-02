@@ -7,7 +7,7 @@ export interface TimeAndAvailable {
     isAvailable: string 
 }
 export interface IGroupDates {
-    date: string; 
+    date: Date; 
     availableSlots: TimeAndAvailable[] 
 }
 
@@ -17,17 +17,23 @@ export interface IGroupDates {
  * 
  */
 export interface ISlotTimings {
-    date: string;
+    date: Date;
     time: string;
     isAvailable: string
 }
 
 export interface IreGroupDate {
-    date : string 
+    date : Date 
     slots : TimeAndAvailable[]
 }
 
 export interface IStudentMarks {
     id: string, name: string, attendance: string,
     ispresent: boolean, marks: number, remarks: string
+}
+
+export interface IEvents { 
+    Name:string,
+    Description:string,
+    MaximumParticipants : number
 }

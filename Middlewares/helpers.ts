@@ -1,6 +1,19 @@
 import mongoose from "mongoose";
 import { IGroupDates, IreGroupDate, ISlotTimings } from "./type.interfaces";
 
+
+export type i = {
+    instructorId: string;
+    responseDeadline: Date,
+    availableSlots: {
+        date: Date;
+        slots: {
+            time: any;
+            isAvailable: string
+        }[]
+    }[]
+}
+
 /**
  *
  * @param date
@@ -13,42 +26,50 @@ export const converToDate = (date: string): string => {
     return `${years}-${months.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }
 
+export type groupDates = { date: Date; slots: string[] }
 /**
  *
- * @param startDateStr
- * @param endDateStr
- * @param slots
+ * @param startDateStr Date 
+ * @param endDateStr    Date
+ * @param slots string[]
  */
-export const assignToDate = (startDateStr: string, endDateStr: string, slots: any[]): { date: string; slots: any[] }[] => {
-    const resultSlot: { date: string; slots: any[] }[] = [];
+export const assignToDate = (startDateStr: string, endDateStr: string, slots: string[]): groupDates[] => {
+    const resultSlot: { date: Date; slots: string[] }[] = [];
     let startDate: Date = new Date(startDateStr);
     const endDate: Date = new Date(endDateStr);
     while (startDate <= endDate) {
         if (startDate.getDay() !== 0) {
-            resultSlot.push({ date: startDate.toLocaleDateString("en-CA", { year: 'numeric', month: '2-digit', day: '2-digit' }), slots: slots });
+            resultSlot.push({ date: startDate, slots: slots });
         }
         startDate.setDate(startDate.getDate() + 1);
     }
     return resultSlot;
 }
 
+type staff = {
+    _id: string,
+    staffId: string,
+    name: string
+}
 /**
  *
  * @param staffs
  * @param slots
  */
-export const assignToStaff = (staffs: { _id: string }[], slots: any[]): { instructorId: string; availableSlots: { date: string; slots: { time: any; isAvailable: string }[] }[] }[] => {
-    const availabilityStaffArray: { instructorId: string; availableSlots: { date: string; slots: { time: any; isAvailable: string }[] }[] }[] = [];
+export const assignToStaff = (staffs: staff[], slots: groupDates[], responseDeadline: Date): i[] => {
+    const availabilityStaffArray: i[] = [];
+    // let availabilityStaffArray = new Array<i>()
     staffs.forEach((staff) => {
         availabilityStaffArray.push({
             instructorId: staff._id,
             availableSlots: slots.map(slot => ({
                 date: slot.date,
-                slots: slot.slots.map((eachSlot : any) => ({
+                slots: slot.slots.map((eachSlot: string) => ({
                     time: eachSlot,
                     isAvailable: 'unmodified',
                 }))
-            }))
+            })),
+            responseDeadline
         })
     });
     return availabilityStaffArray;
@@ -90,14 +111,13 @@ export const generateHoursForStaffs = (): string[] => {
 
 
 /**
- *
  * @param slots 
  * @paramType ISlotTimings []
  * @returns Returns an array of Objects By Grouping the Date
  * @returnType IGroupDates [] 
  */
-export const reTransformSlots = (slots:ISlotTimings[]) : IGroupDates[] => {
-    
+export const reTransformSlots = (slots: ISlotTimings[]): IGroupDates[] => {
+
     return slots.reduce((acc: IGroupDates[], curr) => {
         const { date, time, isAvailable } = curr;
         let f = acc.find(e => e.date === date);
@@ -118,14 +138,15 @@ export const toObjType = (obj: any) => obj as mongoose.Schema.Types.ObjectId;
  * @paramType IreGroupDate[]
  * @returns Converts IGroupedDates to ISlotTimings
  */
-export const transformSlots : (schedule : IreGroupDate[]) => ISlotTimings[] = 
-    (schedule: IreGroupDate[]):ISlotTimings[] => {
-        const result: { date: string; time: string; isAvailable: string }[] = [];
+export const transformSlots: (schedule: IreGroupDate[]) => ISlotTimings[] =
+    (schedule: IreGroupDate[]): ISlotTimings[] => {
+        const result: { date: Date; time: string; isAvailable: string }[] = [];
         schedule.forEach(e => {
+            console.log(e);
             e.slots.forEach(slot => result.push(({ date: e.date, time: slot.time, isAvailable: slot.isAvailable })));
         })
         return result.filter(e => e.isAvailable === 'unmodified');
-}
+    }
 
 /**
  * @param slotTime  - has a string with venue and timing
@@ -133,8 +154,8 @@ export const transformSlots : (schedule : IreGroupDate[]) => ISlotTimings[] =
  * @type ({slotTime : string , venue :  string})
  * @return - whether the split string is same as venue
  */
-export const venueMatch = (slotTime : string , venue : string) : boolean => {
-    if(slotTime !== null && slotTime !== undefined) {
+export const venueMatch = (slotTime: string, venue: string): boolean => {
+    if (slotTime !== null && slotTime !== undefined) {
         let slot = slotTime.split('|')[0].trim();
         return slot === venue;
     }

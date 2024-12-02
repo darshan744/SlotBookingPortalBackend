@@ -2,6 +2,7 @@ import { Request , Response } from "express";
 import mongoose from 'mongoose';
 import { IRetrivalSlots } from "../../Models/interfaces";
 import { SlotModel } from "../../Models/Slot.model";
+import { eventModel } from "../../Models/Event.model";
 /**
  * @route - api/v1/Students/slots/:id/:eventType
  */
@@ -9,6 +10,8 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
     console.log("Cookie",req.headers.cookie);
     console.log("Slots" , req.session.id);
     let event = req.params.eventType;
+   event = event.replace('_',' ');
+    console.log(event);
     let studentId: string | null = req.params.id;
     let user = req.session.user;
     console.log("Student Session")
@@ -21,20 +24,14 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
         res.status(404).json({ message: "Student Not Found" });
         return;
       }
-      if (event !== "MockInterview" && event !== "SelfIntroduction" && event !== "GroupDiscussion") {
-        res.status(404).json({ message: "Invalid Event Type" });
-        return;
-      }
-      event =
-        event === "MockInterview"  ? "Mock Interview" : event === "SelfIntroduction"
-          ? "Self Introduction" : "Group Discussion";
-      const agg = [
-        {
+      const agg = [{
           $match: {
             eventType: event,
+            endDate:{
+              $gte:[new Date() , "$startDate"]
+            }
           },
-        },
-        {
+        },{
           $project: {
             slotId: 1,
             startDate: 1,

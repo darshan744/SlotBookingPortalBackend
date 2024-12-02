@@ -1,6 +1,7 @@
 import {Request , Response } from 'express';
 import mongoose ,{ClientSession ,startSession } from 'mongoose';
 import { SlotModel} from '../../Models/Slot.model';
+import { StudentModel } from '../../Models/Student.model';
 
 
 /**
@@ -59,6 +60,15 @@ export const bookSlot = async (req: Request, res: Response): Promise<void> => {
           ],
         }
       );
+      await StudentModel.findOneAndUpdate(
+      {
+        _id : studentObjectId
+      },
+    {
+      $set:{
+        upcomingEvent : date.toString() + time
+      }
+    })
       if (!slot) {
         res.json({ message: "Just now got booked" , success : false });
         await session.abortTransaction();

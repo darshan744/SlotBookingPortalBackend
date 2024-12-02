@@ -8,6 +8,7 @@ const StaffSchema = new mongoose.Schema<IStaff>({
     dept: String,
     phNo: String,
     email: String,
+    password:String,
     eventHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event' }]
 });
 

@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
 import { StudentModel } from "../../Models/Student.model";
-import { IStaff, IStudent } from "../../Models/interfaces";
+import { IStaff, IStudent, IUser } from "../../Models/interfaces";
 import mongoose from "mongoose";
 import { Role } from "../../../Shared/Authenticate.enum";
 import { StaffModel } from "../../Models/Staff.model";
 import { toObjType } from "../helpers";
+import { UserModel } from "../../Models/User.model";
 
 /**
  * Handles Google login for both students and staff.
@@ -14,8 +15,19 @@ import { toObjType } from "../helpers";
  * @param {Response} res - The response object to send the result.
  */
 export const googleLogin = async (req: Request, res: Response) => {
-    const user = req.body.user;
-    const student: IStudent | null = await StudentModel.findOne({ email: user.email }, { password: 0 });
+    const credentials = req.body.user;
+    const student: IStudent | null = await StudentModel.findOne({ email: credentials.email }, { password: 0 });
+    // const user : IUser | null = await UserModel.findOne({email : credentials.email} , {password:0 , _id : 0 });
+    // if(user) {
+    //     req.session.user = {
+    //         objectId : user.objectId.toString(),
+    //         id:user.id,
+    //         role : user.role
+    //     }
+    // }
+    // else {
+    //     res.json({success: , message : "User Not Found"})
+    // }
     if (student) {
         req.session.user = {
             objectId: (student._id as mongoose.Types.ObjectId).toString(),
@@ -33,7 +45,7 @@ export const googleLogin = async (req: Request, res: Response) => {
         res.json({ success: true,  data, role: 'student' })
         console.log(req.session, req.session.id);
     } else {
-        const staff: IStaff | null = await StaffModel.findOne({ email: user.email }, { password: 0 });
+        const staff: IStaff | null = await StaffModel.findOne({ email: credentials.email }, { password: 0 });
         if (staff) {
             req.session.user = {
                 objectId: toObjType(staff._id).toString(),

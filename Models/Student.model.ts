@@ -9,6 +9,7 @@ const StudentSchema = new mongoose.Schema<IStudent>({
     email:String,
     year : String,
     password : String,
+    upcomingEvent:String,
     resume :{type : String},
     EventHistory : [{type : StudentEventResultSchema }]
 });
