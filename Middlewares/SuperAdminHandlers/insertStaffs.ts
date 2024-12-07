@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { StaffModel } from "../../Models/Staff.model";
+import { UserModel } from "../../Models/User.model";
 
 export const createStaffs = async (req: Request,res: Response,next: NextFunction): Promise<void> => {
     try {
@@ -7,7 +7,7 @@ export const createStaffs = async (req: Request,res: Response,next: NextFunction
       if (!Array.isArray(staffs)) {
         res.status(400).json({ success: false, message: "Invalid Input" });
       }
-      await StaffModel.insertMany(staffs);
+      await UserModel.insertMany(staffs);
       res.json({ success: true });
     } catch (e) {
       res.json({

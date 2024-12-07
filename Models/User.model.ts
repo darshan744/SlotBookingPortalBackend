@@ -1,11 +1,12 @@
-import mongoose from 'mongoose';
+import { Schema , model} from 'mongoose';
 import { IUser } from './interfaces';
 
-const userSchema = new mongoose.Schema<IUser>({
+const userSchema = new Schema<IUser>({
     id : String,
-    objectId : mongoose.Types.ObjectId,
+    name:String,
     email : String,
     password : String,
-    role:String,
-})
-export const UserModel = mongoose.model('User' , userSchema);
+    userType:String,
+    department :String,
+},{discriminatorKey : 'userType', timestamps:true});
+export const UserModel = model('User' , userSchema);

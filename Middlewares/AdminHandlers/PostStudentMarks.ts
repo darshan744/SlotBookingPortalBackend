@@ -17,12 +17,15 @@ export const studentsMarks = async (req: Request, res: Response): Promise<void> 
     let studentObjectIds: mongoose.Schema.Types.ObjectId[] = [];
     for (const student of studentmarks) {
         const studentId = student.id;
+        const timestamp = new Date().toISOString().replace(/[-:.]/g, ""); //YYYYMMDDTHHMMSSZ
+        const resultId = `${studentId}_${eventType}_${timestamp}`;
         const results = {
             marks: student.marks,
             remarks: student.remarks === "" ? "No Remarks" : student.remarks,
             isPresent: student.ispresent,
             eventType: eventType,
             date: new Date(),
+            resultId
         }
         const update: IStudent | null = await StudentModel.findOneAndUpdate({
             studentId: studentId

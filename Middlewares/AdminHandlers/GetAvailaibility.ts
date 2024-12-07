@@ -1,8 +1,9 @@
+import { transformSlots } from './../../Utils/TransformSlots.utils';
 import { ISlotTimings } from './../type.interfaces';
 import {ObjectId} from 'mongoose';
 import {Request  , Response }  from 'express';
 import { AvailabilityModel } from '../../Models/Availability.model';
-import { transformSlots } from '../helpers';
+
 import { IAvailability } from '../../Models/interfaces';
 
 /**

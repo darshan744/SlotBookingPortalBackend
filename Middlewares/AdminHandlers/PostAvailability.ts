@@ -1,9 +1,9 @@
-import mongoose , {ObjectId} from 'mongoose';
+
 import {Request  , Response }  from 'express';
-import { StaffModel } from '../../Models/Staff.model';
 import { IGroupDates } from '../type.interfaces';
 import { AvailabilityModel } from '../../Models/Availability.model';
-import { reTransformSlots } from '../helpers';
+import { reTransformSlots } from '../../Utils/RetransformSlots.utils';
+
 
 
 /**
@@ -13,7 +13,7 @@ import { reTransformSlots } from '../helpers';
  */
 export const postAvailability = async (req: Request, res: Response): Promise<void> => {
 
-    // let id: ObjectId | null = (await StaffModel.findOne({ staffId: req.params.id }, '_id'))
+
     let id = req.session.user.objectId
     const availabilities: any = req.body;
     const reTransformedSlots: IGroupDates[] = reTransformSlots(availabilities);

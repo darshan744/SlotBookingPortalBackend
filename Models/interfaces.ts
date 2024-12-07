@@ -13,17 +13,14 @@ interface IStudentEventResult extends Document {
     remarks: string
 }
 
-interface IStudent extends Document {
-    studentId: String,
-    name: String,
-    department: String,
-    email: String,
-    year: String,
-    password: String,
-    upcomingEvent:String,
-    resume: { type: String },
+interface IStudent extends IUser {
+    department: string,
+    year: string,
+    upcomingEvent:string,
+    resume: string,
     EventHistory: typeof StudentEventResultSchema[]
 }
+
 interface IVenues extends Document {
     venue: string,
     staffs: string[],
@@ -38,13 +35,9 @@ interface ISlot extends Document {
     slots: typeof VenuesSchema[],
     bookers: typeof BookingStatusSchema[]
 }
-interface IStaff extends Document {
-    staffId: string,
-    name: string,
-    dept: string,
+interface IStaff extends IUser {
+    department: string,
     phNo: string,
-    password: string,
-    email: string,
     eventHistory: mongoose.Schema.Types.ObjectId[]
 }
 interface ISlotGenerated extends Document {
@@ -94,10 +87,11 @@ interface IRetrivalSlots extends Document {
 
 interface IUser extends Document {
     id : string,
+    name:string,
     email : string,
     password : string,
-    objectId : mongoose.Types.ObjectId,
-    role:string
+    userType:string,
+    department: string,
 }
 
 export {

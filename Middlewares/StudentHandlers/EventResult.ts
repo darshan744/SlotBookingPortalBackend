@@ -6,6 +6,7 @@ export const getEventResult = async (req : Request , res : Response) : Promise<v
     try{
       const studentEventResult = await StudentModel.findOne({studentId : studentId},{EventHistory:1 , _id:0});
       res.json({success : true , data : studentEventResult});
+      console.log(studentEventResult);
     }
     catch(e) {
       console.log(e);

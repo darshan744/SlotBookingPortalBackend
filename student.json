@@ -1,6 +1,6 @@
 [
   {
-    "studentId": "7376241EC101",
+    "id": "7376241EC101",
     "name": "Susan McGlynn",
     "department": "ECE",
     "year": "Year 1",
@@ -10,7 +10,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS102",
+    "id": "7376241CS102",
     "name": "Damon Cormier",
     "department": "CSE",
     "year": "Year 2",
@@ -20,7 +20,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT103",
+    "id": "7376241IT103",
     "name": "Irene Windler",
     "department": "IT",
     "year": "Year 3",
@@ -30,7 +30,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE104",
+    "id": "7376241EE104",
     "name": "Natasha Mills-Russel",
     "department": "EEE",
     "year": "Year 4",
@@ -40,7 +40,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC105",
+    "id": "7376241EC105",
     "name": "Patsy Homenick",
     "department": "ECE",
     "year": "Year 1",
@@ -50,7 +50,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS106",
+    "id": "7376241CS106",
     "name": "Charlie Fadel",
     "department": "CSE",
     "year": "Year 2",
@@ -60,7 +60,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT107",
+    "id": "7376241IT107",
     "name": "Bob Sporer",
     "department": "IT",
     "year": "Year 3",
@@ -70,7 +70,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE108",
+    "id": "7376241EE108",
     "name": "Jana Dare",
     "department": "EEE",
     "year": "Year 4",
@@ -80,7 +80,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC109",
+    "id": "7376241EC109",
     "name": "Kenneth Lang",
     "department": "ECE",
     "year": "Year 1",
@@ -90,7 +90,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS110",
+    "id": "7376241CS110",
     "name": "Kelly Brown",
     "department": "CSE",
     "year": "Year 2",
@@ -100,7 +100,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT111",
+    "id": "7376241IT111",
     "name": "Miss Angelica Sporer Sr.",
     "department": "IT",
     "year": "Year 3",
@@ -110,7 +110,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE112",
+    "id": "7376241EE112",
     "name": "Jerry Brakus",
     "department": "EEE",
     "year": "Year 4",
@@ -120,7 +120,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC113",
+    "id": "7376241EC113",
     "name": "Gregory Mosciski",
     "department": "ECE",
     "year": "Year 1",
@@ -130,7 +130,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS114",
+    "id": "7376241CS114",
     "name": "Sheldon Hegmann",
     "department": "CSE",
     "year": "Year 2",
@@ -140,7 +140,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT115",
+    "id": "7376241IT115",
     "name": "Jorge Turcotte",
     "department": "IT",
     "year": "Year 3",
@@ -150,7 +150,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE116",
+    "id": "7376241EE116",
     "name": "Dianne Christiansen",
     "department": "EEE",
     "year": "Year 4",
@@ -160,7 +160,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC117",
+    "id": "7376231EC117",
     "name": "Timothy Skiles",
     "department": "ECE",
     "year": "Year 1",
@@ -170,7 +170,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS118",
+    "id": "7376241CS118",
     "name": "Robin Crist",
     "department": "CSE",
     "year": "Year 2",
@@ -180,7 +180,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT119",
+    "id": "7376241IT119",
     "name": "Victor Stracke",
     "department": "IT",
     "year": "Year 3",
@@ -190,7 +190,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE120",
+    "id": "7376241EE120",
     "name": "Austin Runolfsson",
     "department": "EEE",
     "year": "Year 4",
@@ -200,7 +200,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC121",
+    "id": "7376241EC121",
     "name": "Holly Auer",
     "department": "ECE",
     "year": "Year 1",
@@ -210,7 +210,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS122",
+    "id": "7376241CS122",
     "name": "Lula Lind",
     "department": "CSE",
     "year": "Year 2",
@@ -220,7 +220,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT123",
+    "id": "7376241IT123",
     "name": "Camille Rogahn",
     "department": "IT",
     "year": "Year 3",
@@ -230,7 +230,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE124",
+    "id": "7376231EE124",
     "name": "Christopher Kling",
     "department": "EEE",
     "year": "Year 4",
@@ -240,7 +240,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC125",
+    "id": "7376241EC125",
     "name": "Sabrina Schroeder",
     "department": "ECE",
     "year": "Year 1",
@@ -250,7 +250,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS126",
+    "id": "7376241CS126",
     "name": "Sidney Gleichner-Block",
     "department": "CSE",
     "year": "Year 2",
@@ -260,7 +260,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT127",
+    "id": "7376231IT127",
     "name": "Jerald Deckow",
     "department": "IT",
     "year": "Year 3",
@@ -270,7 +270,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE128",
+    "id": "7376241EE128",
     "name": "Jon Mann",
     "department": "EEE",
     "year": "Year 4",
@@ -280,7 +280,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC129",
+    "id": "7376241EC129",
     "name": "Billy Stehr",
     "department": "ECE",
     "year": "Year 1",
@@ -290,7 +290,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS130",
+    "id": "7376241CS130",
     "name": "Betty Sanford",
     "department": "CSE",
     "year": "Year 2",
@@ -300,7 +300,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT131",
+    "id": "7376231IT131",
     "name": "Janet Donnelly",
     "department": "IT",
     "year": "Year 3",
@@ -310,7 +310,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE132",
+    "id": "7376241EE132",
     "name": "Heather Russel",
     "department": "EEE",
     "year": "Year 4",
@@ -320,7 +320,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC133",
+    "id": "7376241EC133",
     "name": "Theodore Mayer",
     "department": "ECE",
     "year": "Year 1",
@@ -330,7 +330,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS134",
+    "id": "7376241CS134",
     "name": "Blanca Howell",
     "department": "CSE",
     "year": "Year 2",
@@ -340,7 +340,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT135",
+    "id": "7376241IT135",
     "name": "Steve Hermann",
     "department": "IT",
     "year": "Year 3",
@@ -350,7 +350,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE136",
+    "id": "7376241EE136",
     "name": "Mathew Romaguera",
     "department": "EEE",
     "year": "Year 4",
@@ -360,7 +360,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC137",
+    "id": "7376241EC137",
     "name": "Rudolph Dooley",
     "department": "ECE",
     "year": "Year 1",
@@ -370,7 +370,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS138",
+    "id": "7376241CS138",
     "name": "Anthony Champlin DVM",
     "department": "CSE",
     "year": "Year 2",
@@ -380,7 +380,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT139",
+    "id": "7376241IT139",
     "name": "Lonnie Conroy",
     "department": "IT",
     "year": "Year 3",
@@ -390,7 +390,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE140",
+    "id": "7376241EE140",
     "name": "Casey Goyette",
     "department": "EEE",
     "year": "Year 4",
@@ -400,7 +400,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC141",
+    "id": "7376241EC141",
     "name": "Claire Bartoletti",
     "department": "ECE",
     "year": "Year 1",
@@ -410,7 +410,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS142",
+    "id": "7376241CS142",
     "name": "Darren Hintz",
     "department": "CSE",
     "year": "Year 2",
@@ -420,7 +420,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT143",
+    "id": "7376241IT143",
     "name": "Cristina McDermott",
     "department": "IT",
     "year": "Year 3",
@@ -430,7 +430,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE144",
+    "id": "7376241EE144",
     "name": "Marlon Lang",
     "department": "EEE",
     "year": "Year 4",
@@ -440,7 +440,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC145",
+    "id": "7376241EC145",
     "name": "Tyler Kub",
     "department": "ECE",
     "year": "Year 1",
@@ -450,7 +450,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS146",
+    "id": "7376241CS146",
     "name": "Irene Reinger V",
     "department": "CSE",
     "year": "Year 2",
@@ -460,7 +460,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT147",
+    "id": "7376241IT147",
     "name": "Diane Stanton",
     "department": "IT",
     "year": "Year 3",
@@ -470,7 +470,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE148",
+    "id": "7376231EE148",
     "name": "Rex Hickle",
     "department": "EEE",
     "year": "Year 4",
@@ -480,7 +480,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC149",
+    "id": "7376241EC149",
     "name": "Chris Herzog",
     "department": "ECE",
     "year": "Year 1",
@@ -490,7 +490,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS150",
+    "id": "7376241CS150",
     "name": "Gene Hirthe-Koch",
     "department": "CSE",
     "year": "Year 2",
@@ -500,7 +500,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT151",
+    "id": "7376241IT151",
     "name": "Charlie Dicki",
     "department": "IT",
     "year": "Year 3",
@@ -510,7 +510,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE152",
+    "id": "7376241EE152",
     "name": "Janie McClure",
     "department": "EEE",
     "year": "Year 4",
@@ -520,7 +520,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC153",
+    "id": "7376241EC153",
     "name": "Bernard Stiedemann",
     "department": "ECE",
     "year": "Year 1",
@@ -530,7 +530,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS154",
+    "id": "7376241CS154",
     "name": "Ted O'Connell Jr.",
     "department": "CSE",
     "year": "Year 2",
@@ -540,7 +540,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT155",
+    "id": "7376241IT155",
     "name": "Geraldine Nikolaus",
     "department": "IT",
     "year": "Year 3",
@@ -550,7 +550,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE156",
+    "id": "7376241EE156",
     "name": "Kristen Keeling",
     "department": "EEE",
     "year": "Year 4",
@@ -560,7 +560,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC157",
+    "id": "7376241EC157",
     "name": "Alicia Streich",
     "department": "ECE",
     "year": "Year 1",
@@ -570,7 +570,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS158",
+    "id": "7376241CS158",
     "name": "Johanna Wilderman",
     "department": "CSE",
     "year": "Year 2",
@@ -580,7 +580,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT159",
+    "id": "7376241IT159",
     "name": "Marc Lockman",
     "department": "IT",
     "year": "Year 3",
@@ -590,7 +590,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE160",
+    "id": "7376241EE160",
     "name": "Gertrude Nitzsche",
     "department": "EEE",
     "year": "Year 4",
@@ -600,7 +600,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC161",
+    "id": "7376231EC161",
     "name": "Cecil Waelchi",
     "department": "ECE",
     "year": "Year 1",
@@ -610,7 +610,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS162",
+    "id": "7376241CS162",
     "name": "Delbert Runolfsson",
     "department": "CSE",
     "year": "Year 2",
@@ -620,7 +620,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT163",
+    "id": "7376231IT163",
     "name": "Eileen Hartmann",
     "department": "IT",
     "year": "Year 3",
@@ -630,7 +630,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE164",
+    "id": "7376241EE164",
     "name": "Ginger Pollich",
     "department": "EEE",
     "year": "Year 4",
@@ -640,7 +640,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC165",
+    "id": "7376241EC165",
     "name": "Ruby Pouros",
     "department": "ECE",
     "year": "Year 1",
@@ -650,7 +650,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS166",
+    "id": "7376241CS166",
     "name": "Vicky Herzog I",
     "department": "CSE",
     "year": "Year 2",
@@ -660,7 +660,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT167",
+    "id": "7376241IT167",
     "name": "Carolyn Littel",
     "department": "IT",
     "year": "Year 3",
@@ -670,7 +670,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE168",
+    "id": "7376241EE168",
     "name": "Felicia Kohler",
     "department": "EEE",
     "year": "Year 4",
@@ -680,7 +680,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC169",
+    "id": "7376241EC169",
     "name": "Penny Bogan",
     "department": "ECE",
     "year": "Year 1",
@@ -690,7 +690,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS170",
+    "id": "7376241CS170",
     "name": "Winifred Dickens",
     "department": "CSE",
     "year": "Year 2",
@@ -700,7 +700,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT171",
+    "id": "7376241IT171",
     "name": "Willard Hudson",
     "department": "IT",
     "year": "Year 3",
@@ -710,7 +710,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE172",
+    "id": "7376241EE172",
     "name": "Gene Kshlerin",
     "department": "EEE",
     "year": "Year 4",
@@ -720,7 +720,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC173",
+    "id": "7376241EC173",
     "name": "Shelley McCullough",
     "department": "ECE",
     "year": "Year 1",
@@ -730,7 +730,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS174",
+    "id": "7376241CS174",
     "name": "Sophia Deckow III",
     "department": "CSE",
     "year": "Year 2",
@@ -740,7 +740,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT175",
+    "id": "7376241IT175",
     "name": "Katie Beahan",
     "department": "IT",
     "year": "Year 3",
@@ -750,7 +750,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE176",
+    "id": "7376241EE176",
     "name": "Monica Wisoky",
     "department": "EEE",
     "year": "Year 4",
@@ -760,7 +760,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC177",
+    "id": "7376241EC177",
     "name": "Roxanne Lowe",
     "department": "ECE",
     "year": "Year 1",
@@ -770,7 +770,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS178",
+    "id": "7376241CS178",
     "name": "Marlene D'Amore",
     "department": "CSE",
     "year": "Year 2",
@@ -780,7 +780,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT179",
+    "id": "7376241IT179",
     "name": "Yolanda Orn-Dickens DVM",
     "department": "IT",
     "year": "Year 3",
@@ -790,7 +790,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE180",
+    "id": "7376241EE180",
     "name": "Lamar Daniel",
     "department": "EEE",
     "year": "Year 4",
@@ -800,7 +800,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC181",
+    "id": "7376241EC181",
     "name": "Sean Smith",
     "department": "ECE",
     "year": "Year 1",
@@ -810,7 +810,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS182",
+    "id": "7376241CS182",
     "name": "Aaron Leuschke",
     "department": "CSE",
     "year": "Year 2",
@@ -820,7 +820,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT183",
+    "id": "7376241IT183",
     "name": "Verna Prosacco",
     "department": "IT",
     "year": "Year 3",
@@ -830,7 +830,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE184",
+    "id": "7376231EE184",
     "name": "Rochelle Hills",
     "department": "EEE",
     "year": "Year 4",
@@ -840,7 +840,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC185",
+    "id": "7376241EC185",
     "name": "Claude Kemmer",
     "department": "ECE",
     "year": "Year 1",
@@ -850,7 +850,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS186",
+    "id": "7376241CS186",
     "name": "Freda Kozey",
     "department": "CSE",
     "year": "Year 2",
@@ -860,7 +860,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT187",
+    "id": "7376241IT187",
     "name": "Camille Blick",
     "department": "IT",
     "year": "Year 3",
@@ -870,7 +870,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE188",
+    "id": "7376241EE188",
     "name": "Roosevelt Muller-Bins",
     "department": "EEE",
     "year": "Year 4",
@@ -880,7 +880,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC189",
+    "id": "7376231EC189",
     "name": "Veronica Monahan",
     "department": "ECE",
     "year": "Year 1",
@@ -890,7 +890,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231CS190",
+    "id": "7376231CS190",
     "name": "Wesley Shields",
     "department": "CSE",
     "year": "Year 2",
@@ -900,7 +900,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT191",
+    "id": "7376241IT191",
     "name": "Jenna Lind DVM",
     "department": "IT",
     "year": "Year 3",
@@ -910,7 +910,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE192",
+    "id": "7376231EE192",
     "name": "Vicki Anderson",
     "department": "EEE",
     "year": "Year 4",
@@ -920,7 +920,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC193",
+    "id": "7376241EC193",
     "name": "Spencer Stoltenberg",
     "department": "ECE",
     "year": "Year 1",
@@ -930,7 +930,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231CS194",
+    "id": "7376231CS194",
     "name": "Shane Ratke",
     "department": "CSE",
     "year": "Year 2",
@@ -940,7 +940,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT195",
+    "id": "7376241IT195",
     "name": "Gerardo Erdman",
     "department": "IT",
     "year": "Year 3",
@@ -950,7 +950,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE196",
+    "id": "7376241EE196",
     "name": "Beatrice White",
     "department": "EEE",
     "year": "Year 4",
@@ -960,7 +960,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC197",
+    "id": "7376241EC197",
     "name": "Kyle Aufderhar",
     "department": "ECE",
     "year": "Year 1",
@@ -970,7 +970,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS198",
+    "id": "7376241CS198",
     "name": "Curtis Fay",
     "department": "CSE",
     "year": "Year 2",
@@ -980,7 +980,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT199",
+    "id": "7376241IT199",
     "name": "Vincent Kuhic",
     "department": "IT",
     "year": "Year 3",
@@ -990,7 +990,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE200",
+    "id": "7376241EE200",
     "name": "Charlotte Hermiston",
     "department": "EEE",
     "year": "Year 4",
@@ -1000,7 +1000,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC101",
+    "id": "7376241EC101",
     "name": "Myron Hilpert",
     "department": "ECE",
     "year": "Year 1",
@@ -1010,7 +1010,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS102",
+    "id": "7376241CS102",
     "name": "Virginia Gibson",
     "department": "CSE",
     "year": "Year 2",
@@ -1020,7 +1020,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT103",
+    "id": "7376231IT103",
     "name": "Nathaniel Dietrich",
     "department": "IT",
     "year": "Year 3",
@@ -1030,7 +1030,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE104",
+    "id": "7376241EE104",
     "name": "Ana Dickens",
     "department": "EEE",
     "year": "Year 4",
@@ -1040,7 +1040,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC105",
+    "id": "7376241EC105",
     "name": "Douglas Lang",
     "department": "ECE",
     "year": "Year 1",
@@ -1050,7 +1050,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS106",
+    "id": "7376241CS106",
     "name": "Rene Wolff",
     "department": "CSE",
     "year": "Year 2",
@@ -1060,7 +1060,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT107",
+    "id": "7376241IT107",
     "name": "Yolanda Marvin I",
     "department": "IT",
     "year": "Year 3",
@@ -1070,7 +1070,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE108",
+    "id": "7376241EE108",
     "name": "Javier Runte DVM",
     "department": "EEE",
     "year": "Year 4",
@@ -1080,7 +1080,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC109",
+    "id": "7376241EC109",
     "name": "Cecilia Blick",
     "department": "ECE",
     "year": "Year 1",
@@ -1090,7 +1090,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS110",
+    "id": "7376241CS110",
     "name": "Julie Haag MD",
     "department": "CSE",
     "year": "Year 2",
@@ -1100,7 +1100,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT111",
+    "id": "7376241IT111",
     "name": "Duane Kertzmann",
     "department": "IT",
     "year": "Year 3",
@@ -1110,7 +1110,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE112",
+    "id": "7376241EE112",
     "name": "Marilyn Hoppe",
     "department": "EEE",
     "year": "Year 4",
@@ -1120,7 +1120,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC113",
+    "id": "7376231EC113",
     "name": "Earl Moore",
     "department": "ECE",
     "year": "Year 1",
@@ -1130,7 +1130,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231CS114",
+    "id": "7376231CS114",
     "name": "Rochelle Toy",
     "department": "CSE",
     "year": "Year 2",
@@ -1140,7 +1140,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT115",
+    "id": "7376241IT115",
     "name": "Alan Smith DDS",
     "department": "IT",
     "year": "Year 3",
@@ -1150,7 +1150,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE116",
+    "id": "7376241EE116",
     "name": "Lynne Adams-Predovic",
     "department": "EEE",
     "year": "Year 4",
@@ -1160,7 +1160,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC117",
+    "id": "7376231EC117",
     "name": "Alexis Huels",
     "department": "ECE",
     "year": "Year 1",
@@ -1170,7 +1170,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS118",
+    "id": "7376241CS118",
     "name": "George Treutel",
     "department": "CSE",
     "year": "Year 2",
@@ -1180,7 +1180,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT119",
+    "id": "7376241IT119",
     "name": "Bessie Schowalter",
     "department": "IT",
     "year": "Year 3",
@@ -1190,7 +1190,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE120",
+    "id": "7376231EE120",
     "name": "Frances Mertz",
     "department": "EEE",
     "year": "Year 4",
@@ -1200,7 +1200,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC121",
+    "id": "7376241EC121",
     "name": "Roland Hettinger",
     "department": "ECE",
     "year": "Year 1",
@@ -1210,7 +1210,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS122",
+    "id": "7376241CS122",
     "name": "May Blanda",
     "department": "CSE",
     "year": "Year 2",
@@ -1220,7 +1220,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT123",
+    "id": "7376241IT123",
     "name": "Israel Nolan",
     "department": "IT",
     "year": "Year 3",
@@ -1230,7 +1230,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE124",
+    "id": "7376231EE124",
     "name": "Dana Reinger II",
     "department": "EEE",
     "year": "Year 4",
@@ -1240,7 +1240,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC125",
+    "id": "7376241EC125",
     "name": "Milton Gusikowski",
     "department": "ECE",
     "year": "Year 1",
@@ -1250,7 +1250,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS126",
+    "id": "7376241CS126",
     "name": "May McClure",
     "department": "CSE",
     "year": "Year 2",
@@ -1260,7 +1260,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT127",
+    "id": "7376241IT127",
     "name": "Pat Schuppe",
     "department": "IT",
     "year": "Year 3",
@@ -1270,7 +1270,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE128",
+    "id": "7376241EE128",
     "name": "Charles Johnson I",
     "department": "EEE",
     "year": "Year 4",
@@ -1280,7 +1280,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC129",
+    "id": "7376241EC129",
     "name": "Austin Murphy",
     "department": "ECE",
     "year": "Year 1",
@@ -1290,7 +1290,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS130",
+    "id": "7376241CS130",
     "name": "Charlene Pagac",
     "department": "CSE",
     "year": "Year 2",
@@ -1300,7 +1300,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT131",
+    "id": "7376241IT131",
     "name": "Gerard Swift-Senger",
     "department": "IT",
     "year": "Year 3",
@@ -1310,7 +1310,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE132",
+    "id": "7376241EE132",
     "name": "Timmy Smitham",
     "department": "EEE",
     "year": "Year 4",
@@ -1320,7 +1320,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC133",
+    "id": "7376241EC133",
     "name": "Domingo Gusikowski-Schowalter",
     "department": "ECE",
     "year": "Year 1",
@@ -1330,7 +1330,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS134",
+    "id": "7376241CS134",
     "name": "Alicia Lubowitz DVM",
     "department": "CSE",
     "year": "Year 2",
@@ -1340,7 +1340,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT135",
+    "id": "7376241IT135",
     "name": "Rosa Watsica",
     "department": "IT",
     "year": "Year 3",
@@ -1350,7 +1350,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE136",
+    "id": "7376241EE136",
     "name": "Miss Julia Zemlak",
     "department": "EEE",
     "year": "Year 4",
@@ -1360,7 +1360,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC137",
+    "id": "7376241EC137",
     "name": "Wilson Wuckert-Hamill",
     "department": "ECE",
     "year": "Year 1",
@@ -1370,7 +1370,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS138",
+    "id": "7376241CS138",
     "name": "Wilfred Abernathy",
     "department": "CSE",
     "year": "Year 2",
@@ -1380,7 +1380,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT139",
+    "id": "7376241IT139",
     "name": "Evan DuBuque",
     "department": "IT",
     "year": "Year 3",
@@ -1390,7 +1390,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE140",
+    "id": "7376241EE140",
     "name": "Nichole Yost",
     "department": "EEE",
     "year": "Year 4",
@@ -1400,7 +1400,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC141",
+    "id": "7376241EC141",
     "name": "Kathryn Moen",
     "department": "ECE",
     "year": "Year 1",
@@ -1410,7 +1410,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS142",
+    "id": "7376241CS142",
     "name": "Spencer Cronin",
     "department": "CSE",
     "year": "Year 2",
@@ -1420,7 +1420,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT143",
+    "id": "7376241IT143",
     "name": "Benny Tremblay",
     "department": "IT",
     "year": "Year 3",
@@ -1430,7 +1430,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE144",
+    "id": "7376241EE144",
     "name": "Beatrice Veum DDS",
     "department": "EEE",
     "year": "Year 4",
@@ -1440,7 +1440,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC145",
+    "id": "7376241EC145",
     "name": "Wilfred Wisozk",
     "department": "ECE",
     "year": "Year 1",
@@ -1450,7 +1450,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS146",
+    "id": "7376241CS146",
     "name": "Jermaine Reilly",
     "department": "CSE",
     "year": "Year 2",
@@ -1460,7 +1460,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT147",
+    "id": "7376241IT147",
     "name": "Derek West",
     "department": "IT",
     "year": "Year 3",
@@ -1470,7 +1470,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE148",
+    "id": "7376241EE148",
     "name": "Antonia McCullough",
     "department": "EEE",
     "year": "Year 4",
@@ -1480,7 +1480,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC149",
+    "id": "7376241EC149",
     "name": "Ashley Wunsch",
     "department": "ECE",
     "year": "Year 1",
@@ -1490,7 +1490,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS150",
+    "id": "7376241CS150",
     "name": "Dolores Hessel MD",
     "department": "CSE",
     "year": "Year 2",
@@ -1500,7 +1500,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT151",
+    "id": "7376241IT151",
     "name": "Ms. Natalie Hartmann",
     "department": "IT",
     "year": "Year 3",
@@ -1510,7 +1510,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE152",
+    "id": "7376241EE152",
     "name": "Ida Rath",
     "department": "EEE",
     "year": "Year 4",
@@ -1520,7 +1520,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC153",
+    "id": "7376241EC153",
     "name": "Amanda Turner",
     "department": "ECE",
     "year": "Year 1",
@@ -1530,7 +1530,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231CS154",
+    "id": "7376231CS154",
     "name": "Hugo Block",
     "department": "CSE",
     "year": "Year 2",
@@ -1540,7 +1540,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT155",
+    "id": "7376231IT155",
     "name": "Maria Jast",
     "department": "IT",
     "year": "Year 3",
@@ -1550,7 +1550,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE156",
+    "id": "7376241EE156",
     "name": "Diana Jones",
     "department": "EEE",
     "year": "Year 4",
@@ -1560,7 +1560,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC157",
+    "id": "7376241EC157",
     "name": "Megan Lang",
     "department": "ECE",
     "year": "Year 1",
@@ -1570,7 +1570,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS158",
+    "id": "7376241CS158",
     "name": "Lynda Klocko",
     "department": "CSE",
     "year": "Year 2",
@@ -1580,7 +1580,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT159",
+    "id": "7376241IT159",
     "name": "Jake Pagac",
     "department": "IT",
     "year": "Year 3",
@@ -1590,7 +1590,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE160",
+    "id": "7376241EE160",
     "name": "Shawn DuBuque V",
     "department": "EEE",
     "year": "Year 4",
@@ -1600,7 +1600,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC161",
+    "id": "7376241EC161",
     "name": "Mable Collier",
     "department": "ECE",
     "year": "Year 1",
@@ -1610,7 +1610,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS162",
+    "id": "7376241CS162",
     "name": "Ross Considine",
     "department": "CSE",
     "year": "Year 2",
@@ -1620,7 +1620,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT163",
+    "id": "7376231IT163",
     "name": "Alison Fahey PhD",
     "department": "IT",
     "year": "Year 3",
@@ -1630,7 +1630,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE164",
+    "id": "7376241EE164",
     "name": "Christopher Ruecker",
     "department": "EEE",
     "year": "Year 4",
@@ -1640,7 +1640,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC165",
+    "id": "7376241EC165",
     "name": "Marion Raynor",
     "department": "ECE",
     "year": "Year 1",
@@ -1650,7 +1650,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS166",
+    "id": "7376241CS166",
     "name": "Camille Lebsack",
     "department": "CSE",
     "year": "Year 2",
@@ -1660,7 +1660,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT167",
+    "id": "7376241IT167",
     "name": "Karl Aufderhar",
     "department": "IT",
     "year": "Year 3",
@@ -1670,7 +1670,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE168",
+    "id": "7376241EE168",
     "name": "Roland Hintz",
     "department": "EEE",
     "year": "Year 4",
@@ -1680,7 +1680,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC169",
+    "id": "7376241EC169",
     "name": "Benny Kuhlman-Howell",
     "department": "ECE",
     "year": "Year 1",
@@ -1690,7 +1690,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS170",
+    "id": "7376241CS170",
     "name": "Lois Hamill Jr.",
     "department": "CSE",
     "year": "Year 2",
@@ -1700,7 +1700,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT171",
+    "id": "7376241IT171",
     "name": "Ms. Carolyn Gleason",
     "department": "IT",
     "year": "Year 3",
@@ -1710,7 +1710,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE172",
+    "id": "7376241EE172",
     "name": "Eunice Brown",
     "department": "EEE",
     "year": "Year 4",
@@ -1720,7 +1720,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC173",
+    "id": "7376241EC173",
     "name": "Jesus Torphy MD",
     "department": "ECE",
     "year": "Year 1",
@@ -1730,7 +1730,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS174",
+    "id": "7376241CS174",
     "name": "Miriam Reichel",
     "department": "CSE",
     "year": "Year 2",
@@ -1740,7 +1740,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT175",
+    "id": "7376241IT175",
     "name": "Zachary Hand III",
     "department": "IT",
     "year": "Year 3",
@@ -1750,7 +1750,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE176",
+    "id": "7376241EE176",
     "name": "Roxanne Hermann",
     "department": "EEE",
     "year": "Year 4",
@@ -1760,7 +1760,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC177",
+    "id": "7376241EC177",
     "name": "Joey Hirthe",
     "department": "ECE",
     "year": "Year 1",
@@ -1770,7 +1770,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS178",
+    "id": "7376241CS178",
     "name": "Tracey Ratke",
     "department": "CSE",
     "year": "Year 2",
@@ -1780,7 +1780,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT179",
+    "id": "7376241IT179",
     "name": "Virgil Welch",
     "department": "IT",
     "year": "Year 3",
@@ -1790,7 +1790,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE180",
+    "id": "7376241EE180",
     "name": "Claude Ruecker",
     "department": "EEE",
     "year": "Year 4",
@@ -1800,7 +1800,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EC181",
+    "id": "7376231EC181",
     "name": "Margie Kiehn",
     "department": "ECE",
     "year": "Year 1",
@@ -1810,7 +1810,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231CS182",
+    "id": "7376231CS182",
     "name": "Rosie Reichert",
     "department": "CSE",
     "year": "Year 2",
@@ -1820,7 +1820,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT183",
+    "id": "7376241IT183",
     "name": "Jean Tromp",
     "department": "IT",
     "year": "Year 3",
@@ -1830,7 +1830,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE184",
+    "id": "7376241EE184",
     "name": "Alton Rice",
     "department": "EEE",
     "year": "Year 4",
@@ -1840,7 +1840,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC185",
+    "id": "7376241EC185",
     "name": "Peggy Feest IV",
     "department": "ECE",
     "year": "Year 1",
@@ -1850,7 +1850,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS186",
+    "id": "7376241CS186",
     "name": "Lucy Block",
     "department": "CSE",
     "year": "Year 2",
@@ -1860,7 +1860,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231IT187",
+    "id": "7376231IT187",
     "name": "Alvin Abernathy",
     "department": "IT",
     "year": "Year 3",
@@ -1870,7 +1870,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE188",
+    "id": "7376241EE188",
     "name": "Glenda Mante",
     "department": "EEE",
     "year": "Year 4",
@@ -1880,7 +1880,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC189",
+    "id": "7376241EC189",
     "name": "Wendy Emmerich",
     "department": "ECE",
     "year": "Year 1",
@@ -1890,7 +1890,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS190",
+    "id": "7376241CS190",
     "name": "Celia Ward",
     "department": "CSE",
     "year": "Year 2",
@@ -1900,7 +1900,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT191",
+    "id": "7376241IT191",
     "name": "Jenny Hackett",
     "department": "IT",
     "year": "Year 3",
@@ -1910,7 +1910,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE192",
+    "id": "7376241EE192",
     "name": "Robin Lowe",
     "department": "EEE",
     "year": "Year 4",
@@ -1920,7 +1920,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC193",
+    "id": "7376241EC193",
     "name": "Don Baumbach III",
     "department": "ECE",
     "year": "Year 1",
@@ -1930,7 +1930,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS194",
+    "id": "7376241CS194",
     "name": "Jasmine Larkin",
     "department": "CSE",
     "year": "Year 2",
@@ -1940,7 +1940,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT195",
+    "id": "7376241IT195",
     "name": "Jorge McCullough-Paucek",
     "department": "IT",
     "year": "Year 3",
@@ -1950,7 +1950,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EE196",
+    "id": "7376241EE196",
     "name": "Jose Kunde III",
     "department": "EEE",
     "year": "Year 4",
@@ -1960,7 +1960,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241EC197",
+    "id": "7376241EC197",
     "name": "Phyllis Homenick",
     "department": "ECE",
     "year": "Year 1",
@@ -1970,7 +1970,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241CS198",
+    "id": "7376241CS198",
     "name": "Randolph Tromp-Ondricka",
     "department": "CSE",
     "year": "Year 2",
@@ -1980,7 +1980,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376241IT199",
+    "id": "7376241IT199",
     "name": "John Hermann",
     "department": "IT",
     "year": "Year 3",
@@ -1990,7 +1990,7 @@
     "EventHistory": []
   },
   {
-    "studentId": "7376231EE200",
+    "id": "7376231EE200",
     "name": "Jeffery Lakin",
     "department": "EEE",
     "year": "Year 4",

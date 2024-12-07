@@ -1,9 +1,10 @@
 import { Request , Response } from "express";
 import { SlotModel } from "../../Models/Slot.model";
 import { IBookingStatus } from "../../Models/interfaces";
-import { venueMatch } from "../helpers";
-import mongoose from "mongoose";
-import { StudentModel } from "../../Models/Student.model";
+
+import { ObjectId } from "mongoose";
+import { UserModel } from "../../Models/User.model";
+import { venueMatch } from "../../Utils/VenueMatch.utils";
 
 /** 
  * @method GET
@@ -45,10 +46,10 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
         }
         let staffVenue = data[0].slots.venue;
         let nowBookers: Pick<IBookingStatus, "bookingDate" | "bookingTime" | "studentId">[] = [];
-        data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: mongoose.Schema.Types.ObjectId, isBooked: boolean }) => 
+        data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: ObjectId, isBooked: boolean }) => 
         {
             if (slot.isBooked && slot.bookingTime !== null && venueMatch(slot.bookingTime, staffVenue)) {
-                let d: { bookingTime: string, bookingDate: Date, studentId: mongoose.Schema.Types.ObjectId } = {
+                let d: { bookingTime: string, bookingDate: Date, studentId: ObjectId } = {
                     bookingTime: slot.bookingTime.split("|")[1].toString(),
                     bookingDate: slot.bookingDate,
                     studentId: slot.studentId
@@ -63,7 +64,7 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
         *  });
         * **uncomment to get the current hour bookers**
         */
-        const students = await StudentModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
+        const students = await UserModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
         res.json({ students, eventType: data[0].eventType });
 
 

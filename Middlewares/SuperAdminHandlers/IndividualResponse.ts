@@ -13,7 +13,7 @@ export const getResponseById = async (req: Request,res: Response ): Promise<void
       let results: Array<any> = await AvailabilityModel.aggregate([
         {
           $lookup: {
-            from: "staffs",
+            from: "users",
             localField: "instructorId",
             foreignField: "_id",
             as: "staff",

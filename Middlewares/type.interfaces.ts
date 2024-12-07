@@ -2,6 +2,8 @@
  * Timings Grouped With Dates
  */
 
+import mongoose from "mongoose";
+
 export interface TimeAndAvailable {
     time: string; 
     isAvailable: string 
@@ -37,3 +39,23 @@ export interface IEvents {
     Description:string,
     MaximumParticipants : number
 }
+
+export type IAvailability = {
+    instructorId: string | mongoose.Types.ObjectId;
+    responseDeadline: Date;
+    availableSlots: {
+      date: Date;
+      slots: {
+        time: any;
+        isAvailable: string;
+      }[];
+    }[];
+  };
+
+export type groupDates = { date: Date; slots: string[] };
+
+export type staff = {
+  _id: string;
+  staffId: string;
+  name: string;
+};
