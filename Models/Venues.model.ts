@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import { Schema , model } from "mongoose";
 import { IVenues } from "./interfaces";
 
-const VenuesSchema = new mongoose.Schema<IVenues>({
+const VenuesSchema = new Schema<IVenues>({
     venue: String,
     staffs: [{ type: String, ref: 'Staff' }],
     slots : [{
@@ -9,5 +9,5 @@ const VenuesSchema = new mongoose.Schema<IVenues>({
         limit : Number
     }]
 });
-const VenuesModel = mongoose.model("Venues", VenuesSchema);
+const VenuesModel = model("Venues", VenuesSchema);
 export {VenuesModel , VenuesSchema};

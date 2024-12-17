@@ -9,7 +9,7 @@ export interface TimeAndAvailable {
     isAvailable: string 
 }
 export interface IGroupDates {
-    date: Date; 
+    date: string; 
     availableSlots: TimeAndAvailable[] 
 }
 
@@ -19,13 +19,13 @@ export interface IGroupDates {
  * 
  */
 export interface ISlotTimings {
-    date: Date;
+    date: string;
     time: string;
     isAvailable: string
 }
 
 export interface IreGroupDate {
-    date : Date 
+    date : string 
     slots : TimeAndAvailable[]
 }
 

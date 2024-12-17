@@ -17,8 +17,9 @@ export const getAcceptedResponse = async (req: Request, res: Response): Promise<
         }
       ).populate({
         path: "instructorId",
-        select: "name staffId -_id ",
+        select: "name id -_id ",
       });
+      console.log(result);
       if (result.length === 0) {
         res
           .status(404)

@@ -5,7 +5,8 @@ export function authorize(role:string) {
   return async (req : Request , res : Response , next : NextFunction)=>{
     const session = req.session.user;
     if(!session){
-      res.status(401).json({message:"Please Login" , success:false});
+      console.log('unauthorized');
+      res.status(401).json({message:"Please Login Again" , success:false});
     } 
     else if(session && session.role === role) {
       next();
@@ -15,8 +16,4 @@ export function authorize(role:string) {
       res.status(401).json({message:"Forbidden" , success:false});
     }
   }
-}
-
-export async function authGuard(req : Request , res : Response ,next:NextFunction) {
-  
 }

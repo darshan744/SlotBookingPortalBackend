@@ -24,7 +24,7 @@ export const getResponseById = async (req: Request,res: Response ): Promise<void
         },
         {
           $match: {
-            "staff.staffId": id,
+            "staff.id": id,
             "availableSlots.slots.isAvailable": "Accepted",
           },
         },
@@ -42,7 +42,7 @@ export const getResponseById = async (req: Request,res: Response ): Promise<void
         {
           $group: {
             _id: {
-              staffId: "$staff.staffId",
+              id: "$staff.id",
               name: "$staff.name",
               mail: "$staff.mail",
               date: "$availableSlots.date",
@@ -73,7 +73,7 @@ export const getResponseById = async (req: Request,res: Response ): Promise<void
         {
           $project: {
             _id: 0,
-            staffId: "$_id.staffId",
+            id: "$_id.id",
             name: "$_id.name",
             mail: "$_id.mail",
             availableSlots: 1,

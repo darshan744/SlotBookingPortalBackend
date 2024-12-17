@@ -10,3 +10,5 @@ const userSchema = new Schema<IUser>({
     department :String,
 },{discriminatorKey : 'userType', timestamps:true});
 export const UserModel = model('User' , userSchema);
+
+export const SuperAdminModel = UserModel.discriminator('SuperAdmin' ,new Schema({}));

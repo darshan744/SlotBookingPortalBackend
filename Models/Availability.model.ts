@@ -17,7 +17,7 @@ const AvailabilitySchema = new mongoose.Schema<IAvailability>({
     responseDeadline : Date
 })
 
- function unmodifiedCount(doc : IAvailability) {
+function unmodifiedCount(doc : IAvailability) {
     let count : number = 0;
     try {
         for(const slot of doc.availableSlots) {
@@ -38,6 +38,9 @@ AvailabilitySchema.pre('insertMany',function(next ,docs) {
     }
     next();
 })
-
+AvailabilitySchema.pre('save', function (next) {
+    unmodifiedCount(this);
+    next();
+});
 export const AvailabilityModel = mongoose.model("Availability", AvailabilitySchema);
 

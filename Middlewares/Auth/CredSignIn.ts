@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { IStaff, IStudent } from "../../Models/interfaces";
+import { IStaff, IStudent, IUser } from "../../Models/interfaces";
 import { ResponseMessages } from "../../../Shared/Authenticate.enum";
 import { UserModel } from "../../Models/User.model";
 import mongoose from "mongoose";
@@ -15,15 +15,15 @@ export const authenticate = async (req: Request, res: Response) => {
     const credentials = req.body.user;
     console.log(credentials);
     try{
-        let User : IStudent | IStaff | null = await UserModel.findOne({id:credentials.name})                        
+        let User : IStudent | IStaff | null | IUser= await UserModel.findOne({id:credentials.name})                        
         if( User && User.userType === 'Staff') {
             User = User as IStaff;
         }
         else if(User && User.userType === 'Student') {
             User = User as IStudent;
         }
-        else {
-            User = null;
+        else if(User && User.userType === 'SuperAdmin') {
+            User = User as IUser;
         }
         if(User && User.password === credentials.password) {
             console.log("passcorect");
@@ -34,7 +34,8 @@ export const authenticate = async (req: Request, res: Response) => {
                 name : User.name,
                 role:User.userType,
             }
-            console.log('sessionId : ' , req.session.id);
+            console.log('session: ' , req.session);
+            console.log('sessionId : ' , req.sessionID);
             let data :any = {
                 id: User.id,
                 name: User.name,

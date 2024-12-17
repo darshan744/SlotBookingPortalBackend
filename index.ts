@@ -12,6 +12,7 @@ import { authenticate } from "./Middlewares/Auth/CredSignIn";
 import { logout } from "./Middlewares/Auth/Logout";
 import { Events } from "./Middlewares/SuperAdminHandlers/Events";
 import { authorize } from "./Middlewares/Auth/VerifySession";
+import { insertUser } from "./Middlewares/insertUser";
 
 
 const app: Express = express();
@@ -53,9 +54,10 @@ const sessionOptions = {
   resave: false,
   saveUninitialized: false,
   store: mongoStoreSessionOptions,
-  cookie: { secure: false, maxAge: 60000 * 60 * 60, httpOnly: true, }
+  cookie: { secure: false, maxAge: 60000 * 60 * 60 * 60, httpOnly: true, }
 }
 DatabaseConnection();
+
 
 //options
 app.use(session(sessionOptions));
@@ -63,14 +65,19 @@ app.use(cors(corsOption));
 app.use(express.json());
 
 //log the route and method
-app.use((req , res , next)=>{ console.log(`Request for ${req.path} with method : ${req.method}`);next()})
+app.use((req , res , next)=>{ 
+  console.log(`Request for ${req.path} with method : ${req.method}`);
+  // console.log(req.session);
+  next();
+})
+
 app.use(express.static('./public'))
 
 //authentications
 app.post("/api/v1/google/login", googleLogin);
 app.post("/api/v1/login", authenticate);
 app.post("/api/v1/logout", logout);
-
+app.post('/api/v1/insert' , insertUser);
 //routes
 app.use("/api/v1/SuperAdmin",authorize('SuperAdmin'), superAdminRoutes);
 app.use("/api/v1/Admin",authorize('Staff'), AdminRoutes);
