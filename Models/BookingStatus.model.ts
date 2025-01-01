@@ -8,5 +8,5 @@ export const BookingStatusSchema = new mongoose.Schema<IBookingStatus>({
     bookingDate : {type : Date },
     bookingTime: { type: String }
 });
-export const BookingStatusModel =  mongoose.model("BookingStatus",BookingStatusSchema);
+// export const BookingStatusModel =  mongoose.model("BookingStatus",BookingStatusSchema);
 

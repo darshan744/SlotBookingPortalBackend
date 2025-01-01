@@ -1,6 +1,6 @@
 
 import {Request  , Response }  from 'express';
-import { IGroupDates } from '../type.interfaces';
+import { IGroupDates } from '../function.interfaces';
 import { AvailabilityModel } from '../../Models/Availability.model';
 import { reTransformSlots } from '../../Utils/RetransformSlots.utils';
 

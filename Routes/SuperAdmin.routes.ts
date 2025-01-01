@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-import { postSlots } from '../Middlewares/SuperAdminHandlers/CreateSlots';
+import { postSlots , postSlots2 } from '../Middlewares/SuperAdminHandlers/CreateSlots';
 import { getAcceptedResponse } from '../Middlewares/SuperAdminHandlers/StaffsAvailability';
 import { getResponseById } from '../Middlewares/SuperAdminHandlers/IndividualResponse';
 import { acceptanceStatus } from '../Middlewares/SuperAdminHandlers/AcceptanceStatus';
@@ -7,10 +7,9 @@ import { requestAvailability } from '../Middlewares/SuperAdminHandlers/RequestAv
 import { getAllStaffs } from '../Middlewares/SuperAdminHandlers/GetStaffs';
 import { createStaffs } from '../Middlewares/SuperAdminHandlers/insertStaffs';
 import { createEvent } from '../Middlewares/SuperAdminHandlers/CreateEvent';
+import {getBreaks, postBreaks} from "../Middlewares/SuperAdminHandlers/Breaks";
 
 const router : Router = express.Router();
-
-//`/api/v1/SuperAdmin`
 
 router.post('/staffs/availability',requestAvailability)
 
@@ -24,8 +23,11 @@ router.get('/responses/:id',getResponseById)
 
 router.get('/responses',acceptanceStatus)
 
-router.post('/slots',postSlots);
+router.post('/slots',postSlots2);
 
 router.post('/events', createEvent)
+
+router.route('/breaks').post(postBreaks).get(getBreaks)
+
 
 export {router};

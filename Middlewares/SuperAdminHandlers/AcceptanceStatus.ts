@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { AvailabilityModel } from "../../Models/Availability.model";
+import {IAvailability, IStaff} from "../../Models/interfaces";
 
 
 /**
@@ -8,9 +9,10 @@ import { AvailabilityModel } from "../../Models/Availability.model";
  *  
  */
 export const acceptanceStatus = async (req: Request,res: Response): Promise<void> => {
-    let dbData: Array<any> = await AvailabilityModel.find({}).populate({
-      path: "instructorId",
-      select: "id name email phNo -_id",
+    let dbData: Array<any>;
+    dbData = await AvailabilityModel.find({}, {unmodifiedCount: 1, forYear: 1, eventType: 1}).populate({
+        path: "instructorId",
+        select: "id name email phNo -_id",
     });
     console.log(dbData);
     let results: Array<{
@@ -19,12 +21,14 @@ export const acceptanceStatus = async (req: Request,res: Response): Promise<void
       name: string;
       email: string;
       unmodifiedCount: number;
-    }> = dbData.map((el) => ({
+    }> = dbData.map(el => ({
       id: el.instructorId.id,
       phoneNumber: el.instructorId.phNo,
       name: el.instructorId.name,
       email: el.instructorId.email,
       unmodifiedCount: el.unmodifiedCount,
+        forYear : el.forYear,
+        eventType : el.eventType,
     }));
     console.log(results);
     res.status(200).json({
