@@ -2,7 +2,7 @@ import { StudentModel } from './../../Models/Student.model';
 import { Request , Response } from "express";
 import mongoose from "mongoose";
 import { IBookingStatus, IStudent } from "../../Models/interfaces";
-import { IStudentMarks } from "../type.interfaces";
+import { IStudentMarks } from "../function.interfaces";
 import { SlotModel } from '../../Models/Slot.model';
 /**
  * @method POST

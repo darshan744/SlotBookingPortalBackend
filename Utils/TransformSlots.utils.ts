@@ -1,7 +1,7 @@
-import { IreGroupDate, ISlotTimings } from "../Middlewares/type.interfaces";
+import { IReGroupDate, ISlotTimings } from "../Middlewares/function.interfaces";
 
-export const transformSlots: (schedule: IreGroupDate[]) => ISlotTimings[] = (
-    schedule: IreGroupDate[]
+export const transformSlots: (schedule: IReGroupDate[]) => ISlotTimings[] = (
+    schedule: IReGroupDate[]
   ): ISlotTimings[] => {
     const result: { date: string; time: string; isAvailable: string }[] = [];
     schedule.forEach((e) => {

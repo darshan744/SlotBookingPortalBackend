@@ -1,17 +1,17 @@
 import { Request , Response } from "express";
-import { eventModel } from "../../Models/Event.model";
+import { EventModel } from "../../Models/Settings.model";
 
 export async function Events (req : Request, res : Response) {
     try {
-     const events =  await eventModel.find({},{Name:1 , _id:0});
+     const events =  await EventModel.find({},{Name:1 , _id:0 , settingType : 0});
      if(events) {
-       res.json({ message : 'Successfull' ,data:events})
+       res.json({ message : 'Successfully' ,data:events})
      }
      else {
-       res.json({message:"No events FOund"})
+       res.json({message:"No events Found"})
      }
     }
     catch(e) {
-     res.json({Message: " Error Occured"})
+     res.json({Message: " Error Occurred"})
     }
-   }
+}

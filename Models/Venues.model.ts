@@ -1,13 +1,14 @@
 import { Schema , model } from "mongoose";
-import { IVenues } from "./interfaces";
+import {IVenues2} from "./interfaces";
 
-const VenuesSchema = new Schema<IVenues>({
+const VenuesSchema = new Schema<IVenues2>({
     venue: String,
-    staffs: [{ type: String, ref: 'Staff' }],
-    slots : [{
-        time : String , 
-        limit : Number
-    }]
-});
-const VenuesModel = model("Venues", VenuesSchema);
-export {VenuesModel , VenuesSchema};
+    staffs: [{
+        id : String,
+        slots: [{
+                date: Date,
+                timings : [{time: String, limit: Number}],
+            }]
+        }]
+    });
+export {VenuesSchema};

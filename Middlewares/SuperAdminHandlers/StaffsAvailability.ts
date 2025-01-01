@@ -21,16 +21,12 @@ export const getAcceptedResponse = async (req: Request, res: Response): Promise<
       });
       console.log(result);
       if (result.length === 0) {
-        res
-          .status(404)
-          .json({ success: false, message: "There's no matching found" });
+        res.status(404).json({ success: false, message: "There's no matching found" });
       } else {
         res.status(200).json({ success: true, data: result });
       }
     } catch (e) {
-      res
-        .status(500)
-        .json({ success: false, message: "Unknown Error Occurred in Server" });
+      res.status(500).json({ success: false, message: "Unknown Error Occurred in Server" });
     }
   };
   

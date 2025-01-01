@@ -8,4 +8,4 @@ export const  StudentEventResultSchema = new mongoose.Schema<IStudentEventResult
     marks: { type: Number,  },
     remarks: { type: String,  }
 })
-export const StudentEventResultModel = mongoose.model("StudentEventResult",StudentEventResultSchema);
+// export const StudentEventResultModel = mongoose.model("StudentEventResult",StudentEventResultSchema);

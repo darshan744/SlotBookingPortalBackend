@@ -1,4 +1,4 @@
-import { IGroupDates, ISlotTimings } from "../Middlewares/type.interfaces";
+import { IGroupDates, ISlotTimings } from "../Middlewares/function.interfaces";
 
 export const reTransformSlots = (slots: ISlotTimings[]): IGroupDates[] => {
     return slots.reduce((acc: IGroupDates[], curr) => {

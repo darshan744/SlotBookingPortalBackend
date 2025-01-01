@@ -1,6 +1,7 @@
 /**
  * Timings Grouped With Dates
  */
+//Contains the types from the frontend
 
 import mongoose from "mongoose";
 
@@ -24,7 +25,7 @@ export interface ISlotTimings {
     isAvailable: string
 }
 
-export interface IreGroupDate {
+export interface IReGroupDate {
     date : string 
     slots : TimeAndAvailable[]
 }
@@ -34,15 +35,11 @@ export interface IStudentMarks {
     ispresent: boolean, marks: number, remarks: string
 }
 
-export interface IEvents { 
-    Name:string,
-    Description:string,
-    MaximumParticipants : number
-}
-
 export type TAvailability = {
     instructorId:  mongoose.Schema.Types.ObjectId;
     responseDeadline: Date;
+    forYear:string,
+    eventType:string,
     availableSlots: {
       date: Date
       slots: {

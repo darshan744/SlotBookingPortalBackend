@@ -1,7 +1,5 @@
 
 import mongoose from "mongoose"
-import { VenuesSchema } from "./Venues.model";
-import { BookingStatusSchema } from "./BookingStatus.model";
 import { Document } from "mongoose";
 import { StudentEventResultSchema } from "./StudentEventResult.model";
 
@@ -20,20 +18,40 @@ interface IStudent extends IUser {
     resume: string,
     EventHistory: typeof StudentEventResultSchema[]
 }
-
+interface IBookingStatus {
+    studentId: mongoose.Schema.Types.ObjectId,
+    isBooked: boolean,
+    bookingDate: Date | null,
+    bookingTime: string | null
+}
 interface IVenues extends Document {
     venue: string,
     staffs: string[],
     slots: { time: string, limit: number }[]
 }
+interface TimeSlot {
+    time : string,
+    limit : number,
+}
+interface IVenues2  {
+    venue: string,
+    staffs : {
+        id:string,//staff id 
+        slots:{
+            date : Date ,
+            timings : TimeSlot[]
+        }[]
+        //accepted timings alone will be kept here
+    }[]
+}
 interface ISlot extends Document {
     slotId: string,
     startDate: Date,
     endDate: Date,
-    eventType: String,
-    year: String,
-    slots: typeof VenuesSchema[],
-    bookers: typeof BookingStatusSchema[]
+    eventType: string,
+    year: string,
+    slots: IVenues2[],
+    bookers: IBookingStatus[]
 }
 interface IStaff extends IUser {
     department: string,
@@ -48,8 +66,11 @@ interface ISlotGenerated extends Document {
 }
 interface IAvailability extends Document {
     instructorId: mongoose.Schema.Types.ObjectId,
-    unmodifiedCount: Number,
-    deleteAt: Date,
+    unmodifiedCount:number,
+    responseDeadline : Date
+    requestId : string,
+    forYear:string,
+    eventType: string,
     availableSlots:
     {
         date: Date,
@@ -59,17 +80,10 @@ interface IAvailability extends Document {
             isAvailable: string
         }[]
     }[],
-    responseDeadline : Date
+
 }
 
-interface IBookingStatus {
-    studentId: mongoose.Schema.Types.ObjectId,
-    isBooked: boolean,
-    bookingDate: Date | null,
-    bookingTime: string | null
-}
-
-interface IRetrivalSlots extends Document {
+interface IRetrievalSlots extends Document {
     startDate: string,
     endDate: string,
     bookers: {
@@ -93,8 +107,26 @@ interface IUser extends Document {
     userType:string,
     department: string,
 }
+interface ISettings extends Document {
+    settingType : string,
+}
 
+interface IEvents  extends  ISettings{
+    Name:string,
+    Description:string,
+    MaximumParticipants : number
+}
+
+interface IBreaks extends ISettings {
+    configurationId: {type : string , unique:true},
+    breaks : {
+        morningBreak : string,
+        eveningBreak : string,
+        lunchStart : string,
+        lunchEnd : string,
+    }
+}
 export {
-    IAvailability, IBookingStatus, ISlot, ISlotGenerated, IStaff, IStudent,
-    IStudentEventResult, IVenues, IRetrivalSlots ,IUser
+    IEvents,IAvailability, IBookingStatus, ISlot, ISlotGenerated, IStaff, IStudent,ISettings,
+    IStudentEventResult, IVenues, IRetrievalSlots ,IUser ,IVenues2 ,TimeSlot ,IBreaks
 }
