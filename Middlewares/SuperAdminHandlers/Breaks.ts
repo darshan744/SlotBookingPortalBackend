@@ -8,21 +8,17 @@ export async function postBreaks (req: Request, res: Response): Promise<void> {
         res.json({success : false , error: "Body Not Found"});
         return;
     }
-    // console.log(req.body);
-    // res.json(body);
+   
     try {
         const responseCursor = await BreaksModel.create(body);
-        console.log(responseCursor);
         res.json({success : true ,message: 'Successfully Created'});
     }catch (e:any) {
-        console.log(e.message);
         res.status(400).json({message : e.message , success : false});
     }
 }
 export async function getBreaks (req: Request, res: Response): Promise<void> {
     try{
         const configId = req.query.configurationID;
-        console.log(configId);
         if(configId){
             const breakCursor = await BreaksModel.findOne(
                 {configurationId : configId} ,

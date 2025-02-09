@@ -10,11 +10,10 @@ import {IAvailability, IStaff} from "../../Models/interfaces";
  */
 export const acceptanceStatus = async (req: Request,res: Response): Promise<void> => {
     let dbData: Array<any>;
-    dbData = await AvailabilityModel.find({}, {unmodifiedCount: 1, forYear: 1, eventType: 1}).populate({
+    dbData = await AvailabilityModel.find({responseDeadline : {$gt : new Date() }}, {unmodifiedCount: 1, forYear: 1, eventType: 1}).populate({
         path: "instructorId",
         select: "id name email phNo -_id",
     });
-    console.log(dbData);
     let results: Array<{
       id: string;
       phoneNumber: string;
@@ -30,7 +29,6 @@ export const acceptanceStatus = async (req: Request,res: Response): Promise<void
         forYear : el.forYear,
         eventType : el.eventType,
     }));
-    console.log(results);
     res.status(200).json({
       message: "Success",
       result: results,

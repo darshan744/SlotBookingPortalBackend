@@ -4,12 +4,10 @@ import { StudentModel } from '../../Models/Student.model';
 export const getEventResult = async (req : Request , res : Response) : Promise<void> => {
     let studentId = req.params.id;
     try{
-      const studentEventResult = await StudentModel.findOne({studentId : studentId},{EventHistory:1 , _id:0});
+      const studentEventResult = await StudentModel.findOne({id : studentId},{EventHistory:1 , _id:0});
       res.json({success : true , data : studentEventResult});
-      console.log(studentEventResult);
     }
     catch(e) {
-      console.log(e);
-      res.json({success : false , message : "Cannot Retreive Event Result"});
+      res.json({success : false , message : "Cannot Retrieve Event Result"});
     }
   }

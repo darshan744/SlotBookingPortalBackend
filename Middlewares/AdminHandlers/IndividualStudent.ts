@@ -31,7 +31,6 @@ export async function findStudent(req : Request , res : Response){
         student ? res.json({data :student , message : "Students Found" , success:true}) 
                 : res.json({message : "Student not Found" , success:false});
     } catch (error : any) {
-        console.log(error.message)
         res.status(500).json({message:"Error Occurred"});
     }
     

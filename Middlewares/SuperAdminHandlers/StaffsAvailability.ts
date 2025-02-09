@@ -19,7 +19,6 @@ export const getAcceptedResponse = async (req: Request, res: Response): Promise<
         path: "instructorId",
         select: "name id -_id ",
       });
-      console.log(result);
       if (result.length === 0) {
         res.status(404).json({ success: false, message: "There's no matching found" });
       } else {

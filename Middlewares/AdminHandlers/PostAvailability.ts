@@ -14,11 +14,7 @@ import { reTransformSlots } from '../../Utils/RetransformSlots.utils';
 export const postAvailability = async (req: Request, res: Response): Promise<void> => {
     let id = req.session.user.objectId
     const availabilities: any = req.body;
-    // for(const a of availabilities)
-    //     console.log(a);
     const reTransformedSlots: IGroupDates[] = reTransformSlots(availabilities);
-    // for(const a of reTransformedSlots)
-    //     console.log(a);
     try {
         const userAvailability = await AvailabilityModel.findOne({ instructorId: id , responseDeadline : {$gte : ["$responseDeadline" , new Date()]}});
         if (!userAvailability) {
@@ -37,11 +33,9 @@ export const postAvailability = async (req: Request, res: Response): Promise<voi
             }
         });
         await userAvailability.save();
-        // console.log(JSON.stringify(userAvailability));
         
         res.json({ message: "Success", slots: userAvailability });
     } catch (e: any) {
-        console.log(e);
         res.status(500).json({ message: e + " error occurred" });
     }
 }

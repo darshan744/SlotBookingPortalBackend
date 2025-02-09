@@ -10,5 +10,5 @@ const VenuesSchema = new Schema<IVenues2>({
                 timings : [{time: String, limit: Number}],
             }]
         }]
-    });
+    },{_id : false});
 export {VenuesSchema};

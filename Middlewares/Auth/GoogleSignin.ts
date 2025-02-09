@@ -19,9 +19,7 @@ export const googleLogin = async (req: Request, res: Response) => {
         const user: IStudent | null | IStaff = await UserModel.findOne({
             email: credentials.email,
         });
-        console.log(user);
         if (user) {
-            console.log( "dept", user.department);
             req.session.user = {
                 objectId: (user._id as mongoose.Types.ObjectId).toString(),
                 id: user.id,
@@ -37,14 +35,11 @@ export const googleLogin = async (req: Request, res: Response) => {
             if('year' in user) {
                 data.year = user.year
             }
-            console.log(user.department);
-            console.log('found');
             res.json({data , success:true, role : user.userType});
         } else {
             res.json({ success: false, message: ResponseMessages.USER_NOT_FOUND });
         }
     } catch (error: any) {
-        console.log("error occured", error.message);
         res.status(500).json({ success: false, message: "Server Error" });
     }
 };

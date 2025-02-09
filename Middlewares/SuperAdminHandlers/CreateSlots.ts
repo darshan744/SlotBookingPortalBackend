@@ -51,6 +51,7 @@ export const postSlots2 = async (req: Request, res: Response): Promise<void> => 
         isBooked:false,
         bookingDate:null,
         bookingTime:null,
+        slotFinished:false,
         })
     );
     let staffAvailabilityCursor     = (await AvailabilityModel.find(
@@ -60,7 +61,6 @@ export const postSlots2 = async (req: Request, res: Response): Promise<void> => 
     ));
     let staffIds = data.venuesAndStaffs.map(e=>
         (e.staffs)).flat();//flat() converts 2d Array to 1d Array
-    console.log(staffIds);
     /**
      * We have the instructor id as objectId and the id as the string id
      * so to compare and  retrieve the corresponding response of the staff we get
@@ -93,12 +93,15 @@ export const postSlots2 = async (req: Request, res: Response): Promise<void> => 
      * @desc id for the slot with containing startDate_endDate_eventType
      * @example = 2024-12-25_2024-12-30_Mock Interview
      */
-    const slotID = `${(data.startDate).split("T")[0]}_${data.endDate.split("T")[0]}_${data.eventType}`;
-    let venues =  mapTimings(data.venuesAndStaffs , data.slots ,staffAcceptedResponse)
-    const slots = new Slot(slotID , data.startDate , data.endDate , data.eventType , data.year , venues , bookers );
-
-    await SlotModel.create(slots);
-    res.json({ slots })
+   try {
+     const slotID = `${(data.startDate).split("T")[0]}_${data.endDate.split("T")[0]}_${data.eventType}`;
+     let venues =  mapTimings(data.venuesAndStaffs , data.slots ,staffAcceptedResponse)
+     const slots = new Slot(slotID , data.startDate , data.endDate , data.eventType , data.year , venues , bookers );
+     await SlotModel.insertMany(slots);
+     res.json({ slots })
+   } catch (error : any) {
+        res.json({e : error.message})
+   }
 }
 class Slot {
     slotId: string;

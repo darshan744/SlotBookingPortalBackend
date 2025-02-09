@@ -9,7 +9,6 @@ import { EventModel } from "../../Models/Settings.model";
 export const slots = async (req: Request, res: Response): Promise<void> => {
     let event = req.params.eventType;
     const year = req.query.year;
-    console.log(year ,",",   event);
    event = event.replace('_',' ')
     let user = req.session.user;
     let studentObjectId = new mongoose.Types.ObjectId(user.objectId??"")
@@ -27,7 +26,6 @@ export const slots = async (req: Request, res: Response): Promise<void> => {
       if(slotsData) {
         slotsData.bookers = slotsData.bookers.filter(booker => booker.studentId.toString() === studentObjectId.toString());
       }
-      console.log(slotsData);
       if(slotsData.bookers[0].isBooked) {
           res.json({success : true , message : "Already Booked" , data : slotsData.bookers[0]})
           return;

@@ -67,7 +67,6 @@ app.use(express.json());
 //log the route and method
 app.use((req , res , next)=>{ 
   console.log(`Request for ${req.path} with method : ${req.method}`);
-  // console.log(req.session);
   next();
 })
 

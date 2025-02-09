@@ -61,11 +61,11 @@ export async function bookSlot (req: Request, res: Response): Promise<void> {
        await cursor.save({session : session});
        const studentCursor = await StudentModel.findOneAndUpdate({_id : new mongoose.Types.ObjectId(userObjectId)},
            {$set:{upcomingEvent : `${body.eventType}_${body.date}_${body.time}_${body.staff}_${body.venue}`}},{new : true});
-       console.log(studentCursor);
+
        await session.commitTransaction();
        res.json({success : true ,slots:cursor.slots.filter(e=>e.venue === body.venue),bookers: cursor.bookers, message : "SlotBooked Successfully"});
     }catch (e : any) {
-        console.log(e);
+        
         await session.abortTransaction()
         res.json({message : e.message , success : false });
     }finally {

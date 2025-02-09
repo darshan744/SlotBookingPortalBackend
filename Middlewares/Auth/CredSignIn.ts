@@ -13,7 +13,6 @@ import mongoose from "mongoose";
  */
 export const authenticate = async (req: Request, res: Response) => {
     const credentials = req.body.user;
-    console.log(credentials);
     try{
         let User : IStudent | IStaff | null | IUser= await UserModel.findOne({id:credentials.name})                        
         if( User && User.userType === 'Staff') {
@@ -26,16 +25,12 @@ export const authenticate = async (req: Request, res: Response) => {
             User = User as IUser;
         }
         if(User && User.password === credentials.password) {
-            console.log("passcorect");
-            console.log(User.department);
             req.session.user = {
                 objectId : (User._id as mongoose.Types.ObjectId).toString(),
                 id:User.id,
                 name : User.name,
                 role:User.userType,
             }
-            console.log('session: ' , req.session);
-            console.log('sessionId : ' , req.sessionID);
             let data :any = {
                 id: User.id,
                 name: User.name,
@@ -51,7 +46,6 @@ export const authenticate = async (req: Request, res: Response) => {
             res.json({success:false , message : ResponseMessages.USER_NOT_FOUND})
         }
     } catch(e : any){
-        console.log(e.message);
         res.status(500).json({success:false , message:'error occured'})
     }
 }

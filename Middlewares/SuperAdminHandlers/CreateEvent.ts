@@ -4,7 +4,6 @@ import { Request , Response } from "express";
 
 export const createEvent = async (req : Request , res : Response) => {
     const eventDetails : IEvents = req.body;
-    console.log(req.body);
 
     eventDetails.Name = eventDetails.Name.trimEnd();
     if(!eventDetails) {
@@ -15,7 +14,6 @@ export const createEvent = async (req : Request , res : Response) => {
         const result = await EventModel.create(eventDetails,{new : true})
         res.status(200).json({ message : "Done updating"  , success:true })
     } catch (error : any) {
-        console.log(error.message);
         res.json({success:false , err : error.message , message:"Failed To Insert Event"});
     }
 

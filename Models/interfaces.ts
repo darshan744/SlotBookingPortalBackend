@@ -16,13 +16,14 @@ interface IStudent extends IUser {
     year: string,
     upcomingEvent:string,
     resume: string,
-    EventHistory: typeof StudentEventResultSchema[]
+    EventHistory:  IStudentEventResult[]
 }
 interface IBookingStatus {
     studentId: mongoose.Schema.Types.ObjectId,
     isBooked: boolean,
     bookingDate: Date | null,
-    bookingTime: string | null
+    bookingTime: string | null,
+    slotFinished : boolean 
 }
 interface IVenues extends Document {
     venue: string,

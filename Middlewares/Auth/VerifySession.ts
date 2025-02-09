@@ -5,7 +5,6 @@ export function authorize(role:string) {
   return async (req : Request , res : Response , next : NextFunction)=>{
     const session = req.session.user;
     if(!session){
-      console.log('unauthorized');
       res.status(401).json({message:"Please Login Again" , success:false});
     } 
     else if(session && session.role === role) {

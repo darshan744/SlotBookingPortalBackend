@@ -13,61 +13,17 @@ import { venueMatch } from "../../Utils/VenueMatch.utils";
  */
 export const getStudents = async (req: Request, res: Response): Promise<void> => {
     let hour = new Date().getHours();
-    let staffId = req.params.id;
-    console.log(staffId);
-    if (!staffId) {
-        res.status(404).json({ success: false, message: "Please Enter Correct Data" });
-        return
-    }
-    const agg = [
-        {
-            $unwind: "$slots",
-        },
-        {
-            $match: {
-                "slots.staffs": staffId,
-            },
-        },
-        {
-            $project: {
-                eventType: 1,
-                slots: 1,
-                bookers: 1,
-                _id: 0,
-            },
-        },
-    ];
-    let data
-    try {
-        data = await SlotModel.aggregate(agg);
-        if (data.length === 0) {
-            res.json({ message: "No Data Found" });
+    const staffId = req.session.user.id
+    try{
+        const cursor = await SlotModel.findOne({"slots.staffs.id" : staffId} , {bookers : 1, _id : 0 , eventType : 1}).lean();
+        if(!cursor || !cursor.bookers) {
+            res.json({message : "Nothing found" , student:null});
             return;
         }
-        let staffVenue = data[0].slots.venue;
-        let nowBookers: Pick<IBookingStatus, "bookingDate" | "bookingTime" | "studentId">[] = [];
-        data[0].bookers.forEach((slot: { bookingDate: Date, bookingTime: string, studentId: ObjectId, isBooked: boolean }) => 
-        {
-            if (slot.isBooked && slot.bookingTime !== null && venueMatch(slot.bookingTime, staffVenue)) {
-                let d: { bookingTime: string, bookingDate: Date, studentId: ObjectId } = {
-                    bookingTime: slot.bookingTime.split("|")[1].toString(),
-                    bookingDate: slot.bookingDate,
-                    studentId: slot.studentId
-                }
-                nowBookers.push(d);
-            }
-        });
-
-      /**
-        * nowBookers = nowBookers.filter(e=> {
-        * return (e.bookingTime?.split("-")[0].trim().split(":").map(Number)[0] === hour);
-        *  });
-        * **uncomment to get the current hour bookers**
-        */
-        const students = await UserModel.find({ _id: { $in: nowBookers.map(e => e.studentId) } }, { _id: 0, password: 0 })
-        res.json({ students, eventType: data[0].eventType });
-
-
+        const filteredCursor = cursor.bookers.filter(c => (c.bookingTime !== null && !c.slotFinished && c.bookingTime.split('/')[2] === staffId));
+        const students = await UserModel.find({ _id: { $in: filteredCursor.map(e => e.studentId) } }, 
+        { _id: 0, id : 1 , name : 1  })
+        res.json({success : true , message : "Slot Students Found" , students , eventType : cursor.eventType });
     } catch (error) {
 
         res.status(500).json({ message: "Error Occurred" });
