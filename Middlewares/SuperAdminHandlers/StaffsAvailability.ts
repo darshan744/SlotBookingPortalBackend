@@ -9,7 +9,7 @@ import { AvailabilityModel } from "../../Models/Availability.model";
 export const getAcceptedResponse = async (req: Request, res: Response): Promise<void> => {
     try {
       const result: Array<any> = await AvailabilityModel.find(
-        { unmodifiedCount: 0 },
+        { unmodifiedCount: 0 , responseDeadline : {$lt : new Date()}},
         {
           availableSlots: 0,
           _id: 0,

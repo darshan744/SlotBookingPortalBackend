@@ -15,7 +15,11 @@ export const authenticate = async (req: Request, res: Response) => {
     const credentials = req.body.user;
     try{
         let User : IStudent | IStaff | null | IUser= await UserModel.findOne({id:credentials.name})                        
-        if( User && User.userType === 'Staff') {
+        if(!User) {
+            res.status(404).json({message: ResponseMessages.USER_NOT_FOUND});
+            return;
+        }
+        else if(User.userType === 'Staff') {
             User = User as IStaff;
         }
         else if(User && User.userType === 'Student') {
@@ -24,14 +28,14 @@ export const authenticate = async (req: Request, res: Response) => {
         else if(User && User.userType === 'SuperAdmin') {
             User = User as IUser;
         }
-        if(User && User.password === credentials.password) {
+        if(User.comparePassword(credentials.password)) {
             req.session.user = {
                 objectId : (User._id as mongoose.Types.ObjectId).toString(),
                 id:User.id,
                 name : User.name,
                 role:User.userType,
             }
-            let data :any = {
+            let data:any = {
                 id: User.id,
                 name: User.name,
                 email: User.email,
@@ -39,11 +43,12 @@ export const authenticate = async (req: Request, res: Response) => {
                 role:User.userType
             };
             'resume' in User ? data = {...data , resume : User.resume} : data;
-            'year' in User ?  data = { ...data , year:User.year} : data;            
+            'year' in User ?  data = { ...data , year:User.year} : data;
+            console.log(data);
             res.json({success:true , data , role : User.userType , message:"Login Successful"});
         }
         else {
-            res.json({success:false , message : ResponseMessages.USER_NOT_FOUND})
+            res.status(404).json({success:false , message : ResponseMessages.PASSWORD_INCORRECT});
         }
     } catch(e : any){
         res.status(500).json({success:false , message:'error occured'})

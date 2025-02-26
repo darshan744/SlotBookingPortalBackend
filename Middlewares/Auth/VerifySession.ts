@@ -9,7 +9,6 @@ export function authorize(role:string) {
     } 
     else if(session && session.role === role) {
       next();
-      return 
     }
     else {
       res.status(401).json({message:"Forbidden" , success:false});

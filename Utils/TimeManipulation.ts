@@ -56,7 +56,7 @@ type TResultType =  Array<{
  * @param slots the slot timings that is generated in frontend
  * @param staffAcceptedTimings the accepted timings of the staff
  * @desc Maps the created slots in the frontend to the accepted staff's timing and
- * creates the slot timings with mapping with the staffs corresponding venue
+ * creates the slot timings with the staffs corresponding venue
  */
 export function mapTimings (venueAndStaffs : ISlotRequest['venuesAndStaffs'] ,slots : TSlots[],
                      staffAcceptedTimings : TStaffAcceptedTimings[]) {

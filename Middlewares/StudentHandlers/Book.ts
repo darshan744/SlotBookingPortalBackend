@@ -28,7 +28,7 @@ export async function bookSlot (req: Request, res: Response): Promise<void> {
        // const cursor = await SlotModel.findOne({slotId : body.slotId});
        const userObjectId  = req.session.user.objectId;
        if(!cursor){
-           res.json({success : false , message : "User Not Found"});
+           res.status(404).json({success : false , message : "User Not Found"});
            return;
        }
        for(const slot of cursor.slots) {
@@ -65,80 +65,9 @@ export async function bookSlot (req: Request, res: Response): Promise<void> {
        await session.commitTransaction();
        res.json({success : true ,slots:cursor.slots.filter(e=>e.venue === body.venue),bookers: cursor.bookers, message : "SlotBooked Successfully"});
     }catch (e : any) {
-        
         await session.abortTransaction()
         res.json({message : e.message , success : false });
     }finally {
         await session.endSession()
     }
 }
-
-
-  /**
- * **Explanation**:
- * This MongoDB query updates the limit of a specific time slot at a specific venue.
- * It uses **arrayFilters** to match and modify specific elements in an array within the document.
- *
- * **Search Criteria**:
- * - `slotId`: Identifies the document for updating.
- * - `venue`: The venue within the `slots` array (e.g., "SF001").
- *
- * **Update Operation**:
- * - The `$set` operator updates the `limit` field of the slot for the specified `venue` and `time`.
- * - The `arrayFilters` parameter is used to filter the arrays and update the correct slot.
- *
- * **Array Filters**:
- * - `venue.venue`: Matches the venue (e.g., `"SF001"`).
- * - `time.time`: Matches the time slot (e.g., `"09:00 - 09:15"`).
- *
- * **Query Example**:
- * This query will set the limit of the time slot to 35 for the specified venue and time:
- * ```js
- * db.slots.update(
- *   { slotId: "2024-11-04_2024-11-11_Mock Interview", "slots.venue": "SF001" },
- *   { $set: { "slots.$[venue].slots.$[time].limit": 35 } },
- *   { arrayFilters: [ { "venue.venue": "SF001" }, { "time.time": "09:00 - 09:15" }] }
- * );
- * ```
- *
- * **MongoDB Document Structure**:
- * ```json
- * {
- *   "slots": [
- *     {
- *       "venue": "SF001",
- *       "staffs": ["John", "Doe"],
- *       "slots": [
- *         { "time": "09:00 - 09:15", "limit": 10 }
- *       ]
- *     }
- *   ]
- * }
- * ```
- */
-/**
-```js
-db["slots"].findOneAndUpdate(
-    {
-      "bookers.studentId": ObjectId('672a46fd1fdb7cc295bd6c55'),
-      "slotId": "2024-11-04_2024-11-11_Mock Interview",
-      "slots.venue": "SF001"
-    },
-    {
-      $set: {
-        "bookers.$[id].isBooked": true,
-        "bookers.$.bookingTime": `${date.toLocaleDateString()}|${time}`
-      },
-      $inc: {
-        "slots.$[venue].slots.$[time].limit": -1
-      }
-    },
-    {
-      arrayFilters: [
-        { "venue.venue": "EW112" },
-        { "time.time": "10:45 - 11:00" },
-        { "id.studentId": ObjectId('672a46fd1fdb7cc295bd6c55') }
-      ]
-    }
-);
-```*/

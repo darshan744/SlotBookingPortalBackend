@@ -10,7 +10,7 @@ export const createStaffs = async (req: Request,res: Response,next: NextFunction
       await UserModel.insertMany(staffs);
       res.json({ success: true });
     } catch (e) {
-      res.json({
+      res.status(500).json({
         success: false,
         message: "Error Occurred in inserting objects array",
       });

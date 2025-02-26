@@ -15,15 +15,25 @@ export const getStudents = async (req: Request, res: Response): Promise<void> =>
     let hour = new Date().getHours();
     const staffId = req.session.user.id
     try{
-        const cursor = await SlotModel.findOne({"slots.staffs.id" : staffId} , {bookers : 1, _id : 0 , eventType : 1}).lean();
+        const cursor = await SlotModel.findOne({"slots.staffs.id" : staffId , endDate:{$gte : new Date()}} , {bookers : 1, _id : 0 , eventType : 1 , slotId:1}).lean();
         if(!cursor || !cursor.bookers) {
-            res.json({message : "Nothing found" , student:null});
+            res.status(404).json({message : "Nothing found" , student:null});
             return;
         }
-        const filteredCursor = cursor.bookers.filter(c => (c.bookingTime !== null && !c.slotFinished && c.bookingTime.split('/')[2] === staffId));
+        const filteredCursor = cursor.bookers.filter(
+          (c) =>
+            //checking students who have only booked
+            c.bookingTime !== null &&
+            //checking if slot is finished for that student
+            !c.slotFinished &&
+            //`${body.time}/${body.venue}/${body.staff}`
+            //checking staff id
+            c.bookingTime.split("/")[2] === staffId
+        );
+
         const students = await UserModel.find({ _id: { $in: filteredCursor.map(e => e.studentId) } }, 
         { _id: 0, id : 1 , name : 1  })
-        res.json({success : true , message : "Slot Students Found" , students , eventType : cursor.eventType });
+        res.json({success : true , message : "Slot Students Found" , students , eventType : cursor.eventType , slotId : cursor.slotId });
     } catch (error) {
 
         res.status(500).json({ message: "Error Occurred" });

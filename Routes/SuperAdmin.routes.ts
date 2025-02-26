@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-import { postSlots , postSlots2 } from '../Middlewares/SuperAdminHandlers/CreateSlots';
+import { getSlots , postSlots2 } from '../Middlewares/SuperAdminHandlers/Slots';
 import { getAcceptedResponse } from '../Middlewares/SuperAdminHandlers/StaffsAvailability';
 import { getResponseById } from '../Middlewares/SuperAdminHandlers/IndividualResponse';
 import { acceptanceStatus } from '../Middlewares/SuperAdminHandlers/AcceptanceStatus';
@@ -9,6 +9,7 @@ import { createStaffs } from '../Middlewares/SuperAdminHandlers/insertStaffs';
 import { createEvent } from '../Middlewares/SuperAdminHandlers/CreateEvent';
 import {getBreaks, postBreaks} from "../Middlewares/SuperAdminHandlers/Breaks";
 import {dashboard} from "../Middlewares/SuperAdminHandlers/Dashboard";
+import { getQueries, postRemarksToQuery } from '../Middlewares/SuperAdminHandlers/Query';
 
 const router : Router = express.Router();
 
@@ -24,13 +25,16 @@ router.get('/responses/:id',getResponseById)
 
 router.get('/responses',acceptanceStatus)
 
-router.post('/slots',postSlots2);
+router.route("/slots").post(postSlots2).get(getSlots);
 
 router.post('/events', createEvent)
 
 router.route('/breaks').post(postBreaks).get(getBreaks)
 
 router.get('/dashboard' , dashboard)
+
+router.route('/query').get(getQueries).post(postRemarksToQuery);
+
 
 
 export {router};

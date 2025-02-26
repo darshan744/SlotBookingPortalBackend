@@ -6,6 +6,11 @@ import { getEventResult } from '../Middlewares/StudentHandlers/EventResult';
 import { upload } from '../Utils/MulterConfig';
 import { fileUpload } from '../Middlewares/StudentHandlers/FileUpload';
 import { fileDelete } from '../Middlewares/StudentHandlers/FileDelete';
+import {
+  getStudentSpecificQueries,
+  postStudentQuery,
+} from "../Middlewares/StudentHandlers/Query";
+
 const router : Router = express.Router();
 
 router.post('/slots/:eventType/book',bookSlot);
@@ -17,4 +22,9 @@ router.get('/eventResult/:id',getEventResult);
 router.route('/upload')
       .post(upload.single('file') , fileUpload)
       .delete(fileDelete)
+      
+router.route("/query")
+      .get(getStudentSpecificQueries)
+      .post(postStudentQuery);
+      
 export {router}
