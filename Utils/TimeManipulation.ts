@@ -48,8 +48,6 @@ type TResultType =  Array<{
     }[]
 }[]
 }>;
-
-
 /**
  *
  * @param venueAndStaffs the venues and staff mapped to the venues

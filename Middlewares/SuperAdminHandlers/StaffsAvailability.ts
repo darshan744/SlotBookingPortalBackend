@@ -9,7 +9,7 @@ import { AvailabilityModel } from "../../Models/Availability.model";
 export const getAcceptedResponse = async (req: Request, res: Response): Promise<void> => {
     try {
       const result: Array<any> = await AvailabilityModel.find(
-        { unmodifiedCount: 0 , responseDeadline : {$lt : new Date()}},
+        { unmodifiedCount: 0 }, //, responseDeadline : {$lt : new Date()}
         {
           availableSlots: 0,
           _id: 0,
@@ -20,6 +20,7 @@ export const getAcceptedResponse = async (req: Request, res: Response): Promise<
         select: "name id -_id ",
       });
       if (result.length === 0) {
+        console.log({message: "There's no matching found"});
         res.status(404).json({ success: false, message: "There's no matching found" });
       } else {
         res.status(200).json({ success: true, data: result });

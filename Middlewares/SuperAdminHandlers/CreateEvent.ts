@@ -4,14 +4,14 @@ import { Request , Response } from "express";
 
 export const createEvent = async (req : Request , res : Response) => {
     const eventDetails : IEvents = req.body;
-
     eventDetails.Name = eventDetails.Name.trimEnd();
     if(!eventDetails) {
         res.json({message : "No info Found" , success:false});
         return;
     }
     try {
-        const result = await EventModel.create(eventDetails,{new : true})
+        console.log(eventDetails);
+        const result = await EventModel.insertMany(eventDetails);
         res.status(200).json({ message : "Done updating"  , success:true })
     } catch (error : any) {
         res.json({success:false , err : error.message , message:"Failed To Insert Event"});

@@ -13,33 +13,43 @@ export const getResponseById = async (req: Request,res: Response ): Promise<void
       let results: Array<any> = await AvailabilityModel.aggregate([
         {
           $lookup: {
+            // checks another collections
             from: "users",
+            // what field i have to check with 
             localField: "instructorId",
+            // other collection's matching field
             foreignField: "_id",
+            // alias
             as: "staff",
           },
         },
         {
+          //after matching split  the array to each document
           $unwind: "$staff",
         },
         {
+          // in the each document match with staff's id
           $match: {
             "staff.id": id,
             "availableSlots.slots.isAvailable": "Accepted",
           },
         },
         {
+          // array to each documents
           $unwind: "$availableSlots",
         },
         {
+          // splitting with each slots 
           $unwind: "$availableSlots.slots",
         },
         {
+          // match with the isAvailable Property
           $match: {
             "availableSlots.slots.isAvailable": "Accepted",
           },
         },
         {
+          // Group the resultant document
           $group: {
             _id: {
               id: "$staff.id",

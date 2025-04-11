@@ -1,12 +1,9 @@
 import { Request, Response } from "express";
 import { AvailabilityModel } from "../../Models/Availability.model";
-import {IAvailability, IStaff} from "../../Models/interfaces";
 
 
 /**
- * 
  * @for The table in the SuperAdmin 
- *  
  */
 export const acceptanceStatus = async (req: Request,res: Response): Promise<void> => {
     try {
@@ -30,10 +27,7 @@ export const acceptanceStatus = async (req: Request,res: Response): Promise<void
           forYear : el.forYear,
           eventType : el.eventType,
       }));
-      res.status(200).json({
-        message: "Success",
-        result: results,
-      });
+      res.status(200).json({message: "Success",result: results});
     } catch (error : any) {
       res.status(500).json({message : "Cannot Retrieve data"})
     }

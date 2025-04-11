@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-import { getSlots , postSlots2 } from '../Middlewares/SuperAdminHandlers/Slots';
+import { getSlots , postSlots2 } from '../Middlewares/SuperAdminHandlers/Slots/Slots';
 import { getAcceptedResponse } from '../Middlewares/SuperAdminHandlers/StaffsAvailability';
 import { getResponseById } from '../Middlewares/SuperAdminHandlers/IndividualResponse';
 import { acceptanceStatus } from '../Middlewares/SuperAdminHandlers/AcceptanceStatus';
